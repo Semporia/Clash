@@ -1,0 +1,28 @@
+payload: 
+ # Facebook
+ 
+ - DOMAIN-SUFFIX,cdninstagram.com,Facebook
+ - DOMAIN-SUFFIX,fb.com,Facebook
+ - DOMAIN-SUFFIX,fb.me,Facebook
+ - DOMAIN-SUFFIX,fbaddins.com,Facebook
+ - DOMAIN-SUFFIX,fbcdn.net,Facebook
+ - DOMAIN-SUFFIX,fbsbx.com,Facebook
+ - DOMAIN-SUFFIX,fbworkmail.com,Facebook
+ - DOMAIN-SUFFIX,instagram.com,Facebook
+ - DOMAIN-SUFFIX,m.me,Facebook
+ - DOMAIN-SUFFIX,messenger.com,Facebook
+ - DOMAIN-SUFFIX,oculus.com,Facebook
+ - DOMAIN-SUFFIX,oculuscdn.com,Facebook
+ - DOMAIN-SUFFIX,rocksdb.org,Facebook
+ - DOMAIN-SUFFIX,whatsapp.com,Facebook
+ - DOMAIN-SUFFIX,whatsapp.net,Facebook
+ - DOMAIN-KEYWORD,facebook,Facebook
+ - IP-CIDR,3.123.36.126/32,Facebook
+ - IP-CIDR,35.157.215.84/32,Facebook
+ - IP-CIDR,35.157.217.255/32,Facebook
+ - IP-CIDR,52.58.209.134/32,Facebook
+ - IP-CIDR,54.93.124.31/32,Facebook
+ - IP-CIDR,54.162.243.80/32,Facebook
+ - IP-CIDR,54.173.34.141/32,Facebook
+ - IP-CIDR,54.235.23.242/32,Facebook
+ - IP-CIDR,169.45.248.118/32,Facebook
