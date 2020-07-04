@@ -1,0 +1,8 @@
+payload:
+ #Steam
+ 
+ - DOMAIN-SUFFIX,fanatical.com,Steam
+ - DOMAIN-SUFFIX,humblebundle.com,Steam
+ - DOMAIN-SUFFIX,steamcommunity.com,Steam
+ - DOMAIN-SUFFIX,steampowered.com,Steam
+ - DOMAIN-SUFFIX,steamstatic.com,Steam
