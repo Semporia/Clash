@@ -1,0 +1,6 @@
+payload:
+ # taobao
+ 
+ - DOMAIN-KEYWORD,taobao,DIRECT
+ - DOMAIN-KEYWORD,tmall,DIRECT
+ - DOMAIN-SUFFIX,1688.com,DIRECT
