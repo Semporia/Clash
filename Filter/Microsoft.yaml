@@ -1,0 +1,31 @@
+payload: 
+ # Microsoft
+ 
+ - DOMAIN-KEYWORD,onedrive,Microsoft
+ - DOMAIN-KEYWORD,office365,Microsoft
+ - DOMAIN-KEYWORD,outlook,Microsoft
+ - DOMAIN-KEYWORD,office,Microsoft
+ - DOMAIN-SUFFIX,azure.com,Microsoft
+ - DOMAIN-SUFFIX,fabric.io,Microsoft
+ - DOMAIN-SUFFIX,files.1drv.com,Microsoft
+ - DOMAIN-SUFFIX,hotmail.com,Microsoft
+ - DOMAIN-SUFFIX,live.com,Microsoft
+ - DOMAIN-SUFFIX,live.net,Microsoft
+ - DOMAIN-SUFFIX,livefilestore.com,Microsoft
+ - DOMAIN-SUFFIX,mesh.com,Microsoft
+ - DOMAIN-SUFFIX,microsoft.com,Microsoft
+ - DOMAIN-SUFFIX,microsoftonline.com,Microsoft
+ - DOMAIN-SUFFIX,microsoft-tst.com,Microsoft
+ - DOMAIN-SUFFIX,msn.com,Microsoft
+ - DOMAIN-SUFFIX,office.com,Microsoft
+ - DOMAIN-SUFFIX,office.net,Microsoft
+ - DOMAIN-SUFFIX,onedrive.com,Microsoft
+ - DOMAIN-SUFFIX,outlook.com,Microsoft
+ - DOMAIN-SUFFIX,p.sfx.ms,Microsoft
+ - DOMAIN-SUFFIX,sharepoint.com,Microsoft
+ - DOMAIN-SUFFIX,skype.com,Microsoft
+ - DOMAIN-SUFFIX,spoprod-a.akamaihd.net,Microsoft
+ - DOMAIN-SUFFIX,storage.msn.com,Microsoft
+ - DOMAIN-SUFFIX,windows.net,Microsoft
+ - DOMAIN-SUFFIX,xbox.com,Microsoft
+ - DOMAIN-SUFFIX,xboxlive.com,Microsoft
