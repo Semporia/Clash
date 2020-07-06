@@ -1,6 +1,6 @@
 payload: 
   # > PayPal
 
-  - DOMAIN-KEYWORD,paypal,PayPal
-  - DOMAIN-SUFFIX,paypal.com,PayPal
-  - DOMAIN-SUFFIX,paypalobjects.com,PayPal
+  - DOMAIN-KEYWORD,paypal,paypal
+  - DOMAIN-SUFFIX,paypal.com,paypal
+  - DOMAIN-SUFFIX,paypalobjects.com,paypal
