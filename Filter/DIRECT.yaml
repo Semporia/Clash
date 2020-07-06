@@ -61,7 +61,6 @@ payload:
 
 # > Alibaba
 
- - USER-AGENT,%E4%BC%98%E9%85%B7*
  - DOMAIN-SUFFIX,alibaba.com
  - DOMAIN-SUFFIX,alicdn.com
  - DOMAIN-SUFFIX,alikunlun.com
@@ -202,8 +201,7 @@ payload:
 
 # > NetEase
 
- - USER-AGENT,NeteaseMusic*
- - USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*
+ - DOMAIN-KEYWORD,NeteaseMusic
  - DOMAIN-SUFFIX,163.com
  - DOMAIN-SUFFIX,126.net
  - DOMAIN-SUFFIX,127.net
@@ -244,9 +242,7 @@ payload:
 
 # > Tencent
 
- - USER-AGENT,MicroMessenger%20Client
- - USER-AGENT,WeChat*
- - USER-AGENT,%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1*
+ - DOMAIN-KEYWORD,WeChat
  - DOMAIN-SUFFIX,gtimg.com
  - DOMAIN-SUFFIX,idqqimg.com
  - DOMAIN-SUFFIX,igamecj.com
@@ -261,7 +257,7 @@ payload:
 
 # > YYeTs
 
- - USER-AGENT,YYeTs*
+ - DOMAIN-KEYWORD,YYeTs
  - DOMAIN-SUFFIX,jstucdn.com
  - DOMAIN-SUFFIX,zimuzu.io
  - DOMAIN-SUFFIX,zimuzu.tv
