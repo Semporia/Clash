@@ -1,7 +1,7 @@
 payload: 
  # Google
- 
- - DOMAIN-KEYWORD,Google
+
+ - DOMAIN-KEYWORD,google
  - DOMAIN-SUFFIX,ampproject.org
  - DOMAIN-SUFFIX,abc.xyz
  - DOMAIN-SUFFIX,android.com
