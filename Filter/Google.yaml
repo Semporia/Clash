@@ -56,7 +56,6 @@ payload:
  - DOMAIN-SUFFIX,gvt1.com
  - DOMAIN-SUFFIX,gvt3.com
  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com
- - DOMAIN-KEYWORD
  - DOMAIN-KEYWORD,blogspot
  - DOMAIN-KEYWORD,mtalk.google.com
  - DOMAIN,safebrowsing.googleapis.com
