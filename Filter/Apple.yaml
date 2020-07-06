@@ -2,6 +2,7 @@ payload:
   # > Apple
 
   - DOMAIN-KEYWORD,apple,Apple
+  - DOMAIN-KEYWORD,icloud,Apple
   - DOMAIN-SUFFIX,aaplimg.com,Apple
   - DOMAIN-SUFFIX,apple.co,Apple
   - DOMAIN-SUFFIX,apple.com,Apple
