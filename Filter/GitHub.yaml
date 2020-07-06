@@ -1,6 +1,6 @@
 payload:
- #GitHub
+  #GitHub
 
- - DOMAIN-KEYWORD,github,GitHub
- - DOMAIN-SUFFIX,github.com,GitHub
- - DOMAIN-SUFFIX,githubassets.com,GitHub
+  - DOMAIN-KEYWORD,github,GitHub
+  - DOMAIN-SUFFIX,github.com,GitHub
+  - DOMAIN-SUFFIX,githubassets.com,GitHub
