@@ -61,7 +61,7 @@ payload:
 
 # > Alibaba
 
-USER-AGENT,%E4%BC%98%E9%85%B7*
+ - USER-AGENT,%E4%BC%98%E9%85%B7*
  - DOMAIN-SUFFIX,alibaba.com
  - DOMAIN-SUFFIX,alicdn.com
  - DOMAIN-SUFFIX,alikunlun.com
@@ -92,7 +92,7 @@ USER-AGENT,%E4%BC%98%E9%85%B7*
  - DOMAIN-SUFFIX,icloud-content.com
  - DOMAIN-SUFFIX,me.com
  - DOMAIN-SUFFIX,mzstatic.com
-DOMAIN,www-cdn.icloud.com.akadns.net
+ - DOMAIN,www-cdn.icloud.com.akadns.net
 
 # > Baidu
 
@@ -114,7 +114,7 @@ DOMAIN,www-cdn.icloud.com.akadns.net
 
  - DOMAIN-SUFFIX,blizzard.com
  - DOMAIN-SUFFIX,battle.net
-DOMAIN,blzddist1-a.akamaihd.net
+ - DOMAIN,blzddist1-a.akamaihd.net
 
 # > ByteDance
 
@@ -198,12 +198,12 @@ DOMAIN,blzddist1-a.akamaihd.net
  - DOMAIN-SUFFIX,visualstudio.com
  - DOMAIN-SUFFIX,windows.com
  - DOMAIN-SUFFIX,windowsupdate.com
-DOMAIN,officecdn-microsoft-com.akamaized.net
+ - DOMAIN,officecdn-microsoft-com.akamaized.net
 
 # > NetEase
 
-USER-AGENT,NeteaseMusic*
-USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*
+ - USER-AGENT,NeteaseMusic*
+ - USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*
  - DOMAIN-SUFFIX,163.com
  - DOMAIN-SUFFIX,126.net
  - DOMAIN-SUFFIX,127.net
@@ -244,9 +244,9 @@ USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*
 
 # > Tencent
 
-USER-AGENT,MicroMessenger%20Client
-USER-AGENT,WeChat*
-USER-AGENT,%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1*
+ - USER-AGENT,MicroMessenger%20Client
+ - USER-AGENT,WeChat*
+ - USER-AGENT,%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1*
  - DOMAIN-SUFFIX,gtimg.com
  - DOMAIN-SUFFIX,idqqimg.com
  - DOMAIN-SUFFIX,igamecj.com
@@ -257,11 +257,11 @@ USER-AGENT,%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1*
  - DOMAIN-SUFFIX,tencent.com
  - DOMAIN-SUFFIX,tencent-cloud.net
  - DOMAIN-SUFFIX,tenpay.com
-DOMAIN,file-igamecj.akamaized.net
+ - DOMAIN,file-igamecj.akamaized.net
 
 # > YYeTs
 
-USER-AGENT,YYeTs*
+ - USER-AGENT,YYeTs*
  - DOMAIN-SUFFIX,jstucdn.com
  - DOMAIN-SUFFIX,zimuzu.io
  - DOMAIN-SUFFIX,zimuzu.tv
@@ -293,7 +293,7 @@ USER-AGENT,YYeTs*
 
  - DOMAIN-SUFFIX,speedtest.net
  - DOMAIN-SUFFIX,netspeedtestmaster.com
-DOMAIN,speedtest.macpaw.com
+ - DOMAIN,speedtest.macpaw.com
 
 # > Private Tracker
 
