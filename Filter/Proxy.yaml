@@ -11,7 +11,7 @@ payload:
   - DOMAIN-SUFFIX,gvt1.com,PROXY
   - DOMAIN-SUFFIX,gvt3.com,PROXY
   - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,PROXY
-  - DOMAIN-KEYWORD,google,PROXY
+
   - DOMAIN-KEYWORD,blogspot,PROXY
   # > Microsoft
   - DOMAIN-SUFFIX,onedrive.live.com,PROXY
