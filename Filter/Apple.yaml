@@ -23,6 +23,7 @@ payload:
   - IP-CIDR,192.35.50.0/24,Apple
   - IP-CIDR,198.183.17.0/24,Apple
   - IP-CIDR,205.180.175.0/24,Apple
+  
   - DOMAIN-SUFFIX,apple.news,Apple
   - DOMAIN,aod.itunes.apple.com,Apple
   - DOMAIN,api.smoot.apple.cn,Apple
