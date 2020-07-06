@@ -381,7 +381,6 @@ payload:
   - DOMAIN-SUFFIX,nim-lang-cn.org,DIRECT
   - DOMAIN-SUFFIX,nvidia.com,DIRECT
   - DOMAIN-SUFFIX,oracle.com,DIRECT
-  - DOMAIN-SUFFIX,paypal.com,DIRECT
   - DOMAIN-SUFFIX,paypalobjects.com,DIRECT
   - DOMAIN-SUFFIX,qdaily.com,DIRECT
   - DOMAIN-SUFFIX,qidian.com,DIRECT
