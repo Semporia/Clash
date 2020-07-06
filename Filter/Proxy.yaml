@@ -1,4 +1,4 @@
-payload: 
+·payload: 
  # Proxy
  
  - DOMAIN-SUFFIX,lin.ee,Proxy
@@ -600,8 +600,6 @@ payload:
  - DOMAIN-KEYWORD,beetalk,Proxy
  - DOMAIN-KEYWORD,blogspot,Proxy
  - DOMAIN-KEYWORD,dropbox,Proxy
- - DOMAIN-KEYWORD,facebook,Proxy
- - DOMAIN-KEYWORD,github,Proxy
  - DOMAIN-KEYWORD,instagram,Proxy
  - DOMAIN-KEYWORD,porn,Proxy
  - DOMAIN-KEYWORD,twitter,Proxy
