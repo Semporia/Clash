@@ -1,6 +1,7 @@
 payload: 
  # AdBlock
  
+ - DOMAIN-KEYWORD,adguard, AdBlock
  - DOMAIN-SUFFIX,a.ckm.iqiyi.com, AdBlock
  - DOMAIN-SUFFIX,ad.m.iqiyi.com,AdBlock
  - DOMAIN-SUFFIX,afp.iqiyi.com,AdBlock
