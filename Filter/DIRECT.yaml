@@ -404,7 +404,7 @@ payload:
   - DOMAIN,download.jetbrains.com,DIRECT
   - DOMAIN,images-cn.ssl-images-amazon.com,DIRECT
   - DOMAIN,cdn.angruo.com,DIRECT
-
+  - DOMAIN-KEYWORD,dler,DIRECT
 
   # （可选）使用来自 ipipdotnet 的 ChinaIP 以解决数据不准确的问题，使用 ChinaIP.yaml 时可禁用下列直至（包括）「GEOIP,CN」规则
   # - RULE-SET,ChinaIP
