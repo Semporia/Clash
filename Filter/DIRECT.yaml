@@ -112,17 +112,6 @@ payload:
   - DOMAIN-SUFFIX,miwifi.com,DIRECT
   - DOMAIN-SUFFIX,xiaomi.com,DIRECT
   
-  # > Microsoft
-  - DOMAIN-SUFFIX,microsoft.com,DIRECT
-  - DOMAIN-SUFFIX,msecnd.net,DIRECT
-  - DOMAIN-SUFFIX,office365.com,DIRECT
-  - DOMAIN-SUFFIX,outlook.com,DIRECT
-  - DOMAIN-SUFFIX,s-microsoft.com,DIRECT
-  - DOMAIN-SUFFIX,visualstudio.com,DIRECT
-  - DOMAIN-SUFFIX,windows.com,DIRECT
-  - DOMAIN-SUFFIX,windowsupdate.com,DIRECT
-  - DOMAIN,officecdn-microsoft-com.akamaized.net,DIRECT
-  
   # > NetEase
   - DOMAIN-KEYWORD,NeteaseMusic*,DIRECT
   - DOMAIN-SUFFIX,163.com,DIRECT

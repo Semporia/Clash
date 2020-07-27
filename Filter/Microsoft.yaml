@@ -29,4 +29,4 @@ payload:
   - DOMAIN-SUFFIX,windows.net,Microsoft
   - DOMAIN-SUFFIX,xbox.com,Microsoft
   - DOMAIN-SUFFIX,xboxlive.com,Microsoft
-  - DOMAIN-SUFFIX,outlook.office365.com,Microsoft
+  - DOMAIN-SUFFIX,outlook.office365.com,Microsoft 
