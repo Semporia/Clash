@@ -1,6 +1,7 @@
 payload:
-  # > Apple
+  # 如无特殊需求可不用加此策略及选择代理，在大部分地区 Apple CDN 可正常工作，使用代理后可能导致「Cannot Connect to iCloud」等问题
 
+  # > Apple
   - DOMAIN-KEYWORD,apple,Apple
   - DOMAIN-KEYWORD,icloud,Apple
   - DOMAIN-SUFFIX,aaplimg.com,Apple
@@ -15,16 +16,32 @@ payload:
   - DOMAIN-SUFFIX,icloud.com.cn,Apple
   - DOMAIN-SUFFIX,icloud-content.com,Apple
   - DOMAIN-SUFFIX,me.com,Apple
-  - DOMAIN-SUFFIX,mzstatic.com,Apple
   - DOMAIN,www-cdn.icloud.com.akadns.net,Apple
-  - IP-CIDR,17.0.0.0/8,Apple
 
-  # > Apple News and Apple Map TOMTOM Version
+  # > Map
+  - DOMAIN-SUFFIX,ls.apple.com,Apple
+  - DOMAIN,gs-loc-cn.apple.com,Apple
 
-  - DOMAIN,gateway.icloud.com,PROXY
-  - DOMAIN,gspe1-ssl.ls.apple.com,PROXY
-  - DOMAIN-SUFFIX,apple.news,PROXY
-  - DOMAIN,news-client.apple.com,PROXY
-  - DOMAIN,news-edge.apple.com,PROXY
-  - DOMAIN,news-events.apple.com,PROXY
-  - DOMAIN,apple.comscoreresearch.com,PROXY
+  # Apple News
+  - DOMAIN-SUFFIX,apple.news,Apple
+  - DOMAIN,news-client.apple.com,Apple
+  - DOMAIN,news-edge.apple.com,Apple
+  - DOMAIN,news-events.apple.com,Apple
+
+  # Apple Music
+  - DOMAIN,aod.itunes.apple.com,Apple
+  - DOMAIN,api.smoot.apple.cn,Apple
+  - DOMAIN,music.apple.com,Apple
+  - DOMAIN,mvod.itunes.apple.com,Apple
+
+  # > App Store
+  - DOMAIN-SUFFIX,mzstatic.com,Apple
+  - DOMAIN,iosapps.itunes.apple.com,Apple
+  - DOMAIN,osxapps.itunes.apple.com,Apple
+
+  # > Update
+  - DOMAIN,supportdownload.apple.com,Apple
+  - DOMAIN,appldnld.apple.com,Apple
+  - DOMAIN,swcdn.apple.com,Apple
+  - DOMAIN,apptrailers.itunes.apple.com,Apple
+  - DOMAIN,updates-http.cdn-apple.com,Apple
