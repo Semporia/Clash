@@ -18,6 +18,11 @@ payload:
   - DOMAIN-SUFFIX,me.com,Apple
   - DOMAIN,www-cdn.icloud.com.akadns.net,Apple
 
+  # > Apple Map
+  - DOMAIN-SUFFIX,ls.apple.com,Apple
+  - DOMAIN-SUFFIX,ssl.ls.apple.com,Apple
+  - DOMAIN,gs-loc-cn.apple.com,Apple
+  - PROCESS-NAME,com.apple.geod,Apple
 
   # Apple News
   - DOMAIN-SUFFIX,apple.news,Apple
