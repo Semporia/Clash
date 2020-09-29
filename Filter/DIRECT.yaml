@@ -8,6 +8,7 @@ payload:
   
   # > Apple Map
   - DOMAIN-SUFFIX,ls.apple.com,DIRECT
+  - DOMAIN-SUFFIX,ssl.ls.apple.com,DIRECT
   - DOMAIN,gs-loc-cn.apple.com,DIRECT
   - PROCESS-NAME,com.apple.geod,DIRECT
 
