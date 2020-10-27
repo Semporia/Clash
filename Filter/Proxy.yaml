@@ -147,7 +147,6 @@ payload:
   - DOMAIN-SUFFIX,discordapp.com,PROXY
   - DOMAIN-SUFFIX,discordapp.net,PROXY
   - DOMAIN-SUFFIX,disqus.com,PROXY
-  - DOMAIN-SUFFIX,dlercloud.com,PROXY
   - DOMAIN-SUFFIX,dns2go.com,PROXY
   - DOMAIN-SUFFIX,dowjones.com,PROXY
   - DOMAIN-SUFFIX,dropbox.com,PROXY
