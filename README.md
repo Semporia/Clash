@@ -146,13 +146,6 @@ rule-providers:
     url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/Netflix.yaml
     interval: 86400
 
-  GlobalTV:
-    type: http
-    behavior: classical
-    path: ./Filter/GlobalTV.yaml
-    url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/GlobalTV.yaml
-    interval: 86400
-
   Proxy:
     type: http
     behavior: classical
@@ -222,9 +215,6 @@ rules:
 
   # (Netflix)
   - RULE-SET,Netflix,Netflix
-
-  # (GlobalTV)
-  - RULE-SET,GlobalTV,GlobalTV
 
   # (Proxy)
   - RULE-SET,Proxy,Proxy
