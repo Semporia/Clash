@@ -4,6 +4,10 @@
 
 [ClashX Download](https://github.com/yichengchen/clashX/releases)
 
+### 懒人配置参考！
+
+[config.yaml](https://raw.githubusercontent.com/Semporia/ClashX-Pro/master/config.yaml)
+
 ### 远程引用分流规则
 
 ```properties
