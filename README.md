@@ -1,5 +1,6 @@
-# 自用整合Clash X 分流
+# 自用整合ClashX 分流
 
+### ClashX 下载地址
 ### 远程引用分流规则
 
 ```properties
