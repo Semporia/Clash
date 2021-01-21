@@ -2,7 +2,7 @@
 
 ### ClashX 下载地址
 
-[ClashX Download](https://github.com/yichengchen/clashX/releases)
+[ClashX Download](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public)
 
 ### 懒人配置参考！
 
