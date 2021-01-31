@@ -148,21 +148,6 @@ payload:
   - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,DIRECT
   - DOMAIN-SUFFIX,steamstat.us,DIRECT
   
-  # > Tencent
-  - DOMAIN-KEYWORD,MicroMessenger%20Client,DIRECT
-  - DOMAIN-KEYWORD,WeChat*,DIRECT
-  - DOMAIN-SUFFIX,gtimg.com,DIRECT
-  - DOMAIN-SUFFIX,idqqimg.com,DIRECT
-  - DOMAIN-SUFFIX,igamecj.com,DIRECT
-  - DOMAIN-SUFFIX,myapp.com,DIRECT
-  - DOMAIN-SUFFIX,myqcloud.com,DIRECT
-  - DOMAIN-SUFFIX,qq.com,DIRECT
-  - DOMAIN-SUFFIX,servicewechat.com,DIRECT
-  - DOMAIN-SUFFIX,tencent.com,DIRECT
-  - DOMAIN-SUFFIX,tencent-cloud.net,DIRECT
-  - DOMAIN-SUFFIX,tenpay.com,DIRECT
-  - DOMAIN,file-igamecj.akamaized.net,DIRECT
-  
   # > YYeTs
   - DOMAIN-SUFFIX,jstucdn.com,DIRECT
   - DOMAIN-SUFFIX,zimuzu.io,DIRECT
@@ -188,11 +173,6 @@ payload:
   - DOMAIN-SUFFIX,ipv6-test.com,DIRECT
   - DOMAIN-SUFFIX,test-ipv6.com,DIRECT
   - DOMAIN-SUFFIX,whatismyip.com,DIRECT
-  
-  # > Speed Test
-  # - DOMAIN-SUFFIX,speedtest.net,DIRECT
-  - DOMAIN-SUFFIX,netspeedtestmaster.com,DIRECT
-  - DOMAIN,speedtest.macpaw.com,DIRECT
   
   # > Private Tracker
   - DOMAIN-SUFFIX,awesome-hd.me,DIRECT
