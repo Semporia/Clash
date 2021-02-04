@@ -1,8 +1,8 @@
-# 自用整合ClashX 分流
+# 自用整合ClashX Pro 分流
 
-### ClashX 下载地址
+### ClashX Pro 下载地址
 
-[ClashX Download](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public)
+[ClashX Pro Download](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public)
 
 ### 懒人配置参考！
 
