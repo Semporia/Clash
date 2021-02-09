@@ -1,3 +1,4 @@
+# NAME: Steam
 payload:
   - DOMAIN-SUFFIX,csgo.wmsj.cn
   - DOMAIN-SUFFIX,dl.steam.ksyna.com
