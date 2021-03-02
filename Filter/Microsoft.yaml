@@ -95,5 +95,6 @@ payload:
   - DOMAIN-KEYWORD,microsoft
   - DOMAIN-KEYWORD,onedrive
   - DOMAIN-KEYWORD,skydrive
+  - DOMAIN-KEYWORD,outlook
   - PROCESS-NAME,onedrive
   - PROCESS-NAME,onedriveupdater
