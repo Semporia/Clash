@@ -98,6 +98,7 @@ payload:
   - DOMAIN-KEYWORD,onedrive
   - DOMAIN-KEYWORD,skydrive
   - DOMAIN-KEYWORD,outlook
+  - DOMAIN-KEYWORD,outlook.live
   - PROCESS-NAME,onedrive
   - PROCESS-NAME,onedriveupdater
 
