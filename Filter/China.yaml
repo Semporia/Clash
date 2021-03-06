@@ -636,9 +636,6 @@ payload:
   - DOMAIN-KEYWORD,aliyun
   - DOMAIN-KEYWORD,baidu
   - DOMAIN-KEYWORD,beplay
-  - DOMAIN-KEYWORD,microsoft
-  - DOMAIN-KEYWORD,officecdn
-  - DOMAIN-KEYWORD,speedtest
   - DOMAIN-KEYWORD,taobao
   - IP-CIDR,1.255.62.0/24
   - IP-CIDR,119.28.28.28/32
