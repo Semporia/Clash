@@ -101,6 +101,6 @@ payload:
   - DOMAIN-KEYWORD,outlook,Microsoft
   - DOMAIN-KEYWORD,outlook.live,Microsoft
   - DOMAIN-KEYWORD,hotmail,Microsoft
-  - PROCESS-NAME,onedrive,Microsoft
-  - PROCESS-NAME,onedriveupdater,Microsoft
+  - DOMAIN-KEYWORD,onedrive,Microsoft
+  - DOMAIN-KEYWORD,onedriveupdater,Microsoft
 
