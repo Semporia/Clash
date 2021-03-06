@@ -105,4 +105,4 @@ payload:
   - DOMAIN-KEYWORD,onedrive,Microsoft
   - DOMAIN-KEYWORD,onedriveupdater,Microsoft
   - DOMAIN-KEYWORD,microsoftstore,Microsoft
-
+  - DOMAIN-KEYWORD,microsoftonline,Microsoft
