@@ -10,7 +10,6 @@ payload:
   - DOMAIN,images-cn.ssl-images-amazon.com
   - DOMAIN,ip.istatmenus.app
   - DOMAIN,mtalk.google.com
-  - DOMAIN,officecdn-microsoft-com.akamaized.net
   - DOMAIN,safebrowsing.googleapis.com
   - DOMAIN,sms.imagetasks.com
   - DOMAIN,speedtest.macpaw.com
@@ -556,7 +555,6 @@ payload:
   - DOMAIN-SUFFIX,uxengine.net
   - DOMAIN-SUFFIX,v-56.com
   - DOMAIN-SUFFIX,veryzhun.com
-  - DOMAIN-SUFFIX,visualstudio.com
   - DOMAIN-SUFFIX,vmware.com
   - DOMAIN-SUFFIX,wandoujia.com
   - DOMAIN-SUFFIX,wangsu.com
