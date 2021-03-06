@@ -100,6 +100,7 @@ payload:
   - DOMAIN-KEYWORD,skydrive,Microsoft
   - DOMAIN-KEYWORD,outlook,Microsoft
   - DOMAIN-KEYWORD,outlook.live,Microsoft
+  - DOMAIN-KEYWORD,hotmail,Microsoft
   - PROCESS-NAME,onedrive,Microsoft
   - PROCESS-NAME,onedriveupdater,Microsoft
 
