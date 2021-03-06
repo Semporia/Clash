@@ -325,9 +325,6 @@ payload:
   - DOMAIN-SUFFIX,libguides.com
   - DOMAIN-SUFFIX,licdn.com
   - DOMAIN-SUFFIX,linkedin.com
-  - DOMAIN-SUFFIX,live.com
-  - DOMAIN-SUFFIX,live.net
-  - DOMAIN-SUFFIX,livechina.com
   - DOMAIN-SUFFIX,liyuans.com
   - DOMAIN-SUFFIX,lizhi.io
   - DOMAIN-SUFFIX,localizecdn.com
@@ -400,9 +397,6 @@ payload:
   - DOMAIN-SUFFIX,nuomi.com
   - DOMAIN-SUFFIX,nvidia.com
   - DOMAIN-SUFFIX,oecd-ilibrary.org
-  - DOMAIN-SUFFIX,office.com
-  - DOMAIN-SUFFIX,office.net
-  - DOMAIN-SUFFIX,office365.com
   - DOMAIN-SUFFIX,onenote.com
   - DOMAIN-SUFFIX,onenote.net
   - DOMAIN-SUFFIX,ooklaserver.net
@@ -413,7 +407,6 @@ payload:
   - DOMAIN-SUFFIX,oup.com
   - DOMAIN-SUFFIX,ourbits.club
   - DOMAIN-SUFFIX,ourdvs.com
-  - DOMAIN-SUFFIX,outlook.com
   - DOMAIN-SUFFIX,overcast.fm
   - DOMAIN-SUFFIX,ovid.com
   - DOMAIN-SUFFIX,oxfordartonline.com
@@ -590,8 +583,6 @@ payload:
   - DOMAIN-SUFFIX,workflowy.com
   - DOMAIN-SUFFIX,worldbank.org
   - DOMAIN-SUFFIX,worldscientific.com
-  - DOMAIN-SUFFIX,xbox.com
-  - DOMAIN-SUFFIX,xboxlive.com
   - DOMAIN-SUFFIX,xdrig.com
   - DOMAIN-SUFFIX,xhostfire.com
   - DOMAIN-SUFFIX,xiachufang.com
