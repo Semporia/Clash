@@ -97,10 +97,12 @@ payload:
   - DOMAIN-KEYWORD,microsoft,Microsoft
   - DOMAIN-KEYWORD,onedrive,Microsoft
   - DOMAIN-KEYWORD,office,Microsoft
+  - DOMAIN-KEYWORD,office365,Microsoft
   - DOMAIN-KEYWORD,skydrive,Microsoft
   - DOMAIN-KEYWORD,outlook,Microsoft
   - DOMAIN-KEYWORD,outlook.live,Microsoft
   - DOMAIN-KEYWORD,hotmail,Microsoft
   - DOMAIN-KEYWORD,onedrive,Microsoft
   - DOMAIN-KEYWORD,onedriveupdater,Microsoft
+  - DOMAIN-KEYWORD,microsoftstore,Microsoft
 
