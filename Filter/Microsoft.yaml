@@ -93,6 +93,7 @@ payload:
   - DOMAIN-SUFFIX,xboxlive.com,Microsoft
   - DOMAIN-SUFFIX,yammer.com,Microsoft
   - DOMAIN-SUFFIX,yammerusercontent.com,Microsoft
+  - DOMAIN-SUFFIX,account.microsoft.com,Microsoft
   - DOMAIN-KEYWORD,1drv,Microsoft
   - DOMAIN-KEYWORD,microsoft,Microsoft
   - DOMAIN-KEYWORD,onedrive,Microsoft
