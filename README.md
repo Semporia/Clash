@@ -40,66 +40,64 @@ proxy-groups:
   - { name: "paypal", type: url-test, use: ["United States"]}
   - { name: "Proxy", type: url-test, use: ["Hong Kong","United States"]} 
 
-
-# 分流规则  
-rule-providers:
-
-  AdBlock: {type: http, behavior: classical, path: ./Filter/AdBlock, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/AdBlock.yaml, interval: 3600}
-  Apple: {type: http, behavior: classical, path: ./Filter/Apple, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/Apple.yaml, interval: 3600}
-  Adobe: {type: http, behavior: classical, path: ./Filter/Adobe, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/Adobe.yaml, interval: 3600}
-  Amazon: {type: http, behavior: classical, path: ./Filter/Amazon, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/Amazon.yaml, interval: 3600}
-
-  China: {type: http, behavior: classical, path: ./Filter/China, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/China.yaml, interval: 3600}
-
-  Dler: {type: http, behavior: classical, path: ./Filter/Dler, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/Dler.yaml, interval: 3600}
-
-  Facebook: {type: http, behavior: classical, path: ./Filter/Facebook, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/Facebook.yaml, interval: 3600}
-
-  GitHub: {type: http, behavior: classical, path: ./Filter/GitHub, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/GitHub.yaml, interval: 3600}
-  Google: {type: http, behavior: classical, path: ./Filter/Google, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/Google.yaml, interval: 3600}
-  
-  Microsoft: {type: http, behavior: classical, path: ./Filter/Microsoft, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/Microsoft.yaml, interval: 3600}
-  
-  Netflix: {type: http, behavior: classical, path: ./Filter/Netflix, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/Netflix.yaml, interval: 3600}
-  
-  Spotify: {type: http, behavior: classical, path: ./Filter/Spotify, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/Spotify.yaml, interval: 3600}
-  Speedtest: {type: http, behavior: classical, path: ./Filter/Speedtest, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/Speedtest.yaml, interval: 3600}
-  Steam: {type: http, behavior: classical, path: ./Filter/Steam, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/Steam.yaml, interval: 3600}
-
-  Telegram: {type: http, behavior: classical, path: ./Filter/Telegram, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/Telegram.yaml, interval: 3600}
-  Twitter: {type: http, behavior: classical, path: ./Filter/Twitter, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/Twitter.yaml, interval: 3600}
-  Tencent: {type: http, behavior: classical, path: ./Filter/Tencent, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/Tencent.yaml, interval: 3600}
-
-  YouTube: {type: http, behavior: classical, path: ./Filter/YouTube, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/YouTube.yaml, interval: 3600}
-
-  PayPal: {type: http, behavior: classical, path: ./Filter/PayPal, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/PayPal.yaml, interval: 3600}
-  Proxy: {type: http, behavior: classical, path: ./Filter/Proxy, url: https://raw.githubusercontent.com/Semporia/Clash-X/master/Filter/Proxy.yaml, interval: 3600}
-    
 # 分流规则  
 rules:
-  - RULE-SET,AdBlock,REJECT
-  - RULE-SET,Apple,Apple
-  - RULE-SET,Adobe,Adobe
-  - RULE-SET,Amazon,Amazon
-  - RULE-SET,China,China
-  - RULE-SET,Dler,Dler
-  - RULE-SET,Facebook,Facebook 
-  - RULE-SET,GitHub,GitHub
-  - RULE-SET,Google,Google
-  - RULE-SET,Microsoft,Microsoft
-  - RULE-SET,Netflix,Netflix 
-  - RULE-SET,Speedtest,Speedtest
-  - RULE-SET,Steam,Steam
-  - RULE-SET,Spotify,Spotify
-  - RULE-SET,Telegram,Telegram 
-  - RULE-SET,Twitter,Twitter 
-  - RULE-SET,Tencent,Tencent
-  - RULE-SET,YouTube,YouTube 
-  - RULE-SET,PayPal,paypal 
-  - RULE-SET,Proxy,Proxy
+- RULE-SET,AdBlock,REJECT
+- RULE-SET,Proxy,Proxy
+- RULE-SET,Apple,Apple
+- RULE-SET,Adobe,Adobe
+- RULE-SET,Amazon,Amazon
+- RULE-SET,Dler,Dler
+- RULE-SET,Facebook,Facebook 
+- RULE-SET,GitHub,GitHub
+- RULE-SET,Google,Google
+- RULE-SET,Microsoft,Microsoft
+- RULE-SET,Netflix,Netflix 
+- RULE-SET,Speedtest,Speedtest
+- RULE-SET,Steam,Steam
+- RULE-SET,Spotify,Spotify
+- RULE-SET,Telegram,Telegram 
+- RULE-SET,Twitter,Twitter 
+- RULE-SET,Tencent,Tencent
+- RULE-SET,YouTube,YouTube 
+- RULE-SET,PayPal,paypal 
+- RULE-SET,China,China
+- DOMAIN-SUFFIX,live.cn,China
 
-  # GeoIP China
-  - GEOIP,CN,DIRECT
-  - MATCH,MATCH
+- GEOIP,CN,DIRECT
+- MATCH,MATCH
+
+rule-providers:
+
+  AdBlock: {type: http, behavior: classical, path: ./Filter/AdBlock, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/AdBlock.yaml, interval: 3600}
+  Apple: {type: http, behavior: classical, path: ./Filter/Apple, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Apple.yaml, interval: 3600}
+  Adobe: {type: http, behavior: classical, path: ./Filter/Adobe, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Adobe.yaml, interval: 3600}
+  Amazon: {type: http, behavior: classical, path: ./Filter/Amazon, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Amazon.yaml, interval: 3600}
+
+  China: {type: http, behavior: classical, path: ./Filter/China, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/China.yaml, interval: 3600}
+
+  Dler: {type: http, behavior: classical, path: ./Filter/Dler, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Dler.yaml, interval: 3600}
+
+  Facebook: {type: http, behavior: classical, path: ./Filter/Facebook, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Facebook.yaml, interval: 3600}
+
+  GitHub: {type: http, behavior: classical, path: ./Filter/GitHub, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/GitHub.yaml, interval: 3600}
+  Google: {type: http, behavior: classical, path: ./Filter/Google, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Google.yaml, interval: 3600}
+  
+  Microsoft: {type: http, behavior: classical, path: ./Filter/Microsoft, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Microsoft.yaml, interval: 3600}
+  
+  Netflix: {type: http, behavior: classical, path: ./Filter/Netflix, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Netflix.yaml, interval: 3600}
+  
+  Spotify: {type: http, behavior: classical, path: ./Filter/Spotify, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Spotify.yaml, interval: 3600}
+  Speedtest: {type: http, behavior: classical, path: ./Filter/Speedtest, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Speedtest.yaml, interval: 3600}
+  Steam: {type: http, behavior: classical, path: ./Filter/Steam, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Steam.yaml, interval: 3600}
+
+  Telegram: {type: http, behavior: classical, path: ./Filter/Telegram, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Telegram.yaml, interval: 3600}
+  Twitter: {type: http, behavior: classical, path: ./Filter/Twitter, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Twitter.yaml, interval: 3600}
+  Tencent: {type: http, behavior: classical, path: ./Filter/Tencent, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Tencent.yaml, interval: 3600}
+
+  YouTube: {type: http, behavior: classical, path: ./Filter/YouTube, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/YouTube.yaml, interval: 3600}
+
+  PayPal: {type: http, behavior: classical, path: ./Filter/PayPal, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/PayPal.yaml, interval: 3600}
+  Proxy: {type: http, behavior: classical, path: ./Filter/Proxy, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Proxy.yaml, interval: 3600}
 
 ```
