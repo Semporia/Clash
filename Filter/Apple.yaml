@@ -35,7 +35,17 @@ payload:
   - DOMAIN,api.smoot.apple.cn,Apple
   - DOMAIN,music.apple.com,Apple
   - DOMAIN,mvod.itunes.apple.com,Apple
-
+  
+  # > Apple TV
+  - DOMAIN,hls-amt.itunes.apple.com,Apple
+  - DOMAIN,hls.itunes.apple.com,Apple
+  - DOMAIN,np-edge.itunes.apple.com,Apple
+  - DOMAIN,play-edge.itunes.apple.com,Apple
+  - DOMAIN,tv.applemusic.com,Apple
+  - DOMAIN,uts-api.itunes.apple.com,Apple
+  - DOMAIN-SUFFIX,tv.apple.com,Apple
+  - PROCESS-NAME,tv,Apple
+  
   # > App Store
   - DOMAIN-SUFFIX,mzstatic.com,Apple
   - DOMAIN,iosapps.itunes.apple.com,Apple
