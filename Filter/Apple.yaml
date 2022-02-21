@@ -1,59 +1,109 @@
 payload:
   # 如无特殊需求可不用加此策略及选择代理，在大部分地区 Apple CDN 可正常工作，使用代理后可能导致「Cannot Connect to iCloud」等问题
-
-  # > Apple
-  - DOMAIN-KEYWORD,apple,Apple
-  - DOMAIN-KEYWORD,icloud,Apple
-  - DOMAIN-SUFFIX,aaplimg.com,Apple
-  - DOMAIN-SUFFIX,apple.co,Apple
-  - DOMAIN-SUFFIX,apple.com,Apple
-  - DOMAIN-SUFFIX,apple.com.cn,Apple
-  - DOMAIN-SUFFIX,apple-cloudkit.com,Apple
-  - DOMAIN-SUFFIX,appstore.com,Apple
-  - DOMAIN-SUFFIX,cdn-apple.com,Apple
-  - DOMAIN-SUFFIX,crashlytics.com,Apple
-  - DOMAIN-SUFFIX,icloud.com,Apple
-  - DOMAIN-SUFFIX,icloud.com.cn,Apple
-  - DOMAIN-SUFFIX,icloud-content.com,Apple
-  - DOMAIN-SUFFIX,me.com,Apple
-  - DOMAIN,www-cdn.icloud.com.akadns.net,Apple
-
-  # > Apple Map
-  - DOMAIN-SUFFIX,ls.apple.com,Apple
-  - DOMAIN-SUFFIX,ssl.ls.apple.com,Apple
-  - DOMAIN,gs-loc-cn.apple.com,Apple
-  - PROCESS-NAME,com.apple.geod,Apple
-
-  # Apple News
-  - DOMAIN-SUFFIX,apple.news,Apple
-  - DOMAIN,news-client.apple.com,Apple
-  - DOMAIN,news-edge.apple.com,Apple
-  - DOMAIN,news-events.apple.com,Apple
-
-  # Apple Music
-  - DOMAIN,aod.itunes.apple.com,Apple
-  - DOMAIN,api.smoot.apple.cn,Apple
-  - DOMAIN,music.apple.com,Apple
-  - DOMAIN,mvod.itunes.apple.com,Apple
-  
-  # > Apple TV
-  - DOMAIN,hls-amt.itunes.apple.com,Apple
-  - DOMAIN,hls.itunes.apple.com,Apple
-  - DOMAIN,np-edge.itunes.apple.com,Apple
-  - DOMAIN,play-edge.itunes.apple.com,Apple
-  - DOMAIN,tv.applemusic.com,Apple
-  - DOMAIN,uts-api.itunes.apple.com,Apple
-  - DOMAIN-SUFFIX,tv.apple.com,Apple
-  - PROCESS-NAME,tv,Apple
   
   # > App Store
-  - DOMAIN-SUFFIX,mzstatic.com,Apple
-  - DOMAIN,iosapps.itunes.apple.com,Apple
-  - DOMAIN,osxapps.itunes.apple.com,Apple
+  - DOMAIN-SUFFIX,mzstatic.com
+  - DOMAIN,iosapps.itunes.apple.com
+  - DOMAIN,osxapps.itunes.apple.com
+  - DOMAIN,apps.apple.com
+  - DOMAIN,itunes.apple.com
+  
+  # > Apple
+  - DOMAIN-KEYWORD,apple
+  - DOMAIN-KEYWORD,icloud
+  - DOMAIN-SUFFIX,aaplimg.com
+  - DOMAIN-SUFFIX,apple.co
+  - DOMAIN-SUFFIX,apple.com
+  - DOMAIN-SUFFIX,apple.com.cn
+  - DOMAIN-SUFFIX,apple-cloudkit.com
+  - DOMAIN-SUFFIX,appstore.com
+  - DOMAIN-SUFFIX,cdn-apple.com
+  - DOMAIN-SUFFIX,crashlytics.com
+  - DOMAIN-SUFFIX,icloud.com
+  - DOMAIN-SUFFIX,icloud.com.cn
+  - DOMAIN-SUFFIX,icloud-content.com
+  - DOMAIN-SUFFIX,me.com
+  - DOMAIN,www-cdn.icloud.com.akadns.net
 
+  # > Apple Daily
+  - DOMAIN-SUFFIX,appledaily.com
+  - DOMAIN-SUFFIX,appledaily.com.hk
+  - DOMAIN-SUFFIX,appledaily.com.tw
+  - DOMAIN-SUFFIX,appledaily.hk
+  - DOMAIN-SUFFIX,atnext.com
+  - DOMAIN-SUFFIX,eracom.com.tw
+  - DOMAIN-SUFFIX,next.hk
+  - DOMAIN-SUFFIX,nextdigital.com.hk
+  - DOMAIN-SUFFIX,nextmag.com.tw
+  - DOMAIN-SUFFIX,nextmedia.com
+  - DOMAIN-SUFFIX,nextmgz.com
+  - DOMAIN-SUFFIX,nexttv.com.tw
+  - DOMAIN-SUFFIX,sharpdaily.tw
+  
+  # > Apple Mail
+  - DOMAIN-SUFFIX,mail.icloud.com.cn
+  - DOMAIN-SUFFIX,mail.me.com
+
+  # Apple Music
+  - DOMAIN,aod-ssl.itunes.apple.com
+  - DOMAIN,aod.itunes.apple.com
+  - DOMAIN,audio-ssl.itunes.apple.com
+  - DOMAIN,audio.itunes.apple.com
+  - DOMAIN,mvod.itunes.apple.com
+  - DOMAIN,streamingaudio.itunes.apple.com
+  - DOMAIN-SUFFIX,applemusic.com
+  - DOMAIN-SUFFIX,blobstore.apple.com
+  - DOMAIN-SUFFIX,music.apple.com
+  - PROCESS-NAME,music
+
+  # Apple News
+  - DOMAIN,apple.comscoreresearch.com
+  - DOMAIN,gateway.icloud.com
+  - DOMAIN,gspe1-ssl.ls.apple.com
+  - DOMAIN,news-assets.apple.com
+  - DOMAIN,news-client-search.apple.com
+  - DOMAIN,news-client.apple.com
+  - DOMAIN,news-edge.apple.com
+  - DOMAIN,news-events.apple.com
+  - DOMAIN-SUFFIX,apple.news
+  - PROCESS-NAME,news
+
+  # > Apple Proxy
+  - DOMAIN,api-glb-sea.smoot.apple.com
+  - DOMAIN,books.itunes.apple.com
+  - DOMAIN,cvws.icloud-content.com
+  - DOMAIN,developer.apple.com
+  - DOMAIN,hls.itunes.apple.com
+  - DOMAIN,itunes.apple.com
+  - DOMAIN,lookup-api.apple.com
+  - DOMAIN,sandbox.itunes.apple.com
+  - DOMAIN,testflight.apple.com
+  - DOMAIN-SUFFIX,apple-dns.net
+  - DOMAIN-SUFFIX,apps.apple.com
+  - DOMAIN-SUFFIX,appsto.re
+  - DOMAIN-SUFFIX,blobstore.apple.com
+  - DOMAIN-SUFFIX,digicert.com
+  - PROCESS-NAME,lookupviewservice
+  
+  # > Apple TV
+  - DOMAIN,hls-amt.itunes.apple.com
+  - DOMAIN,hls.itunes.apple.com
+  - DOMAIN,np-edge.itunes.apple.com
+  - DOMAIN,play-edge.itunes.apple.com
+  - DOMAIN,tv.applemusic.com
+  - DOMAIN,uts-api.itunes.apple.com
+  - DOMAIN-SUFFIX,tv.apple.com
+  - PROCESS-NAME,tv
+
+  # > Apple Map
+  - DOMAIN-SUFFIX,ls.apple.com
+  - DOMAIN-SUFFIX,ssl.ls.apple.com
+  - DOMAIN,gs-loc-cn.apple.com
+  - PROCESS-NAME,com.apple.geod
+  
   # > Update
-  - DOMAIN,supportdownload.apple.com,Apple
-  - DOMAIN,appldnld.apple.com,Apple
-  - DOMAIN,swcdn.apple.com,Apple
-  - DOMAIN,apptrailers.itunes.apple.com,Apple
-  - DOMAIN,updates-http.cdn-apple.com,Apple
+  - DOMAIN,supportdownload.apple.com
+  - DOMAIN,appldnld.apple.com
+  - DOMAIN,swcdn.apple.com
+  - DOMAIN,apptrailers.itunes.apple.com
+  - DOMAIN,updates-http.cdn-apple.com
