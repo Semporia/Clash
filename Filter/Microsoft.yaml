@@ -1,5 +1,4 @@
 # NAME: Microsoft
-
 payload:
   - DOMAIN-SUFFIX,1drv.com
   - DOMAIN-SUFFIX,a-msedge.net
@@ -147,7 +146,6 @@ payload:
   - DOMAIN-SUFFIX,ie8.co
   - DOMAIN-SUFFIX,ie9.com
   - DOMAIN-SUFFIX,imaginecup.pl
-  - DOMAIN-SUFFIX,img-prod-cms-rt-microsoft-com
   - DOMAIN-SUFFIX,img-prod-cms-rt-microsoft-com.akamaized.net
   - DOMAIN-SUFFIX,img-s-msn-com.akamaized.net
   - DOMAIN-SUFFIX,ingads.com
@@ -162,6 +160,7 @@ payload:
   - DOMAIN-SUFFIX,live.com
   - DOMAIN-SUFFIX,live.net
   - DOMAIN-SUFFIX,livefilestore.com
+  - DOMAIN-SUFFIX,livetileedge.dsx.mp.microsoft.com.edgekey.net
   - DOMAIN-SUFFIX,livingyourambition.com
   - DOMAIN-SUFFIX,localytics.com
   - DOMAIN-SUFFIX,lync.com
@@ -258,6 +257,7 @@ payload:
   - DOMAIN-SUFFIX,msidentity.com
   - DOMAIN-SUFFIX,msignitechina.com
   - DOMAIN-SUFFIX,msinnovationchallenge.com
+  - DOMAIN-SUFFIX,msn.cn
   - DOMAIN-SUFFIX,msn.com
   - DOMAIN-SUFFIX,msnkids.com
   - DOMAIN-SUFFIX,msnmaps.com
@@ -418,54 +418,31 @@ payload:
   - DOMAIN-SUFFIX,yammer.com
   - DOMAIN-SUFFIX,yammerusercontent.com
   - DOMAIN-KEYWORD,1drv
-  - DOMAIN-KEYWORD,applicationinsights
-  - DOMAIN-KEYWORD,azure
-  - DOMAIN-KEYWORD,azure-dns
-  - DOMAIN-KEYWORD,azurecosmosdb
-  - DOMAIN-KEYWORD,azuredigitaltwins
-  - DOMAIN-KEYWORD,azuredns-prd
-  - DOMAIN-KEYWORD,azurefd
-  - DOMAIN-KEYWORD,azureplanetscale
-  - DOMAIN-KEYWORD,bing
-  - DOMAIN-KEYWORD,biying
-  - DOMAIN-KEYWORD,cosmosdb
-  - DOMAIN-KEYWORD,here
-  - DOMAIN-KEYWORD,hotmail
-  - DOMAIN-KEYWORD,internetexplorer
-  - DOMAIN-KEYWORD,joinms
-  - DOMAIN-KEYWORD,live
   - DOMAIN-KEYWORD,microsoft
-  - DOMAIN-KEYWORD,microsoft-online
-  - DOMAIN-KEYWORD,microsofthouse
-  - DOMAIN-KEYWORD,microsoftnews
-  - DOMAIN-KEYWORD,microsoftnewsforkids
-  - DOMAIN-KEYWORD,microsoftnewskids
-  - DOMAIN-KEYWORD,microsoftol
-  - DOMAIN-KEYWORD,microsoftreactor
-  - DOMAIN-KEYWORD,microsoftsilverlight
-  - DOMAIN-KEYWORD,microsoftstore
-  - DOMAIN-KEYWORD,msauth
-  - DOMAIN-KEYWORD,msft
-  - DOMAIN-KEYWORD,msftauth
-  - DOMAIN-KEYWORD,msminico
-  - DOMAIN-KEYWORD,msn
-  - DOMAIN-KEYWORD,msnewskids
-  - DOMAIN-KEYWORD,office
   - DOMAIN-KEYWORD,onedrive
-  - DOMAIN-KEYWORD,onenote
-  - DOMAIN-KEYWORD,outlook
-  - DOMAIN-KEYWORD,sharepoint
   - DOMAIN-KEYWORD,skydrive
-  - DOMAIN-KEYWORD,skype
-  - DOMAIN-KEYWORD,skypeassets
-  - DOMAIN-KEYWORD,vfsforgit
-  - DOMAIN-KEYWORD,visualstudio
-  - DOMAIN-KEYWORD,windows
-  - DOMAIN-KEYWORD,windowsazure
-  - DOMAIN-KEYWORD,winhec
-  - DOMAIN-KEYWORD,xbox
-  - DOMAIN-KEYWORD,xbox360
-  - DOMAIN-KEYWORD,xboxlive
-  - DOMAIN-KEYWORD,xboxone
+  - PROCESS-NAME,onedrive
+  - PROCESS-NAME,onedriveupdater
+
+# NAME: Mail
+payload:
+  - DOMAIN,imap-mail.outlook.com
+  - DOMAIN,outlook.office365.com
+  - DOMAIN,smtp-mail.outlook.com
+  - DOMAIN,smtp.office365.com
+
+# NAME: OneDrive
+payload:
+  - DOMAIN-SUFFIX,livefilestore.com
+  - DOMAIN-SUFFIX,oneclient.sfx.ms
+  - DOMAIN-SUFFIX,photos.live.com
+  - DOMAIN-SUFFIX,sharepoint.com
+  - DOMAIN-SUFFIX,sharepointonline.com
+  - DOMAIN-SUFFIX,spoprod-a.akamaihd.net
+  - DOMAIN-SUFFIX,storage.live.com
+  - DOMAIN-SUFFIX,storage.msn.com
+  - DOMAIN-KEYWORD,1drv
+  - DOMAIN-KEYWORD,onedrive
+  - DOMAIN-KEYWORD,skydrive
   - PROCESS-NAME,onedrive
   - PROCESS-NAME,onedriveupdater
