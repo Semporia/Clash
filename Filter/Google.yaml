@@ -685,7 +685,6 @@ payload:
   - PROCESS-NAME,googledrivefs.exe
 
 # NAME: GoogleDrive
-payload:
   - DOMAIN,www.googleapis.com
   - DOMAIN-SUFFIX,docs.google.com
   - DOMAIN-SUFFIX,drive.google.com
@@ -694,11 +693,9 @@ payload:
   - PROCESS-NAME,backupandsync
 
 # NAME: GoogleSearch
-payload:
   - DOMAIN-KEYWORD,www.google.
 
 # NAME: GoogleVoice
-payload:
   - DOMAIN,lens.l.google.com
 
 # NAME: GoogleMail
