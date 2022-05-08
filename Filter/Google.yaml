@@ -700,3 +700,8 @@ payload:
 # NAME: GoogleVoice
 payload:
   - DOMAIN,lens.l.google.com
+
+# NAME: GoogleMail
+  - DOMAIN,pop.gmail.com
+  - DOMAIN,imap.gmail.com
+  - DOMAIN,smtp.gmail.com
