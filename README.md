@@ -36,6 +36,7 @@ proxy-groups:
   - { name: "Telegram", type: url-test, use: ["Hong Kong"]}
   - { name: "Twitter", type: url-test, use: ["Hong Kong"]}
   - { name: "Tencent", type: select, proxies: ["DIRECT"]} 
+  - { name: "TencentVideo", type: select, proxies: ["DIRECT"]} 
   - { name: "YouTube", type: url-test, use: ["United States"]}
   - { name: "paypal", type: url-test, use: ["United States"]}
   - { name: "Proxy", type: url-test, use: ["Hong Kong","United States"]} 
@@ -59,6 +60,7 @@ rules:
 - RULE-SET,Telegram,Telegram 
 - RULE-SET,Twitter,Twitter 
 - RULE-SET,Tencent,Tencent
+- RULE-SET,TencentVideo,TencentVideo
 - RULE-SET,YouTube,YouTube 
 - RULE-SET,PayPal,paypal 
 - RULE-SET,China,China
@@ -94,6 +96,7 @@ rule-providers:
   Telegram: {type: http, behavior: classical, path: ./Filter/Telegram, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Telegram.yaml, interval: 3600}
   Twitter: {type: http, behavior: classical, path: ./Filter/Twitter, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Twitter.yaml, interval: 3600}
   Tencent: {type: http, behavior: classical, path: ./Filter/Tencent, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Tencent.yaml, interval: 3600}
+  Tencent: {type: http, behavior: classical, path: ./Filter/TencentVideo, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/TencentVideo.yaml, interval: 3600}
 
   YouTube: {type: http, behavior: classical, path: ./Filter/YouTube, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/YouTube.yaml, interval: 3600}
 
