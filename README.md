@@ -11,6 +11,19 @@
 ### 远程引用分流规则
 
 ```yaml
+# 代理节点
+proxy-providers:
+  # 所有节点
+  机场名:
+    type: http
+    path: ./Server/机场名.yaml
+    url: 订阅连接
+    interval: 3600
+    filter: '节点关键词'
+    health-check:
+        enable: true
+        url: http://www.gstatic.com/generate_204
+        interval: 3600
 
 # 代理组策略
 proxy-groups:
@@ -39,6 +52,7 @@ proxy-groups:
   - { name: "TencentVideo", type: select, proxies: ["DIRECT"]} 
   - { name: "YouTube", type: url-test, use: ["United States"]}
   - { name: "paypal", type: url-test, use: ["United States"]}
+  - { name: "Discord", type: url-test, use: ["United States"]}
   - { name: "Proxy", type: url-test, use: ["Hong Kong","United States"]} 
 
 # 分流规则  
@@ -63,7 +77,8 @@ rules:
 - RULE-SET,TencentVideo,TencentVideo
 - RULE-SET,YouTube,YouTube 
 - RULE-SET,PayPal,paypal 
-- RULE-SET,China,China
+- RULE-SET,PayPal,paypal
+- RULE-SET,Discord,Discord
 - DOMAIN-SUFFIX,live.cn,China
 
 - GEOIP,CN,DIRECT
@@ -101,6 +116,7 @@ rule-providers:
   YouTube: {type: http, behavior: classical, path: ./Filter/YouTube, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/YouTube.yaml, interval: 3600}
 
   PayPal: {type: http, behavior: classical, path: ./Filter/PayPal, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/PayPal.yaml, interval: 3600}
+  Discord: {type: http, behavior: classical, path: ./Filter/Discord, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Discord.yaml, interval: 3600}
   Proxy: {type: http, behavior: classical, path: ./Filter/Proxy, url: https://cdn.jsdelivr.net/gh/Semporia/Clash-X@master/Filter/Proxy.yaml, interval: 3600}
 
 ```
