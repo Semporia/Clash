@@ -1,5 +1,5 @@
 # NAME: TikTok
-
+payload:
   -DOMAIN,p16-tiktokcdn-com.akamaized.net
   -DOMAIN-SUFFIX,byteoversea.com
   -DOMAIN-SUFFIX,ibytedtos.com
