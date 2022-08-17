@@ -1,2 +1,7 @@
 payload:
-  
+  - DOMAIN-SUFFIX,ea.com
+  - DOMAIN-KEYWORD,origin
+  - DOMAIN-KEYWORD,epic
+  - DOMAIN-KEYWORD,ubi
+  - DOMAIN-SUFFIX,rockstargames.com
+  - DOMAIN-SUFFIX,rsg.sc
