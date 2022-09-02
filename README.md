@@ -77,7 +77,6 @@ rules:
 - RULE-SET,Tencent,Tencent
 - RULE-SET,TencentVideo,TencentVideo
 - RULE-SET,YouTube,YouTube 
-- RULE-SET,PayPal,paypal 
 - RULE-SET,PayPal,paypal
 - RULE-SET,Discord,Discord
 - DOMAIN-SUFFIX,live.cn,China
