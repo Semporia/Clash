@@ -1,5 +1,6 @@
 # NAME: China
 payload:
+  - DOMAIN,dm0.cc
   - DOMAIN,analytics.strava.com
   - DOMAIN,blzddist1-a.akamaihd.net
   - DOMAIN,cdn.angruo.com
