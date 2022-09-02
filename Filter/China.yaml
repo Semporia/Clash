@@ -573,4 +573,4 @@ payload:
   - DOMAIN-KEYWORD,microsoft
   - DOMAIN-KEYWORD,officecdn
   - DOMAIN-KEYWORD,taobao
-  - DOMAIN-KEYWORD,dm0.cc
+  - DOMAIN-SUFFIX,dm0.cc
