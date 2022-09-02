@@ -1,6 +1,5 @@
 # NAME: China
 payload:
-  - DOMAIN,dm0.cc
   - DOMAIN,analytics.strava.com
   - DOMAIN,blzddist1-a.akamaihd.net
   - DOMAIN,cdn.angruo.com
@@ -574,14 +573,4 @@ payload:
   - DOMAIN-KEYWORD,microsoft
   - DOMAIN-KEYWORD,officecdn
   - DOMAIN-KEYWORD,taobao
-  - IP-CIDR,1.255.62.0/24,no-resolve
-  - IP-CIDR,119.28.28.28/32,no-resolve
-  - IP-CIDR,182.254.116.0/24,no-resolve
-  - IP-CIDR,183.128.0.0/11,no-resolve
-  - IP-CIDR,185.188.32.0/22,no-resolve
-  - IP-CIDR,203.205.238.0/23,no-resolve
-  - IP-CIDR,203.205.254.0/23,no-resolve
-  - IP-CIDR6,2a0b:b580::/48,no-resolve
-  - IP-CIDR6,2a0b:b581::/48,no-resolve
-  - IP-CIDR6,2a0b:b582::/48,no-resolve
-  - IP-CIDR6,2a0b:b583::/48,no-resolve
+  - DOMAIN-KEYWORD,dm0.cc
