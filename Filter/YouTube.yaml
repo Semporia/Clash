@@ -1,12 +1,15 @@
+# NAME: YouTube
 payload:
-  - DOMAIN-SUFFIX,.youtube
   - DOMAIN-SUFFIX,ggpht.cn
   - DOMAIN-SUFFIX,ggpht.com
   - DOMAIN-SUFFIX,googlevideo.com
+  - DOMAIN-SUFFIX,gvt1.com
   - DOMAIN-SUFFIX,gvt2.com
+  - DOMAIN-SUFFIX,video.google.com
   - DOMAIN-SUFFIX,withyoutube.com
   - DOMAIN-SUFFIX,youtu.be
   - DOMAIN-SUFFIX,youtube-nocookie.com
+  - DOMAIN-SUFFIX,youtube-ui.l.google.com
   - DOMAIN-SUFFIX,youtube.ae
   - DOMAIN-SUFFIX,youtube.al
   - DOMAIN-SUFFIX,youtube.am
@@ -102,6 +105,7 @@ payload:
   - DOMAIN-SUFFIX,youtube.fi
   - DOMAIN-SUFFIX,youtube.fr
   - DOMAIN-SUFFIX,youtube.ge
+  - DOMAIN-SUFFIX,youtube.googleapis.com
   - DOMAIN-SUFFIX,youtube.gr
   - DOMAIN-SUFFIX,youtube.gt
   - DOMAIN-SUFFIX,youtube.hk
@@ -159,6 +163,7 @@ payload:
   - DOMAIN-SUFFIX,youtube.uy
   - DOMAIN-SUFFIX,youtube.vn
   - DOMAIN-SUFFIX,youtubeeducation.com
+  - DOMAIN-SUFFIX,youtubeembeddedplayer.googleapis.com
   - DOMAIN-SUFFIX,youtubefanfest.com
   - DOMAIN-SUFFIX,youtubegaming.com
   - DOMAIN-SUFFIX,youtubego.co.id
@@ -176,3 +181,6 @@ payload:
   - IP-CIDR,172.110.32.0/21
   - IP-CIDR,216.73.80.0/20
   - IP-CIDR6,2620:120:e000::/40
+
+# NAME: YouTubeMusic
+  - DOMAIN,music.youtube.com
