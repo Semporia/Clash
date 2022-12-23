@@ -53,67 +53,78 @@ dns:
 # 代理节点
 proxy-providers:
 
+  Airport:
+    type: http
+    path: ./Server/Sub.yaml # 这里文件名称需要与订阅节点名称一样
+    url: # 这里填写订阅链接
+    interval: 3600
+    health-check:
+        enable: true
+        url: http://www.gstatic.com/generate_204
+        interval: 300
+# 香港
   Hong Kong:
-    type: http
-    path: ./Server/Hong Kong.yaml # 这里文件名称需要与订阅节点名称一样
-    url: # 这里填写订阅链接
-    interval: 3600
+    type: file
+    path: ./Server/Sub.yaml
+    filter: '香港'
     health-check:
         enable: true
         url: http://www.gstatic.com/generate_204
-        interval: 300
-
-  Tai Wan:
-    type: http
-    path: ./Server/Tai Wan.yaml
-    url: # 这里填写订阅链接
-    interval: 3600
+        interval: 3600
+  # 台湾
+  Taiwan:
+    type: file
+    path: ./Server/Sub.yaml
+    filter: '台湾'
     health-check:
         enable: true
         url: http://www.gstatic.com/generate_204
-        interval: 300
-
+        interval: 3600
+  # 日本
   Japan:
-    type: http
-    path: ./Server/Japan.yaml
-    url: # 这里填写订阅链接
-    interval: 3600
+    type: file
+    path: ./Server/Sub.yaml
+    filter: '日本'
     health-check:
         enable: true
         url: http://www.gstatic.com/generate_204
-        interval: 300
-
-  Hanguk:
-    type: http
-    path: ./Server/Hanguk.yaml
-    url: # 这里填写订阅链接
-    interval: 3600
+        interval: 3600
+  # 韩国
+  Korea:
+    type: file
+    path: ./Server/Sub.yaml
+    filter: '韩国'
     health-check:
         enable: true
         url: http://www.gstatic.com/generate_204
-        interval: 300
-
+        interval: 3600
+  # 新加坡
+  Singapore:
+    type: file
+    path: ./Server/Sub.yaml
+    filter: '新加坡|狮城'
+    health-check:
+        enable: true
+        url: http://www.gstatic.com/generate_204
+        interval: 3600
+  # 美国
   United States:
-    type: http
-    path: ./Server/United States.yaml
-    url: # 这里填写订阅链接
-    interval: 3600
+    type: file
+    path: ./Server/Sub.yaml
+    filter: '美国'
     health-check:
         enable: true
         url: http://www.gstatic.com/generate_204
-        interval: 300
-
-  Dler Cloud:
-    type: http
-    path: ./Server/Dler Cloud.yaml
-    url: # 这里填写订阅链接
-    interval: 3600
+        interval: 3600
+  # 英国
+  United Kingdom:
+    type: file
+    path: ./Server/Sub.yaml
+    filter: '英国'
     health-check:
         enable: true
         url: http://www.gstatic.com/generate_204
-        interval: 300
-        
-
+        interval: 3600
 # 代理组策略
 proxy-groups:
 
