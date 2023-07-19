@@ -301,11 +301,6 @@ proxy-groups:
     use: 
       - United States
 
-  - name: "Dler"
-    type: url-test
-    use: 
-      - United States
-
 rule-providers:
 
   Apple: 
@@ -333,13 +328,6 @@ rule-providers:
     behavior: classical
     url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/China.yaml
     path: ./Rule/China.yaml
-    interval: 3600
-
-  Dler: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Dler.yaml
-    path: ./Rule/Dler.yaml
     interval: 3600
 
   Facebook: 
@@ -449,7 +437,6 @@ rules:
   - RULE-SET,Apple,Apple
   - RULE-SET,Adobe,Adobe
   - RULE-SET,Amazon,Amazon
-  - RULE-SET,Dler,Dler
   - RULE-SET,Facebook,Facebook 
   - RULE-SET,GitHub,GitHub
   - RULE-SET,Google,Google
