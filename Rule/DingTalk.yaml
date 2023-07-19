@@ -1,0 +1,16 @@
+# NAME: DingTalk
+# UPDATED: 2023-05-28 18:22:00
+# DOMAIN-SUFFIX: 11
+# TOTAL: 11
+payload:
+  - DOMAIN-SUFFIX,ddurl.to
+  - DOMAIN-SUFFIX,dg-work.cn
+  - DOMAIN-SUFFIX,dingding.xin
+  - DOMAIN-SUFFIX,dingtalk.cn
+  - DOMAIN-SUFFIX,dingtalk.com
+  - DOMAIN-SUFFIX,dingtalk.com.cn
+  - DOMAIN-SUFFIX,dingtalk.net
+  - DOMAIN-SUFFIX,dingtalkapps.com
+  - DOMAIN-SUFFIX,laiwang.com
+  - DOMAIN-SUFFIX,lwurl.to
+  - DOMAIN-SUFFIX,realapp.xin
