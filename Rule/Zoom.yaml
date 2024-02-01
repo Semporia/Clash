@@ -5,4 +5,5 @@ payload:
   - DOMAIN-SUFFIX,cloud.zoom.us,Zoom
   - DOMAIN-SUFFIX,zoom.us,Zoom
   - DOMAIN-SUFFIX,zoomgov.com,Zoom
+  - DOMAIN-SUFFIX,zoominfo.com,Zoom
   - DOMAIN-KEYWORD,zoom,Zoom
