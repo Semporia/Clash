@@ -317,7 +317,6 @@ payload:
   - DOMAIN-SUFFIX,zb.com,Proxy
   - DOMAIN-SUFFIX,zello.com,Proxy
   - DOMAIN-SUFFIX,zeronet.io,Proxy
-  - DOMAIN-SUFFIX,zoom.us,Proxy
   - DOMAIN-KEYWORD,jav,Proxy
   - DOMAIN-KEYWORD,pinterest,Proxy
   - DOMAIN-KEYWORD,porn,Proxy
