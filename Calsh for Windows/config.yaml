@@ -1,3 +1,13 @@
+#==========================================
+# @ConfigName        自用 Clash 配置文件
+# @Author            @Semporia
+# @Feedback          请通过邮件反馈问题[其它方式一概无视]Semporia@hotmail.com 💡
+# @UpdateTime        2024-03-25 14:05 UTC/GMT +8
+# @Function          支持手动选择、自动测速、广告屏蔽、兜底分流、按国家分组节点、多机场订阅等等   
+# @Attention         𝐏𝐥𝐞𝐚𝐬𝐞 𝐮𝐬𝐞 𝐭𝐡𝐞 𝐥𝐚𝐭𝐞𝐬𝐭 𝐯𝐞𝐫𝐬𝐢𝐨𝐧 𝐨𝐟 𝐂𝐥𝐚𝐬𝐡 𝐟𝐨𝐫 𝐖𝐢𝐧𝐝𝐨𝐰𝐬
+# @ConfigVersion     1.0.20
+#==========================================
+
 # Port of HTTP(S) proxy server on the local end
 port: 7890
  
@@ -116,387 +126,135 @@ dns:
   # This is a countermeasure against DNS pollution attacks.
   fallback-filter:
     geoip: true
+    geoip-code: CN
     ipcidr:
       - 240.0.0.0/4
-      - 0.0.0.0/32
+
+
+
+# 策略组引用
+pr: &a3 {type: select, proxies: [♻️ Auto]}
+pro: &a1 {type: http, interval: 86400, health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800}}
+auto: &a4 {type: url-test, lazy: true, url: http://www.gstatic.com/generate_204, interval: 900, use: [Subscribe]}
+Man: &a2 {type: select, use: [Subscribe]}
+classical: &a6 {type: http, behavior: classical, interval: 86400}
+domain: &a5 {type: http, behavior: domain, interval: 86400}
+ipcidr: &a7 {type: http, behavior: ipcidr, interval: 86400}
 
 proxy-providers:
-  Airport:
-    type: http
-    # url: "订阅链接"
-    path: ./Server/Airport.yaml
-    interval: 3600
-    # filter: 'Hong Kong'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 86400
-      
-  Hong Kong:
-    type: file
-    path: ./Server/Airport.yaml
-    filter: '香港|Hong Kong'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 86400
-  Singapore :
-    type: file
-    path: ./Server/Airport.yaml
-    filter: 'Singapore|新加坡'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 86400
-  Japan:
-    type: file
-    path: ./Server/Airport.yaml
-    filter: 'Japan|日本'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 86400
-  United States:
-    type: file
-    path: ./Server/Airport.yaml
-    filter: 'United States|美国'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 86400
-
+  Subscribe:
+    <<: *a1
+    url: 订阅链接
+    path: ./proxy_providers/Airport.yaml
+    
+proxies: null
 proxy-groups:
-# 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
- 
-#
-# 策略组说明
-#
-# 「MATCH」类似 Surge 的「Final」，此处用于选择白名单模式(PROXY 策略)和黑名单模式(DIRECT 策略)
-#
-# 「Streaming」和「StreamingSE」比较好理解，有专用于流媒体的节点就设置到其中，如果没有「StreamingSE」的需求可以连带 Rule 部分一起删掉，「Streaming」需至少保留 Rule，用「PROXY」即可。
-#
-# 「PROXY」是代理规则策略，它可以指定为某个节点或嵌套一个其他策略组，如：「自动测试」、「Fallback」或「负载均衡」的策略组，关于这 3 个策略组的具体示例可以看官方示例：https://github.com/Dreamacro/clash
-#
- 
-  # Fallback 比较实用的策略组类型，用于测试服务器节点的可用性，当第一个节点不可用时切换到第二个，以此类推。
 
-  # 代理节点选择
-  - name: "Proxy"
-    type: url-test
-    use: 
-      - Airport
- 
-  # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
-  - name: "MATCH"
-    type: select
-    proxies:
-      - DIRECT
-      - Proxy
+  - {name: ♻️ Auto, <<: *a4}
+  - {name: HK, <<: *a4, filter: "港|HK|(?i)Hong"}
+  - {name: JP, <<: *a4, filter: "日本|东京|JP|(?i)Japan"}   
+  - {name: TW, <<: *a4, filter: "台|湾|TW|(?i)Taiwan"}
+  - {name: US, <<: *a4, filter: "美|US|(?i)States|American"}
+  - {name: SG, <<: *a4, filter: "新|坡|SG|(?i)Singapore"}
+  - {name: TH, <<: *a4, filter: "泰国"}
+  - {name: AE, <<: *a4, filter: "阿联酋|迪拜"}
+  - {name: TR, <<: *a4, filter: "土|耳其|TR|(?i)Turkey"}
 
-  - name: "China"
-    type: select
-    proxies: 
-      - DIRECT
-  
-  - name: "WeChat"
-    type: url-test
-    use: 
-      - Japan 
-  
-  - name: "Tencent"
-    type: url-test
-    use: 
-      - Japan
-
-  - name: "TencentVideo"
-    type: select
-    proxies: 
-      - DIRECT
-
-  - name: "Speedtest"
-    type: select
-    proxies: 
-      - DIRECT
-
-  - name: "Apple"
-    type: url-test
-    use: 
-      - United States
-  
-  - name: "Microsoft"
-    type: url-test
-    use: 
-      - United States
-  
-  - name: "Adobe"
-    type: url-test
-    use: 
-      - United States
-  
-  - name: "Amazon"
-    type: url-test
-    use: 
-      - United States
-
-  - name: "paypal"
-    type: url-test
-    use: 
-      - United States
-
-  - name: "GitHub"
-    type: url-test
-    use: 
-      - Japan
-
-  - name: "Google"
-    type: url-test
-    use: 
-      - United States
-
-  - name: "YouTube"
-    type: url-test
-    use: 
-      - United States
-
-  - name: "Netflix"
-    type: url-test
-    use: 
-      - United States
-  - name: "Steam"
-    type: url-test
-    use: 
-      - United States
-
-  - name: "Spotify"
-    type: url-test
-    use: 
-      - United States
-
-  - name: "Telegram"
-    type: url-test
-    use: 
-      - Japan
-
-  - name: "Twitter"
-    type: url-test
-    use: 
-      - Hong Kong
- 
-  - name: "Facebook"
-    type: url-test
-    use: 
-      - United States
+  - {name: 🚀 Manual, <<: *a2}
+  - {name: Adobe, type: select, proxies: [REJECT]}
+  - {name: Apple, type: select, proxies: [REJECT]}
+  - {name: Amazon, type: select, proxies: [REJECT]}
+  - {name: China, type: select, proxies: [DIRECT]}
+  - {name: DingTalk, type: select, proxies: [US]}
+  - {name: Facebook, type: select, proxies: [REJECT]}
+  - {name: GitHub, type: select, proxies: [US]}
+  - {name: Google, type: select, proxies: [US]}
+  - {name: Microsoft, type: select, proxies: [US]}
+  - {name: Netflix, type: select, proxies: [REJECT]}
+  - {name: NetEase, type: select, proxies: [DIRECT]}
+  - {name: Spotify, type: select, proxies: [US]}
+  - {name: Speedtest, type: select, proxies: [DIRECT]}
+  - {name: Steam, type: select, proxies: [DIRECT]}
+  - {name: Telegram, type: select, proxies: [US]}
+  - {name: Twitter, type: select, proxies: [REJECT]}
+  - {name: Tencent, type: select, proxies: [DIRECT,HK,TW]}
+  - {name: TencentVideo, type: select, proxies: [DIRECT]}
+  - {name: YouTube, type: select, proxies: [REJECT]}
+  - {name: WhatsApp, type: select, proxies: [REJECT]}
+  - {name: WeChat, type: select, proxies: [DIRECT]}
+  - {name: PayPal, type: select, proxies: [REJECT]}
+  - {name: Zoom, type: select, proxies: [DIRECT]}
+  - {name: ChinaIP, type: select, proxies: [DIRECT]}
+  - {name: 🌏 Global, <<: *a3}
+  - {name: MATCH, <<: *a3}
 
 rule-providers:
-
-  Apple: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Apple.yaml
-    path: ./Rule/Apple.yaml
-    interval: 86400
-  Adobe: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Adobe.yaml
-    path: ./Rule/Adobe.yaml
-    interval: 3600
+  Adobe: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Adobe.yaml, path: ./ruleset/Adobe.yaml}
+  Apple: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Apple.yaml, path: ./ruleset/Apple.yaml}
+  Amazon: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Amazon.yaml, path: ./ruleset/Amazon.yaml}
+  China: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/China.yaml, path: ./ruleset/China.yaml}
+  DingTalk: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/DingTalk.yaml, path: ./ruleset/DingTalk.yaml}
+  Facebook: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Facebook.yaml, path: ./ruleset/Facebook.yaml}
+  GitHub: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/GitHub.yaml, path: ./ruleset/GitHub.yaml}
+  Google: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Google.yaml, path: ./ruleset/Google.yaml}
+  Microsoft: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Microsoft.yaml, path: ./ruleset/Microsoft.yaml}
+  Netflix: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Netflix.yaml, path: ./ruleset/Netflix.yaml}
+  NetEase: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/NetEase.yaml, path: ./ruleset/NetEase.yaml}
+  Spotify: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Spotify.yaml, path: ./ruleset/Spotify.yaml}
+  Speedtest: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Speedtest.yaml, path: ./ruleset/Speedtest.yaml}
+  Steam: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Steam.yaml, path: ./ruleset/Steam.yaml}
+  Telegram: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Telegram.yaml, path: ./ruleset/Telegram.yaml}
+  Twitter: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Twitter.yaml, path: ./ruleset/Twitter.yaml}
+  Tencent: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Tencent.yaml, path: ./ruleset/Tencent.yaml}
+  TencentVideo: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/TencentVideo.yaml, path: ./ruleset/TencentVideo.yaml}
+  YouTube: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/YouTube.yaml, path: ./ruleset/YouTube.yaml}
+  WhatsApp: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/WhatsApp.yaml, path: ./ruleset/WhatsApp.yaml}
+  WeChat: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/WeChat.yaml, path: ./ruleset/WeChat.yaml}
+  PayPal: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/PayPal.yaml, path: ./ruleset/PayPal.yaml}
+  Zoom: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Zoom.yaml, path: ./ruleset/Zoom.yaml}
+  ChinaIP: {<<: *a7, url: https://cdn.jsdelivr.net/gh/soffchen/GeoIP2-CN@release/clash-rule-provider.yml, path: ./ruleset/ChinaIP.yaml}
+  Proxy: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Proxy.yaml, path: ./ruleset/Proxy.yaml}
   
-  Amazon: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Amazon.yaml
-    path: ./Rule/Amazon.yaml
-    interval: 3600
-
-  China: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/China.yaml
-    path: ./Rule/China.yaml
-    interval: 3600
-
-  Facebook: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Facebook.yaml
-    path: ./Rule/Facebook.yaml
-    interval: 3600
-
-  GitHub: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/GitHub.yaml
-    path: ./Rule/GitHub.yaml
-    interval: 3600
-  Google: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Google.yaml
-    path: ./Rule/Google.yaml
-    interval: 3600
-  
-  Microsoft: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Microsoft.yaml
-    path: ./Rule/Microsoft.yaml
-    interval: 3600
-  
-  Netflix: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Netflix.yaml
-    path: ./Rule/Netflix.yaml
-    interval: 3600
-  
-  Spotify: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Spotify.yaml
-    path: ./Rule/Spotify.yaml
-    interval: 3600
-  Speedtest: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Speedtest.yaml
-    path: ./Rule/Speedtest.yaml
-    interval: 3600
-  Steam: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Steam.yaml
-    path: ./Rule/Steam.yaml
-    interval: 3600
-
-  Telegram: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Telegram.yaml
-    path: ./Rule/Telegram.yaml
-    interval: 3600
-  Twitter: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Twitter.yaml
-    path: ./Rule/Twitter.yaml
-    interval: 3600
-  Tencent: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Tencent.yaml
-    path: ./Rule/Tencent.yaml
-    interval: 3600
-  TencentVideo: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/TencentVideo.yaml
-    path: ./Rule/TencentVideo.yaml
-    interval: 3600
-
-  YouTube: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/YouTube.yaml
-    path: ./Rule/YouTube.yaml
-    interval: 3600
-
-  PayPal: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/PayPal.yaml
-    path: ./Rule/PayPal.yaml
-    interval: 3600
-  Proxy: 
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Proxy.yaml
-    path: ./Rule/Proxy.yaml
-    interval: 3600
- 
-     
-
-# 规则
 rules:
-  # - RULE-SET,AdBlock,REJECT
-  - RULE-SET,Proxy,Proxy
+  - RULE-SET,Adobe,REJECT
   - RULE-SET,Apple,Apple
-  - RULE-SET,Adobe,Adobe
   - RULE-SET,Amazon,Amazon
-  - RULE-SET,Facebook,Facebook 
+  - RULE-SET,China,DIRECT
+  - RULE-SET,DingTalk,DingTalk
+  - RULE-SET,Facebook,Facebook
   - RULE-SET,GitHub,GitHub
   - RULE-SET,Google,Google
   - RULE-SET,Microsoft,Microsoft
-  - RULE-SET,Netflix,Netflix 
-  - RULE-SET,Speedtest,Speedtest
-  - RULE-SET,Steam,Steam
+  - RULE-SET,Netflix,Netflix
+  - RULE-SET,NetEase,NetEase
   - RULE-SET,Spotify,Spotify
-  - RULE-SET,Telegram,Telegram 
-  - RULE-SET,Twitter,Twitter 
+  - RULE-SET,Speedtest,DIRECT 
+  - RULE-SET,Steam,DIRECT
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,Twitter,Twitter
   - RULE-SET,Tencent,Tencent
-  - RULE-SET,TencentVideo,TencentVideo
-  - RULE-SET,YouTube,YouTube 
-  - RULE-SET,PayPal,paypal
-  - DOMAIN-SUFFIX,live.cn,China
+  - RULE-SET,TencentVideo,DIRECT
+  - RULE-SET,YouTube,YouTube
+  - RULE-SET,WhatsApp,WhatsApp
+  - RULE-SET,WeChat,WeChat
+  - RULE-SET,PayPal,PayPal
+  - RULE-SET,Zoom,Zoom
+  - RULE-SET,ChinaIP,DIRECT
+  - RULE-SET,Proxy,🌏 Global
 
-  - PROCESS-NAME,v2ray,DIRECT
-  - PROCESS-NAME,xray,DIRECT
-  - PROCESS-NAME,naive,DIRECT
-  - PROCESS-NAME,trojan,DIRECT
-  - PROCESS-NAME,trojan-go,DIRECT
-  - PROCESS-NAME,ss-local,DIRECT
-  - PROCESS-NAME,privoxy,DIRECT
-  - PROCESS-NAME,leaf,DIRECT
-  - PROCESS-NAME,v2ray.exe,DIRECT
-  - PROCESS-NAME,xray.exe,DIRECT
-  - PROCESS-NAME,naive.exe,DIRECT
-  - PROCESS-NAME,trojan.exe,DIRECT
-  - PROCESS-NAME,trojan-go.exe,DIRECT
-  - PROCESS-NAME,ss-local.exe,DIRECT
-  - PROCESS-NAME,privoxy.exe,DIRECT
-  - PROCESS-NAME,leaf.exe,DIRECT
-  - PROCESS-NAME,Surge,DIRECT
-  - PROCESS-NAME,Surge 2,DIRECT
-  - PROCESS-NAME,Surge 3,DIRECT
-  - PROCESS-NAME,Surge 4,DIRECT
-  - PROCESS-NAME,Surge%202,DIRECT
-  - PROCESS-NAME,Surge%203,DIRECT
-  - PROCESS-NAME,Surge%204,DIRECT
-  - PROCESS-NAME,Thunder,DIRECT
-  - PROCESS-NAME,DownloadService,DIRECT
-  - PROCESS-NAME,qBittorrent,DIRECT
-  - PROCESS-NAME,Transmission,DIRECT
-  - PROCESS-NAME,fdm,DIRECT
-  - PROCESS-NAME,aria2c,DIRECT
-  - PROCESS-NAME,Folx,DIRECT
-  - PROCESS-NAME,NetTransport,DIRECT
-  - PROCESS-NAME,uTorrent,DIRECT
-  - PROCESS-NAME,WebTorrent,DIRECT
-  - PROCESS-NAME,aria2c.exe,DIRECT
-  - PROCESS-NAME,BitComet.exe,DIRECT
-  - PROCESS-NAME,fdm.exe,DIRECT
-  - PROCESS-NAME,NetTransport.exe,DIRECT
-  - PROCESS-NAME,qbittorrent.exe,DIRECT
-  - PROCESS-NAME,Thunder.exe,DIRECT
-  - PROCESS-NAME,ThunderVIP.exe,DIRECT
-  - PROCESS-NAME,transmission-daemon.exe,DIRECT
-  - PROCESS-NAME,transmission-qt.exe,DIRECT
-  - PROCESS-NAME,uTorrent.exe,DIRECT
-  - PROCESS-NAME,WebTorrent.exe,DIRECT
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
-
-  # Local Area Network
+ # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT
   - IP-CIDR,127.0.0.0/8,DIRECT
   - IP-CIDR,100.64.0.0/10,DIRECT
   - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR,8.218.42.178/32,DIRECT
  
-  # （可选）使用来自 ipipdotnet 的 ChinaIP 以解决数据不准确的问题，使用 ChinaIP.yaml 时可禁用下列直至（包括）「GEOIP,CN」规则
   - IP-CIDR,119.28.28.28/32,DIRECT
   - IP-CIDR,182.254.116.0/24,DIRECT
-  - GEOIP,CN,DIRECT
 
+  # （可选）使用来自 ipipdotnet 的 ChinaIP 以解决数据不准确的问题，使用 ChinaIP.yaml 时可禁用下列直至（包括）「GEOIP,CN」规则
+
+  - GEOIP,CN,DIRECT
   - MATCH,MATCH
