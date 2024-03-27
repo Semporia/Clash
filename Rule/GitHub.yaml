@@ -1,9 +1,5 @@
-# NAME: GitHub
-# UPDATED: 2023-05-28 18:18:43
-# DOMAIN-KEYWORD: 1
-# DOMAIN-SUFFIX: 29
-# TOTAL: 30
 payload:
+# NAME: GitHub
   - DOMAIN-SUFFIX,atom.io
   - DOMAIN-SUFFIX,dependabot.com
   - DOMAIN-SUFFIX,ghcr.io
