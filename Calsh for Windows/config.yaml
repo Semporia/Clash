@@ -161,28 +161,28 @@ proxy-groups:
   - {name: TR, <<: *a4, filter: "土|耳其|TR|(?i)Turkey"}
 
   - {name: 🚀 Manual, <<: *a2}
-  - {name: Adobe, type: select, proxies: [REJECT]}
-  - {name: Apple, type: select, proxies: [REJECT]}
-  - {name: Amazon, type: select, proxies: [REJECT]}
+  - {name: Adobe, type: select, proxies: [REJECT] }
+  - {name: Apple, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png }
+  - {name: Amazon, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Amazon.png }
   - {name: China, type: select, proxies: [DIRECT]}
-  - {name: DingTalk, type: select, proxies: [US]}
-  - {name: Facebook, type: select, proxies: [REJECT]}
-  - {name: GitHub, type: select, proxies: [US]}
-  - {name: Google, type: select, proxies: [US]}
-  - {name: Microsoft, type: select, proxies: [US]}
-  - {name: Netflix, type: select, proxies: [REJECT]}
+  - {name: DingTalk, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/DingTalk.png }
+  - {name: Facebook, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Facebook.png }
+  - {name: GitHub, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/GitHub.png }
+  - {name: Google, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png }
+  - {name: Microsoft, type: select, proxies: [US], iocn: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png }
+  - {name: Netflix, type: select, proxies: [US]}
   - {name: NetEase, type: select, proxies: [DIRECT]}
-  - {name: Spotify, type: select, proxies: [US]}
-  - {name: Speedtest, type: select, proxies: [DIRECT]}
-  - {name: Steam, type: select, proxies: [DIRECT]}
-  - {name: Telegram, type: select, proxies: [US]}
-  - {name: Twitter, type: select, proxies: [REJECT]}
-  - {name: Tencent, type: select, proxies: [DIRECT,HK,TW]}
-  - {name: TencentVideo, type: select, proxies: [DIRECT]}
-  - {name: YouTube, type: select, proxies: [REJECT]}
-  - {name: WhatsApp, type: select, proxies: [REJECT]}
-  - {name: WeChat, type: select, proxies: [DIRECT]}
-  - {name: PayPal, type: select, proxies: [REJECT]}
+  - {name: Spotify, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png }
+  - {name: Speedtest, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png }
+  - {name: Steam, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/TencentVideo.png }
+  - {name: Telegram, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png }
+  - {name: Twitter, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png }
+  - {name: Tencent, type: select, proxies: [JP], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Tencent.png }
+  - {name: TencentVideo, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/TencentVideo.png }
+  - {name: YouTube, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/YouTube.png }
+  - {name: WhatsApp, type: select, proxies: [US], iocn: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Whatsapp.png }
+  - {name: WeChat, type: select, proxies: [JP], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/WeChat.png }
+  - {name: PayPal, type: select, proxies: [US], iocn: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/PayPal.png }
   - {name: Zoom, type: select, proxies: [DIRECT]}
   - {name: ChinaIP, type: select, proxies: [DIRECT]}
   - {name: 🌏 Global, <<: *a3}
