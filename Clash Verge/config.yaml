@@ -168,9 +168,9 @@ proxy-groups:
   - {name: Facebook, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Facebook.png }
   - {name: GitHub, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/GitHub.png }
   - {name: Google, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png }
-  - {name: Microsoft, type: select, proxies: [US], iocn: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png }
-  - {name: Netflix, type: select, proxies: [US]}
-  - {name: NetEase, type: select, proxies: [DIRECT]}
+  - {name: Microsoft, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png }
+  - {name: Netflix, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png }
+  - {name: NetEase, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/NetEase.png }
   - {name: Spotify, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png }
   - {name: Speedtest, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png }
   - {name: Steam, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/TencentVideo.png }
@@ -179,9 +179,9 @@ proxy-groups:
   - {name: Tencent, type: select, proxies: [JP], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Tencent.png }
   - {name: TencentVideo, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/TencentVideo.png }
   - {name: YouTube, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/YouTube.png }
-  - {name: WhatsApp, type: select, proxies: [US], iocn: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Whatsapp.png }
+  - {name: WhatsApp, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Whatsapp.png }
   - {name: WeChat, type: select, proxies: [JP], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/WeChat.png }
-  - {name: PayPal, type: select, proxies: [US], iocn: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/PayPal.png }
+  - {name: PayPal, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Paypal.png }
   - {name: Zoom, type: select, proxies: [DIRECT]}
   - {name: ChinaIP, type: select, proxies: [DIRECT]}
   - {name: 🌏 Global, <<: *a3}
