@@ -1,0 +1,9 @@
+# NAME: XiaoHongShu
+# UPDATED: 2024-07-03 16:17:40
+# DOMAIN-SUFFIX: 4
+# TOTAL: 4
+payload:
+  - DOMAIN-SUFFIX,fengkongcloud.com
+  - DOMAIN-SUFFIX,xhscdn.com
+  - DOMAIN-SUFFIX,xhscdn.net
+  - DOMAIN-SUFFIX,xiaohongshu.com
