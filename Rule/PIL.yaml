@@ -1,0 +1,7 @@
+# NAME: PIL
+payload:
+  - DOMAIN,pilship.com
+  - DOMAIN-SUFFIX,pilship.com
+  - DOMAIN-SUFFIX,pocketpil.com
+  - DOMAIN-KEYWORD,pilship
+  - DOMAIN-KEYWORD,pocketpil
