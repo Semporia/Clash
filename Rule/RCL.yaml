@@ -1,0 +1,4 @@
+# NAME: RCL
+payload:
+  - DOMAIN-SUFFIX,rclgroup.com
+  - DOMAIN-KEYWORD,rclgroup
