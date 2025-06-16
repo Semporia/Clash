@@ -1,6 +1,7 @@
 # NAME: MSC
 payload:
   - DOMAIN,mymsc.msccargo.cn
+  - DOMAIN,msc.com
   - DOMAIN,mscciam.b2clogin.com
   - DOMAIN-SUFFIX,msccargo.cn
   - DOMAIN-SUFFIX,msc.com
