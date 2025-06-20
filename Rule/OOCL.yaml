@@ -1,0 +1,6 @@
+# NAME: OOCL
+payload:
+  - DOMAIN,oocl.com
+  - DOMAIN,moc.oocl.com
+  - DOMAIN-SUFFIX,oocl.com
+  - DOMAIN-KEYWORD,oocl
