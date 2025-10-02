@@ -1,5 +1,12 @@
-payload:
 # NAME: Google
+# DOMAIN: 1
+# DOMAIN-KEYWORD: 5
+# DOMAIN-SUFFIX: 690
+# IP-CIDR: 4
+# IP-CIDR6: 1
+# PROCESS-NAME: 6
+# TOTAL: 707
+payload:
   - DOMAIN,voice.telephony.goog
   - DOMAIN-SUFFIX,0emm.com
   - DOMAIN-SUFFIX,1e100.net
@@ -21,7 +28,6 @@ payload:
   - DOMAIN-SUFFIX,adwords-community.com
   - DOMAIN-SUFFIX,adwords.com
   - DOMAIN-SUFFIX,adwordsexpress.com
-  - DOMAIN-SUFFIX,ai.ytimg.com
   - DOMAIN-SUFFIX,amp.dev
   - DOMAIN-SUFFIX,ampproject.com
   - DOMAIN-SUFFIX,ampproject.net
@@ -32,6 +38,7 @@ payload:
   - DOMAIN-SUFFIX,angulardart.org
   - DOMAIN-SUFFIX,api.ai
   - DOMAIN-SUFFIX,apigee.com
+  - DOMAIN-SUFFIX,app-analytics-services.com
   - DOMAIN-SUFFIX,app-measurement-cn.com
   - DOMAIN-SUFFIX,app-measurement.com
   - DOMAIN-SUFFIX,app-measurement.net
@@ -194,15 +201,10 @@ payload:
   - DOMAIN-SUFFIX,digisfera.com
   - DOMAIN-SUFFIX,digitalassetlinks.org
   - DOMAIN-SUFFIX,digitalattackmap.com
-  - DOMAIN-SUFFIX,distribution.qatp1.net
-  - DOMAIN-SUFFIX,distribution.qcpp1.net
-  - DOMAIN-SUFFIX,distribution.qpdp1.net
   - DOMAIN-SUFFIX,doubleclick-cn.net
   - DOMAIN-SUFFIX,doubleclick.com
   - DOMAIN-SUFFIX,doubleclick.net
   - DOMAIN-SUFFIX,download.qatp1.net
-  - DOMAIN-SUFFIX,download.qcpp1.net
-  - DOMAIN-SUFFIX,download.qpdp1.net
   - DOMAIN-SUFFIX,episodic.com
   - DOMAIN-SUFFIX,fastlane.ci
   - DOMAIN-SUFFIX,fastlane.tools
@@ -487,7 +489,6 @@ payload:
   - DOMAIN-SUFFIX,googlepagecreator.com
   - DOMAIN-SUFFIX,googlephotos.com
   - DOMAIN-SUFFIX,googleplay.com
-  - DOMAIN-SUFFIX,googleplex.com
   - DOMAIN-SUFFIX,googleplus.com
   - DOMAIN-SUFFIX,googlescholar.com
   - DOMAIN-SUFFIX,googlesource.com
@@ -550,8 +551,6 @@ payload:
   - DOMAIN-SUFFIX,meet.new
   - DOMAIN-SUFFIX,mfg-inspector.com
   - DOMAIN-SUFFIX,mobileview.page
-  - DOMAIN-SUFFIX,monitoring.qatp1.net
-  - DOMAIN-SUFFIX,monitoring.qcpp1.net
   - DOMAIN-SUFFIX,monitoring.qpdp1.net
   - DOMAIN-SUFFIX,moodstocks.com
   - DOMAIN-SUFFIX,near.by
@@ -597,18 +596,10 @@ payload:
   - DOMAIN-SUFFIX,projectbaseline.com
   - DOMAIN-SUFFIX,publishproxy.com
   - DOMAIN-SUFFIX,qagpublic.qatp1.net
-  - DOMAIN-SUFFIX,qagpublic.qcpp1.net
-  - DOMAIN-SUFFIX,qagpublic.qpdp1.net
-  - DOMAIN-SUFFIX,qgadmin.qatp1.net
   - DOMAIN-SUFFIX,qgadmin.qcpp1.net
-  - DOMAIN-SUFFIX,qgadmin.qpdp1.net
   - DOMAIN-SUFFIX,qiao-cn.com
   - DOMAIN-SUFFIX,qpx.googleflights.net
   - DOMAIN-SUFFIX,qualysapi.qatp1.net
-  - DOMAIN-SUFFIX,qualysapi.qcpp1.net
-  - DOMAIN-SUFFIX,qualysapi.qpdp1.net
-  - DOMAIN-SUFFIX,qualysguard.qatp1.net
-  - DOMAIN-SUFFIX,qualysguard.qcpp1.net
   - DOMAIN-SUFFIX,qualysguard.qpdp1.net
   - DOMAIN-SUFFIX,questvisual.com
   - DOMAIN-SUFFIX,quickoffice.com
@@ -626,9 +617,7 @@ payload:
   - DOMAIN-SUFFIX,run.app
   - DOMAIN-SUFFIX,savethedate.foo
   - DOMAIN-SUFFIX,saynow.com
-  - DOMAIN-SUFFIX,scanservice1.qatp1.net
   - DOMAIN-SUFFIX,scanservice1.qcpp1.net
-  - DOMAIN-SUFFIX,scanservice1.qpdp1.net
   - DOMAIN-SUFFIX,schema.org
   - DOMAIN-SUFFIX,schemer.com
   - DOMAIN-SUFFIX,screenwisetrends.com
@@ -734,7 +723,7 @@ payload:
   - DOMAIN-SUFFIX,googleusercontent.com
   - PROCESS-NAME,BackupandSync
 
- # NAME: GoogleSearch
+# NAME: GoogleSearch
   - DOMAIN-KEYWORD,www.google.
 
 # NAME: GoogleVoice
@@ -752,7 +741,13 @@ payload:
   - DOMAIN,alt6-mtalk.google.com
   - DOMAIN,alt7-mtalk.google.com
   - DOMAIN,alt8-mtalk.google.com
+  - DOMAIN,android.apis.google.com
+  - DOMAIN,device-provisioning.googleapis.com
+  - DOMAIN,firebaseinstallations.googleapis.com
+  - DOMAIN,mtalk-dev.google.com
+  - DOMAIN,mtalk-staging.google.com
   - DOMAIN,mtalk.google.com
+  - DOMAIN,mtalk4.google.com
   - IP-CIDR,108.177.125.188/32
   - IP-CIDR,142.250.10.188/32
   - IP-CIDR,142.250.31.188/32
@@ -806,21 +801,3 @@ payload:
   - DOMAIN-KEYWORD,colab
   - DOMAIN-KEYWORD,developerprofiles
   - DOMAIN-KEYWORD,generativelanguage
-
-# NAME: GoogleEarth
-  - DOMAIN-SUFFIX,earth-pa.clients6.google.com
-  - DOMAIN-SUFFIX,earth.google.com
-  - DOMAIN-SUFFIX,kh.google.com
-  - DOMAIN-SUFFIX,khm.google.com
-  - DOMAIN-SUFFIX,khm.googleapis.com
-  - DOMAIN-SUFFIX,khm0.google.com
-  - DOMAIN-SUFFIX,khm0.googleapis.com
-  - DOMAIN-SUFFIX,khm1.google.com
-  - DOMAIN-SUFFIX,khm1.googleapis.com
-  - DOMAIN-SUFFIX,khm2.google.com
-  - DOMAIN-SUFFIX,khm2.googleapis.com
-  - DOMAIN-SUFFIX,khm3.google.com
-  - DOMAIN-SUFFIX,khm3.googleapis.com
-  - DOMAIN-SUFFIX,khmdb.google.com
-  - DOMAIN-SUFFIX,khmdb.googleapis.com
-  - DOMAIN-SUFFIX,mw1.google.com
