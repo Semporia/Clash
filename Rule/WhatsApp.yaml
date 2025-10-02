@@ -1,25 +1,15 @@
 # NAME: Whatsapp
-# UPDATED: 2023-04-07 14:50:24
 # DOMAIN: 1
 # DOMAIN-KEYWORD: 1
-# DOMAIN-SUFFIX: 13
+# DOMAIN-SUFFIX: 4
 # IP-CIDR: 11
-# TOTAL: 26
+# TOTAL: 17
 payload:
   - DOMAIN,graph.facebook.com
   - DOMAIN-SUFFIX,bintray.com
-  - DOMAIN-SUFFIX,wa.me
-  - DOMAIN-SUFFIX,whatsapp-plus.info
-  - DOMAIN-SUFFIX,whatsapp-plus.me
-  - DOMAIN-SUFFIX,whatsapp-plus.net
   - DOMAIN-SUFFIX,whatsapp.biz
-  - DOMAIN-SUFFIX,whatsapp.cc
   - DOMAIN-SUFFIX,whatsapp.com
-  - DOMAIN-SUFFIX,whatsapp.info
   - DOMAIN-SUFFIX,whatsapp.net
-  - DOMAIN-SUFFIX,whatsapp.org
-  - DOMAIN-SUFFIX,whatsapp.tv
-  - DOMAIN-SUFFIX,whatsappbrand.com
   - DOMAIN-KEYWORD,whatsapp
   - IP-CIDR,158.85.224.160/27
   - IP-CIDR,158.85.46.128/27
