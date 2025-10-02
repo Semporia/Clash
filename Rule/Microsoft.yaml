@@ -1,24 +1,10 @@
-payload:
-# NAME: OneDrive
-  - DOMAIN-SUFFIX,1drv.com
-  - DOMAIN-SUFFIX,livefilestore.com
-  - DOMAIN-SUFFIX,oneclient.sfx.ms
-  - DOMAIN-SUFFIX,onedrive.com
-  - DOMAIN-SUFFIX,onedrive.live.com
-  - DOMAIN-SUFFIX,photos.live.com
-  - DOMAIN-SUFFIX,sharepoint.com
-  - DOMAIN-SUFFIX,sharepointonline.com
-  - DOMAIN-SUFFIX,skydrive.wns.windows.com
-  - DOMAIN-SUFFIX,spoprod-a.akamaihd.net
-  - DOMAIN-SUFFIX,storage.live.com
-  - DOMAIN-SUFFIX,storage.msn.com
-  - DOMAIN-KEYWORD,1drv
-  - DOMAIN-KEYWORD,onedrive
-  - DOMAIN-KEYWORD,skydrive
-  - PROCESS-NAME,OneDrive
-  - PROCESS-NAME,OneDriveUpdater
-
 # NAME: Microsoft
+# DOMAIN: 1
+# DOMAIN-KEYWORD: 4
+# DOMAIN-SUFFIX: 662
+# PROCESS-NAME: 2
+# TOTAL: 669
+payload:
   - DOMAIN,vsmarketplacebadge.apphb.com
   - DOMAIN-SUFFIX,1drv.ms
   - DOMAIN-SUFFIX,21vbc.com
@@ -689,6 +675,25 @@ payload:
   - PROCESS-NAME,OneDrive
   - PROCESS-NAME,OneDriveUpdater
 
+# NAME: OneDrive
+  - DOMAIN-SUFFIX,1drv.com
+  - DOMAIN-SUFFIX,livefilestore.com
+  - DOMAIN-SUFFIX,oneclient.sfx.ms
+  - DOMAIN-SUFFIX,onedrive.com
+  - DOMAIN-SUFFIX,onedrive.live.com
+  - DOMAIN-SUFFIX,photos.live.com
+  - DOMAIN-SUFFIX,sharepoint.com
+  - DOMAIN-SUFFIX,sharepointonline.com
+  - DOMAIN-SUFFIX,skydrive.wns.windows.com
+  - DOMAIN-SUFFIX,spoprod-a.akamaihd.net
+  - DOMAIN-SUFFIX,storage.live.com
+  - DOMAIN-SUFFIX,storage.msn.com
+  - DOMAIN-KEYWORD,1drv
+  - DOMAIN-KEYWORD,onedrive
+  - DOMAIN-KEYWORD,skydrive
+  - PROCESS-NAME,OneDrive
+  - PROCESS-NAME,OneDriveUpdater
+
 # NAME: Teams
   - DOMAIN,teams.events.data.microsoft.com
   - DOMAIN-SUFFIX,teams.cdn.live.net
@@ -717,6 +722,7 @@ payload:
   - DOMAIN,api.statsig.com
   - DOMAIN,assets.msn.com
   - DOMAIN,browser-intake-datadoghq.com
+  - DOMAIN,chat.openai.com.cdn.cloudflare.net
   - DOMAIN,copilot.microsoft.com
   - DOMAIN,gateway.bingviz.microsoft.net
   - DOMAIN,gateway.bingviz.microsoftapp.net
@@ -730,13 +736,14 @@ payload:
   - DOMAIN,self.events.data.microsoft.com
   - DOMAIN,services.bingapis.com
   - DOMAIN,static.cloudflareinsights.com
+  - DOMAIN,sydney.bing.com
   - DOMAIN,www.bing.com
   - DOMAIN-SUFFIX,algolia.net
   - DOMAIN-SUFFIX,api.microsoftapp.net
   - DOMAIN-SUFFIX,auth0.com
   - DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io
-  - DOMAIN-SUFFIX,cdn.cloudflare.net
   - DOMAIN-SUFFIX,challenges.cloudflare.com
+  - DOMAIN-SUFFIX,chatgpt.com
   - DOMAIN-SUFFIX,chatgpt.livekit.cloud
   - DOMAIN-SUFFIX,client-api.arkoselabs.com
   - DOMAIN-SUFFIX,edgeservices.bing.com
@@ -753,7 +760,6 @@ payload:
   - DOMAIN-SUFFIX,openai.com
   - DOMAIN-SUFFIX,openaiapi-site.azureedge.net
   - DOMAIN-SUFFIX,openaicom.imgix.net
-  - DOMAIN-SUFFIX,poe.com
   - DOMAIN-SUFFIX,segment.io
   - DOMAIN-SUFFIX,sentry.io
   - DOMAIN-SUFFIX,stripe.com
@@ -761,3 +767,5 @@ payload:
   - DOMAIN-KEYWORD,openaicom-api
   - IP-CIDR,24.199.123.28/32
   - IP-CIDR,64.23.132.171/32
+  - IP-ASN,14061
+  - IP-ASN,20473
