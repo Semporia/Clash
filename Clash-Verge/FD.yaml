@@ -197,6 +197,7 @@ rules:
 
 # 花旗银行
   - DOMAIN-SUFFIX,citi.com,US
+  - DOMAIN-SUFFIX,citidirect.com,US
 # 泰國銀行
   - DOMAIN,bibplus.uobgroup.com,TH
   - DOMAIN-SUFFIX,th.bibplus.uobgroup.com,TH
