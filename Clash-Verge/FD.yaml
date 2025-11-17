@@ -235,6 +235,8 @@ rules:
   
   # PROCESS-NAME - 进程名匹配
   - PROCESS-NAME,Telegram.exe,Telegram
+  - PROCESS-NAME,WeChatAppEx.exe,WeChat
+  - PROCESS-NAME,Weixin.exe,WeChat
   # GEOSITE - 地理站点匹配
   # GEOIP - 地理 IP 匹配
   - GEOIP,US,US
