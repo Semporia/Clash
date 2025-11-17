@@ -145,7 +145,7 @@ ipcidr: &a7 {type: http, behavior: ipcidr, interval: 28800}
 # proxy-providers:
 #   Subscribe:
 #     type: http
-#     path: ./proxy_providers/TAG.yaml
+#     path: ./proxy_providers/Remote-TAG.yaml
 #     url: https://gist.githubusercontent.com/Semporia/bc067f79ed1aeaffed2b0385e411a1ce/raw/
 #     interval: 3600
     
@@ -243,7 +243,6 @@ rules:
   - RULE-SET,Proxy,🌏 Global
   
   # PROCESS-NAME - 进程名匹配
-  - PROCESS-NAME,Telegram.exe,Telegram
   - PROCESS-NAME,WeChatAppEx.exe,WeChat
   - PROCESS-NAME,Weixin.exe,WeChat
   # GEOSITE - 地理站点匹配
@@ -260,7 +259,6 @@ rules:
  
   - IP-CIDR,119.28.28.28/32,DIRECT
   - IP-CIDR,182.254.116.0/24,DIRECT
-  - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT # 云海系统
 
   # 国内网站直连
   - GEOSITE,cn,DIRECT
