@@ -200,24 +200,33 @@ rules:
   - DOMAIN-SUFFIX,citidirect.com,US
 # 泰國銀行
   - DOMAIN,bibplus.uobgroup.com,TH
+  - DOMAIN-SUFFIX,thbib.infinity.uobgroup.com,TH
   - DOMAIN-SUFFIX,th.bibplus.uobgroup.com,TH
+  - DOMAIN-SUFFIX,uobgroup.com,TH
   - DOMAIN-KEYWORD,bibplus,TH
+  - DOMAIN-KEYWORD,uobgroup,TH
+  - DOMAIN,cms.uob.co.th,TH
+  - DOMAIN-SUFFIX,cms.uob,TH
+  - DOMAIN-SUFFIX,cms.uob.co.th,TH
 # 迪拜CBD
   - DOMAIN,ibusiness.cbd.ae,AE
   - DOMAIN-SUFFIX,ibusiness.cbd.ae,AE
   - DOMAIN-KEYWORD,iBusiness,AE
 # 土耳其銀行
-  - DOMAIN,vakifbank.com.tr,TR
-  - DOMAIN-SUFFIX,vakifbank.com.tr,TR
-  - DOMAIN-KEYWORD,vakifbank,TR
+  - DOMAIN,vakifbank.com.tr,DIRECT
+  - DOMAIN-SUFFIX,vakifbank.com.tr,DIRECT
+  - DOMAIN-KEYWORD,vakifbank,DIRECT
 # 迪拜ADCB
   - DOMAIN,corporate.adcb.com,AE
   - DOMAIN-SUFFIX,corporate.adcb.com,AE
   - DOMAIN-KEYWORD,adcb,AE
-# 电脑管家
-  - DOMAIN,team.qq.com,DIRECT
-  - DOMAIN-SUFFIX,team.qq.com,DIRECT
-  - DOMAIN-KEYWORD,team.qq.com,DIRECT
+# 俄罗斯
+  - DOMAIN-SUFFIX,sberbank.com,DIRECT
+  - DOMAIN-KEYWORD,sberbank,DIRECT
+# 云海系统
+  - DOMAIN-SUFFIX,haven.scm.eportyun.com,DIRECT
+  - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT
+  - DOMAIN-KEYWORD,exiamfw.home.oocl.com,DIRECT
 # 分流
   - RULE-SET,Adobe,REJECT
   - RULE-SET,GitHub,GitHub
@@ -239,7 +248,6 @@ rules:
   - PROCESS-NAME,Weixin.exe,WeChat
   # GEOSITE - 地理站点匹配
   # GEOIP - 地理 IP 匹配
-  - GEOIP,US,US
 
  # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
