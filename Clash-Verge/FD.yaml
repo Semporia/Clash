@@ -232,6 +232,12 @@ rules:
   - RULE-SET,China,DIRECT
   - RULE-SET,ChinaIP,DIRECT
   - RULE-SET,Proxy,🌏 Global
+  
+  # PROCESS-NAME - 进程名匹配
+  - PROCESS-NAME,Telegram.exe,Telegram
+  # GEOSITE - 地理站点匹配
+  # GEOIP - 地理 IP 匹配
+  - GEOIP,US,US
 
  # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
@@ -245,7 +251,10 @@ rules:
   - IP-CIDR,119.28.28.28/32,DIRECT
   - IP-CIDR,182.254.116.0/24,DIRECT
   - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT # 云海系统
-  # （可选）使用来自 ipipdotnet 的 ChinaIP 以解决数据不准确的问题，使用 ChinaIP.yaml 时可禁用下列直至（包括）「GEOIP,CN」规则
 
+  # 国内网站直连
+  - GEOSITE,cn,DIRECT
   - GEOIP,CN,DIRECT
+  - DOMAIN-SUFFIX,cn,DIRECT
+  # MATCH - 兜底规则
   - MATCH,MATCH
