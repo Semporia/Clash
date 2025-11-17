@@ -152,14 +152,12 @@ ipcidr: &a7 {type: http, behavior: ipcidr, interval: 28800}
 proxies: null
 proxy-groups:
 
-  - {name: ♻️ Auto, <<: *a4}
   - {name: HK, <<: *a4, filter: "香港|HK|(?i)Hong"}
   - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
   - {name: TH, <<: *a4, filter: "泰国"}
   - {name: AE, <<: *a4, filter: "阿联酋|迪拜"}
   - {name: TR, <<: *a4, filter: "土耳其|TR|(?i)Turkey"}
 
-  - {name: 🚀 Manual, <<: *a2}
   - {name: Adobe, type: select, proxies: [REJECT] }
   - {name: China, type: select, proxies: [DIRECT]}
 
@@ -173,6 +171,9 @@ proxy-groups:
   - {name: Google, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png }
   - {name: YouTube, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/YouTube.png }
   - {name: Microsoft, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png }
+  
+  - {name: ♻️ Auto, <<: *a4}
+  - {name: 🚀 Manual, <<: *a2}
   - {name: ChinaIP, type: select, proxies: [DIRECT]}
   - {name: 🌏 Global, <<: *a3}
   - {name: MATCH, <<: *a3}
