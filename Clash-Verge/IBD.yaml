@@ -159,7 +159,6 @@ proxy-groups:
   - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
   - {name: SG, <<: *a4, filter: "新加坡|SG|(?i)Singapore"}
 
-  - {name: 🚀 Manual, <<: *a2}
   - {name: Adobe, type: select, proxies: [REJECT] }
   - {name: Apple, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png }
   - {name: Amazon, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Amazon.png }
@@ -220,6 +219,10 @@ rules:
   - DOMAIN-SUFFIX,haven.scm.eportyun.com,DIRECT
   - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT
   - DOMAIN-KEYWORD,exiamfw.home.oocl.com,DIRECT
+# PROCESS-NAME - 进程名匹配
+  - PROCESS-NAME,Telegram.exe,Telegram
+  - PROCESS-NAME,WeChatAppEx.exe,WeChat
+  - PROCESS-NAME,Weixin.exe,WeChat
 # 分流
   - RULE-SET,Adobe,REJECT
   - RULE-SET,Apple,Apple
@@ -247,10 +250,6 @@ rules:
   - RULE-SET,ChinaIP,DIRECT
   - RULE-SET,Proxy,🌏 Global
   
-  # PROCESS-NAME - 进程名匹配
-  - PROCESS-NAME,Telegram.exe,Telegram
-  - PROCESS-NAME,WeChatAppEx.exe,WeChat
-  - PROCESS-NAME,Weixin.exe,WeChat
   # GEOSITE - 地理站点匹配
   # GEOIP - 地理 IP 匹配
 
