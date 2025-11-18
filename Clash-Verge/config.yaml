@@ -2,9 +2,9 @@
 # @ConfigName        自用 Clash Verge 配置文件
 # @Author            @Semporia
 # @Feedback          请通过 Issues 反馈问题[其它方式一概无视] https://github.com/Semporia/Clash/issues💡
-# @UpdateTime        2024年6月7日 09:03:06
+# @UpdateTime        2025年11月18日
 # @Function          支持手动选择、自动测速、广告屏蔽、兜底分流、按国家分组节点、多机场订阅等等   
-# @ConfigVersion     1.6.5
+# @ConfigVersion     2.0
 #==========================================
 
 # Port of HTTP(S) proxy server on the local end
@@ -134,36 +134,40 @@ dns:
 # 策略组引用
 Pr: &a3 {type: select, proxies: [♻️ Auto]}
 Pro: &a1 {type: http, interval: 28800, health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800}}
-Auto: &a4 {type: url-test, lazy: true, url: http://www.gstatic.com/generate_204, interval: 300, use: [Subscribe]}
+Auto: &a4 {type: url-test, lazy: true, url: http://www.gstatic.com/generate_204, interval: 900, use: [Subscribe]}
 Man: &a2 {type: select, use: [Subscribe]}
 classical: &a6 {type: http, behavior: classical, interval: 28800}
 domain: &a5 {type: http, behavior: domain, interval: 28800}
 ipcidr: &a7 {type: http, behavior: ipcidr, interval: 28800}
 
+# 当使用 Remote 订阅时，proxy-providers 请在扩展配置中添加
+# proxy-providers:
+#   Subscribe:
+#     type: http
+#     path: ./proxy_providers/Remote-TAG.yaml
+#     url: 订阅地址
+#     interval: 3600
+
 proxy-providers:
   Subscribe:
     <<: *a1
-    url: 替换为订阅链接
-    path: ./proxy_providers/Airport.yaml
+    url: 订阅地址
+    path: ./proxy_providers/TAG.yaml
+      
     
 proxies: null
 proxy-groups:
 
-  - {name: ♻️ Auto, <<: *a4}
+  - {name: ♻️ Auto, <<: *a4} 
   - {name: HK, <<: *a4, filter: "香港|HK|(?i)Hong"}
   - {name: JP, <<: *a4, filter: "日本|东京|JP|(?i)Japan"}   
   - {name: TW, <<: *a4, filter: "台湾|TW|(?i)Taiwan"}
   - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
   - {name: SG, <<: *a4, filter: "新加坡|SG|(?i)Singapore"}
-  - {name: TH, <<: *a4, filter: "泰国"}
-  - {name: AE, <<: *a4, filter: "阿联酋|迪拜"}
-  - {name: TR, <<: *a4, filter: "土耳其|TR|(?i)Turkey"}
-
-  - {name: 🚀 Manual, <<: *a2}
+  
   - {name: Adobe, type: select, proxies: [REJECT] }
   - {name: Apple, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png }
   - {name: Amazon, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Amazon.png }
-  - {name: China, type: select, proxies: [DIRECT]}
   - {name: DingTalk, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/DingTalk.png }
   - {name: Facebook, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Facebook.png }
   - {name: GitHub, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/GitHub.png }
@@ -176,13 +180,15 @@ proxy-groups:
   - {name: Steam, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/TencentVideo.png }
   - {name: Telegram, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png }
   - {name: Twitter, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png }
-  - {name: Tencent, type: select, proxies: [JP], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Tencent.png }
+  - {name: Tencent, type: select, proxies: [DIRECT,JP], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Tencent.png }
   - {name: TencentVideo, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/TencentVideo.png }
   - {name: YouTube, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/YouTube.png }
-  - {name: WhatsApp, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Whatsapp.png }
+  - {name: WhatsApp, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/WhatsApp.png }
   - {name: WeChat, type: select, proxies: [JP], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/WeChat.png }
   - {name: PayPal, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Paypal.png }
   - {name: Zoom, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Zoom.png }
+
+  - {name: China, type: select, proxies: [DIRECT]}
   - {name: ChinaIP, type: select, proxies: [DIRECT]}
   - {name: 🌏 Global, <<: *a3}
   - {name: MATCH, <<: *a3}
@@ -215,13 +221,14 @@ rule-providers:
   Proxy: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Proxy.yaml, path: ./ruleset/Proxy.yaml}
   
 rules:
+
   # PROCESS-NAME - 进程名匹配
   - PROCESS-NAME,Telegram.exe,Telegram
   - PROCESS-NAME,QiDian.exe,Tencent
   - PROCESS-NAME,WeChatAppEx.exe,WeChat
   - PROCESS-NAME,Weixin.exe,WeChat
+
   # 分流
-  - RULE-SET,Adobe,REJECT
   - RULE-SET,Apple,Apple
   - RULE-SET,Amazon,Amazon
   - RULE-SET,DingTalk,DingTalk
@@ -244,6 +251,7 @@ rules:
   - RULE-SET,PayPal,PayPal
   - RULE-SET,Zoom,Zoom
   - RULE-SET,China,DIRECT
+  - RULE-SET,Adobe,REJECT
   - RULE-SET,ChinaIP,DIRECT
   - RULE-SET,Proxy,🌏 Global
 
@@ -255,10 +263,11 @@ rules:
   - IP-CIDR,100.64.0.0/10,DIRECT
   - IP-CIDR,224.0.0.0/4,DIRECT
   - IP-CIDR,8.218.42.178/32,DIRECT
+ 
   - IP-CIDR,119.28.28.28/32,DIRECT
   - IP-CIDR,182.254.116.0/24,DIRECT
-
+  - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT # 云海系统
   # （可选）使用来自 ipipdotnet 的 ChinaIP 以解决数据不准确的问题，使用 ChinaIP.yaml 时可禁用下列直至（包括）「GEOIP,CN」规则
-  - GEOIP,US,US
+
   - GEOIP,CN,DIRECT
   - MATCH,MATCH
