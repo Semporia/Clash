@@ -154,8 +154,7 @@ proxy-groups:
 
   - {name: ♻️ Auto, <<: *a4}
   - {name: HK, <<: *a4, filter: "香港|HK|(?i)Hong"}
-  - {name: JP, <<: *a4, filter: "日本|东京|JP|(?i)Japan"}   
-  - {name: TW, <<: *a4, filter: "台湾|TW|(?i)Taiwan"}
+  - {name: JP, <<: *a4, filter: "日本|东京|JP|(?i)Japan"}
   - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
   - {name: SG, <<: *a4, filter: "新加坡|SG|(?i)Singapore"}
 
