@@ -219,7 +219,7 @@ rules:
 # Yang Ming
   - DOMAIN-SUFFIX,yangming.com,HK
 # WAN HAI
-  - DOMAIN-SUFFIX,wanhai.com,HK
+  - DOMAIN-SUFFIX,wanhai.com,DIRECT
 # shipmentlink
   - DOMAIN-SUFFIX,shipmentlink.com,SG
 # SITC
