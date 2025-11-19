@@ -222,6 +222,8 @@ rules:
   - DOMAIN-SUFFIX,wanhai.com,HK
 # shipmentlink
   - DOMAIN-SUFFIX,shipmentlink.com,SG
+# SITC
+  - DOMAIN-SUFFIX,sitcline.com,DIRECT
 # 云海系统
   - DOMAIN-SUFFIX,haven.scm.eportyun.com,DIRECT
   - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT
