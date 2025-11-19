@@ -154,6 +154,7 @@ proxy-groups:
 
   - {name: ♻️ Auto, <<: *a4}
   - {name: HK, <<: *a4, filter: "香港|HK|(?i)Hong"}
+
   - {name: JP, <<: *a4, filter: "日本|东京|JP|(?i)Japan"}
   - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
   - {name: SG, <<: *a4, filter: "新加坡|SG|(?i)Singapore"}
@@ -213,7 +214,14 @@ rule-providers:
   Proxy: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Proxy.yaml, path: ./ruleset/Proxy.yaml}
   
 rules:
-
+# Maersk
+  - DOMAIN-SUFFIX,maersk.com,JP
+# Yang Ming
+  - DOMAIN-SUFFIX,yangming.com,HK
+# WAN HAI
+  - DOMAIN-SUFFIX,wanhai.com,HK
+# shipmentlink
+  - DOMAIN-SUFFIX,shipmentlink.com,SG
 # 云海系统
   - DOMAIN-SUFFIX,haven.scm.eportyun.com,DIRECT
   - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT
