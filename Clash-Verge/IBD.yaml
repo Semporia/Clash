@@ -180,6 +180,7 @@ proxy-groups:
   - {name: WhatsApp, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/WhatsApp.png }
   - {name: PayPal, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Paypal.png }
   - {name: Zoom, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Zoom.png }
+  
   - {name: China, type: select, proxies: [DIRECT]}
   - {name: ChinaIP, type: select, proxies: [DIRECT]}
   - {name: 🌏 Global, <<: *a3}
@@ -232,7 +233,6 @@ rules:
   - PROCESS-NAME,WeChatAppEx.exe,WeChat
   - PROCESS-NAME,Weixin.exe,WeChat
 # 分流
-  - RULE-SET,Adobe,REJECT
   - RULE-SET,Apple,Apple
   - RULE-SET,Tencent,Tencent
   - RULE-SET,TencentVideo,DIRECT
@@ -254,6 +254,7 @@ rules:
   - RULE-SET,WhatsApp,WhatsApp
   - RULE-SET,PayPal,PayPal
   - RULE-SET,Zoom,Zoom
+  - RULE-SET,Adobe,REJECT
   - RULE-SET,China,DIRECT
   - RULE-SET,ChinaIP,DIRECT
   - RULE-SET,Proxy,🌏 Global
