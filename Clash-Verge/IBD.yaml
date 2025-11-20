@@ -224,6 +224,8 @@ rules:
   - DOMAIN-SUFFIX,shipmentlink.com,SG
 # SITC
   - DOMAIN-SUFFIX,sitcline.com,DIRECT
+# Evergreen 
+  - DOMAIN-SUFFIX,evergreen-line.com,HK
 # 云海系统
   - DOMAIN-SUFFIX,haven.scm.eportyun.com,DIRECT
   - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT
