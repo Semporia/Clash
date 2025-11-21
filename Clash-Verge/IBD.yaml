@@ -225,6 +225,8 @@ rules:
   - DOMAIN-SUFFIX,sitcline.com,DIRECT
 # Evergreen 
   - DOMAIN-SUFFIX,evergreen-line.com,DIRECT
+# CMA CGM
+  - DOMAIN-SUFFIX,cma-cgm.com,JP
 # 云海系统
   - DOMAIN-SUFFIX,haven.scm.eportyun.com,DIRECT
   - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT
