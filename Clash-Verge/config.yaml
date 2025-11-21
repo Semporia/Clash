@@ -165,7 +165,6 @@ proxy-groups:
   - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
   - {name: SG, <<: *a4, filter: "新加坡|SG|(?i)Singapore"}
   
-  - {name: Adobe, type: select, proxies: [REJECT] }
   - {name: Apple, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png }
   - {name: Amazon, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Amazon.png }
   - {name: DingTalk, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/DingTalk.png }
@@ -187,7 +186,8 @@ proxy-groups:
   - {name: WeChat, type: select, proxies: [JP], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/WeChat.png }
   - {name: PayPal, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Paypal.png }
   - {name: Zoom, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Zoom.png }
-
+  
+  - {name: Adobe, type: select, proxies: [REJECT] }
   - {name: China, type: select, proxies: [DIRECT]}
   - {name: ChinaIP, type: select, proxies: [DIRECT]}
   - {name: 🌏 Global, <<: *a3}
@@ -250,8 +250,8 @@ rules:
   - RULE-SET,WeChat,WeChat
   - RULE-SET,PayPal,PayPal
   - RULE-SET,Zoom,Zoom
-  - RULE-SET,China,DIRECT
   - RULE-SET,Adobe,REJECT
+  - RULE-SET,China,DIRECT
   - RULE-SET,ChinaIP,DIRECT
   - RULE-SET,Proxy,🌏 Global
 
