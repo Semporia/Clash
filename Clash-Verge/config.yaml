@@ -229,6 +229,7 @@ rules:
   - PROCESS-NAME,Weixin.exe,WeChat
 
   # 分流
+  - RULE-SET,Adobe,REJECT
   - RULE-SET,Apple,Apple
   - RULE-SET,Amazon,Amazon
   - RULE-SET,DingTalk,DingTalk
@@ -250,7 +251,6 @@ rules:
   - RULE-SET,WeChat,WeChat
   - RULE-SET,PayPal,PayPal
   - RULE-SET,Zoom,Zoom
-  - RULE-SET,Adobe,REJECT
   - RULE-SET,China,DIRECT
   - RULE-SET,ChinaIP,DIRECT
   - RULE-SET,Proxy,🌏 Global
