@@ -160,15 +160,13 @@ proxy-groups:
 
   - {name: ♻️ Auto, <<: *a4} 
   - {name: HK, <<: *a4, filter: "香港|HK|(?i)Hong"}
-  - {name: JP, <<: *a4, filter: "日本|东京|JP|(?i)Japan"}   
-  - {name: TW, <<: *a4, filter: "台湾|TW|(?i)Taiwan"}
+  - {name: JP, <<: *a4, filter: "日本|东京|JP|(?i)Japan"}
   - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
   - {name: SG, <<: *a4, filter: "新加坡|SG|(?i)Singapore"}
   
   - {name: GitHub, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/GitHub.png }
   - {name: Microsoft, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png }
 
-  - {name: Adobe, type: select, proxies: [REJECT] }
   - {name: China, type: select, proxies: [DIRECT]}
   - {name: ChinaIP, type: select, proxies: [DIRECT]}
   - {name: 🌏 Global, <<: *a3}
@@ -210,14 +208,16 @@ rules:
 # PIL
   - DOMAIN-SUFFIX,pilship.com,DIRECT
   - DOMAIN-SUFFIX,pocketpil.com,DIRECT
-
-  # 分流
+# RCL
+  - DOMAIN-SUFFIX,rclgroup.com,DIRECT
+# 分流
   - RULE-SET,GitHub,GitHub
   - RULE-SET,Microsoft,Microsoft
   - RULE-SET,China,DIRECT
   - RULE-SET,ChinaIP,DIRECT
   - RULE-SET,Proxy,🌏 Global
-
+# 云海系统
+  - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT 
  # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
@@ -226,10 +226,8 @@ rules:
   - IP-CIDR,100.64.0.0/10,DIRECT
   - IP-CIDR,224.0.0.0/4,DIRECT
   - IP-CIDR,8.218.42.178/32,DIRECT
- 
   - IP-CIDR,119.28.28.28/32,DIRECT
   - IP-CIDR,182.254.116.0/24,DIRECT
-  - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT # 云海系统
   # （可选）使用来自 ipipdotnet 的 ChinaIP 以解决数据不准确的问题，使用 ChinaIP.yaml 时可禁用下列直至（包括）「GEOIP,CN」规则
 
   - GEOIP,CN,DIRECT
