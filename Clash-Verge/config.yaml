@@ -190,7 +190,7 @@ proxy-groups:
   - {name: Adobe, type: select, proxies: [REJECT] }
   - {name: China, type: select, proxies: [DIRECT]}
   - {name: ChinaIP, type: select, proxies: [DIRECT]}
-  - {name: 🌏 Global, <<: *a3}
+  - {name: Global, <<: *a3}
   - {name: MATCH, <<: *a3}
 
 rule-providers:
@@ -256,7 +256,7 @@ rules:
   - RULE-SET,Zoom,Zoom
   - RULE-SET,China,DIRECT
   - RULE-SET,ChinaIP,DIRECT
-  - RULE-SET,Proxy,🌏 Global
+  - RULE-SET,Proxy,Global
 
  # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
