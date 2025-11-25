@@ -188,7 +188,7 @@ proxy-groups:
 
   - {name: China, type: select, proxies: [DIRECT]}
   - {name: ChinaIP, type: select, proxies: [DIRECT]}
-  - {name: 🌏 Global, <<: *a3}
+  - {name: Global, type: select, proxies: [DIRECT]}
   - {name: MATCH, <<: *a3}
 
 rule-providers:
@@ -274,7 +274,7 @@ rules:
   - RULE-SET,Adobe,REJECT
   - RULE-SET,China,DIRECT
   - RULE-SET,ChinaIP,DIRECT
-  - RULE-SET,Proxy,🌏 Global
+  - RULE-SET,Proxy,Global
 # 云海系统
   - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT 
  # Local Area Network
