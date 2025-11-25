@@ -227,6 +227,9 @@ rules:
   - PROCESS-NAME,QiDian.exe,Tencent
   - PROCESS-NAME,WeChatAppEx.exe,WeChat
   - PROCESS-NAME,Weixin.exe,WeChat
+  - PROCESS-NAME,WXWork.exe,WeChat
+  - PROCESS-NAME,WXWorkWeb.exe,WeChat
+  - PROCESS-NAME,WXDrive_x64.exe,WeChat
 
   # 分流
   - RULE-SET,Adobe,REJECT
