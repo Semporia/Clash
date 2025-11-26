@@ -152,20 +152,19 @@ ipcidr: &a7 {type: http, behavior: ipcidr, interval: 28800}
 proxies: null
 proxy-groups:
 
+  - {name: ♻️ Auto, <<: *a4}
   - {name: HK, <<: *a4, filter: "香港|HK|(?i)Hong"}
   - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
   - {name: TH, <<: *a4, filter: "泰国"}
   - {name: AE, <<: *a4, filter: "阿联酋|迪拜"}
   - {name: TR, <<: *a4, filter: "土耳其|TR|(?i)Turkey"}
 
-  - {name: Adobe, type: select, proxies: [REJECT] }
-  - {name: China, type: select, proxies: [DIRECT]}
-
-  - {name: NetEase, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/NetEase.png }
-  - {name: Speedtest, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png }
   - {name: Tencent, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Tencent.png }
   - {name: TencentVideo, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/TencentVideo.png }
   - {name: WeChat, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/WeChat.png }
+
+  - {name: NetEase, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/NetEase.png }
+  - {name: Speedtest, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png }
 
   - {name: GitHub, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/GitHub.png }
   - {name: Google, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png }
@@ -173,10 +172,10 @@ proxy-groups:
   - {name: Microsoft, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png }
   - {name: WhatsApp, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/WhatsApp.png }
 
-  - {name: ♻️ Auto, <<: *a4}
-  - {name: 🚀 Manual, <<: *a2}
+  - {name: Adobe, type: select, proxies: [REJECT] }
+  - {name: China, type: select, proxies: [DIRECT]}
   - {name: ChinaIP, type: select, proxies: [DIRECT]}
-  - {name: 🌏 Global, <<: *a3}
+  - {name: Global, <<: *a3}
   - {name: MATCH, <<: *a3}
 
 rule-providers:
@@ -243,7 +242,7 @@ rules:
   - RULE-SET,WeChat,WeChat
   - RULE-SET,China,DIRECT
   - RULE-SET,ChinaIP,DIRECT
-  - RULE-SET,Proxy,🌏 Global
+  - RULE-SET,Proxy,Global
   
   # PROCESS-NAME - 进程名匹配
   - PROCESS-NAME,WeChatAppEx.exe,WeChat

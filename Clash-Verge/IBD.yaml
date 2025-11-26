@@ -158,10 +158,10 @@ proxy-groups:
   - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
   - {name: SG, <<: *a4, filter: "新加坡|SG|(?i)Singapore"}
   
-  - {name: Apple, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png }
   - {name: Tencent, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Tencent.png }
   - {name: TencentVideo, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/TencentVideo.png }
   - {name: WeChat, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/WeChat.png }
+  - {name: Apple, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png }
   - {name: Amazon, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Amazon.png }
   - {name: DingTalk, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/DingTalk.png }
   - {name: Facebook, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Facebook.png }
