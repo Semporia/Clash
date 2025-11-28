@@ -1,0 +1,300 @@
+#==========================================
+# @ConfigName        自用 Clash Verge 配置文件
+# @Author            @Semporia
+# @Feedback          请通过 Issues 反馈问题[其它方式一概无视] https://github.com/Semporia/Clash/issues💡
+# @UpdateTime        2025年11月17日
+# @Function          支持手动选择、自动测速、广告屏蔽、兜底分流、按国家分组节点、多机场订阅等等   
+# @ConfigVersion     2.0
+#==========================================
+
+# Port of HTTP(S) proxy server on the local end
+port: 7890
+ 
+# Port of SOCKS5 proxy server on the local end
+socks-port: 7891
+ 
+# Transparent proxy server port for Linux and macOS
+# redir-port: 7892
+ 
+# HTTP(S) and SOCKS5 server on the same port
+mixed-port: 7890
+ 
+# authentication of local SOCKS5/HTTP(S) server
+# authentication:
+#  - "user1:pass1"
+#  - "user2:pass2"
+ 
+# Set to true to allow connections to local-end server from
+# other LAN IP addresses
+allow-lan: false
+ 
+# This is only applicable when `allow-lan` is `true`
+# '*': bind all IP addresses
+# 192.168.122.11: bind a single IPv4 address
+# "[aaaa::a8aa:ff:fe09:57d8]": bind a single IPv6 address
+bind-address: '*'
+ 
+# Clash router working mode
+# rule: rule-based packet routing
+# global: all packets will be forwarded to a single endpoint
+# direct: directly forward the packets to the Internet
+mode: Rule
+ 
+# Clash by default prints logs to STDOUT
+# info / warning / error / debug / silent
+log-level: info
+ 
+# When set to false, resolver won't translate hostnames to IPv6 addresses
+ipv6: true
+ 
+# RESTful web API listening address
+external-controller: 127.0.0.1:59446
+ 
+# A relative path to the configuration directory or an absolute path to a
+# directory in which you put some static web resource. Clash core will then
+# serve it at `${API}/ui`.
+# external-ui: folder
+ 
+# Secret for the RESTful API (optional)
+# Authenticate by spedifying HTTP header `Authorization: Bearer ${secret}`
+# ALWAYS set a secret if RESTful API is listening on 0.0.0.0
+# secret: 357e4d16-90c4-4afe-bb32-2e7b30e051f8
+ 
+# Outbound interface name
+# interface-name: en0
+ 
+# Static hosts for DNS server and connection establishment, only works
+# when `dns.enhanced-mode` is `redir-host`.
+#
+# Wildcard hostnames are supported (e.g. *.clash.dev, *.foo.*.example.com)
+# Non-wildcard domain names has a higher priority than wildcard domain names
+# e.g. foo.example.com > *.example.com > .example.com
+# P.S. +.foo.com equals to .foo.com and foo.com
+hosts:
+  'mtalk.google.com': 108.177.125.188
+  # '*.clash.dev': 127.0.0.1
+  # '.dev': 127.0.0.1
+  # 'alpha.clash.dev': '::1'
+ 
+# DNS server settings
+# This section is optional. When not present, DNS server will be disabled.
+dns:
+  enable: false
+  listen: 0.0.0.0:53
+  # ipv6: false # when false, response to AAAA questions will be empty
+ 
+  # These nameservers are used to resolve the DNS nameserver hostnames below.
+  # Specify IP addresses only
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  enhanced-mode: fake-ip # redir-host or fake-ip
+  fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
+  
+  # Hostnames in this list will not be resolved with fake IPs
+  # i.e. questions to these domain names will always be answered with their
+  # real IP addresses
+  # fake-ip-filter:
+  #   - '*.lan'
+  #   - localhost.ptlogin2.qq.com
+  
+  # Supports UDP, TCP, DoT, DoH. You can specify the port to connect to.
+  # All DNS questions are sent directly to the nameserver, without proxies
+  # involved. Clash answers the DNS question with the first result gathered.
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+ 
+  # When `fallback` is present, the DNS server will send concurrent requests
+  # to the servers in this section along with servers in `nameservers`.
+  # The answers from fallback servers are used when the GEOIP country
+  # is not `CN`.
+  # fallback:
+  #   - tcp://1.1.1.1
+ 
+  # If IP addresses resolved with servers in `nameservers` are in the specified
+  # subnets below, they are considered invalid and results from `fallback`
+  # servers are used instead.
+  #
+  # IP address resolved with servers in `nameserver` is used when
+  # `fallback-filter.geoip` is true and when GEOIP of the IP address is `CN`.
+  #
+  # If `fallback-filter.geoip` is false, results from `fallback` nameservers
+  # are always used, and answers from `nameservers` are discarded.
+  #
+  # This is a countermeasure against DNS pollution attacks.
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+
+
+
+# 策略组引用
+Pr: &a3 {type: select, proxies: [♻️ Auto]}
+Pro: &a1 {type: http, interval: 28800, health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800}}
+Auto: &a4 {type: url-test, lazy: true, url: http://www.gstatic.com/generate_204, interval: 900, use: [Subscribe]}
+Man: &a2 {type: select, use: [Subscribe]}
+classical: &a6 {type: http, behavior: classical, interval: 28800}
+domain: &a5 {type: http, behavior: domain, interval: 28800}
+ipcidr: &a7 {type: http, behavior: ipcidr, interval: 28800}
+
+
+# 请在扩展配置文件中提交 proxy-providers 节点订阅
+# proxy-providers:
+#   Subscribe:
+#     type: http
+#     path: ./proxy_providers/Remote-TAG.yaml
+#     url: https://gist.githubusercontent.com/Semporia/bc067f79ed1aeaffed2b0385e411a1ce/raw/
+#     interval: 3600
+    
+proxies: null
+proxy-groups:
+
+  - {name: ♻️ Auto, <<: *a4}
+  - {name: HK, <<: *a4, filter: "香港|HK|(?i)Hong"}
+  - {name: JP, <<: *a4, filter: "日本|东京|JP|(?i)Japan"}
+  - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
+  - {name: SG, <<: *a4, filter: "新加坡|SG|(?i)Singapore"}
+  - {name: ID, <<: *a4, filter: "印尼"}
+  
+  - {name: Tencent, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Tencent.png }
+  - {name: TencentVideo, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/TencentVideo.png }
+  - {name: WeChat, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/WeChat.png }
+  - {name: Apple, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png }
+  - {name: Amazon, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Amazon.png }
+  - {name: DingTalk, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/DingTalk.png }
+  - {name: Facebook, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Facebook.png }
+  - {name: GitHub, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/GitHub.png }
+  - {name: Google, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png }
+  - {name: Microsoft, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png }
+  - {name: Netflix, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png }
+  - {name: NetEase, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/NetEase.png }
+  - {name: Spotify, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png }
+  - {name: Speedtest, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png }
+  - {name: Steam, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/TencentVideo.png }
+  - {name: Telegram, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png }
+  - {name: Twitter, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png }
+  - {name: YouTube, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/YouTube.png }
+  - {name: WhatsApp, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/WhatsApp.png }
+  - {name: PayPal, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Paypal.png }
+  - {name: Zoom, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Zoom.png }
+  - {name: Adobe, type: select, proxies: [REJECT] }
+  - {name: China, type: select, proxies: [DIRECT]}
+  - {name: ChinaIP, type: select, proxies: [DIRECT]}
+  - {name: 🌏 Global, <<: *a3}
+  - {name: MATCH, <<: *a3}
+
+rule-providers:
+  Apple: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Apple.yaml, path: ./ruleset/Apple.yaml}
+  Tencent: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Tencent.yaml, path: ./ruleset/Tencent.yaml}
+  TencentVideo: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/TencentVideo.yaml, path: ./ruleset/TencentVideo.yaml}
+  WeChat: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/WeChat.yaml, path: ./ruleset/WeChat.yaml}
+  Amazon: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Amazon.yaml, path: ./ruleset/Amazon.yaml}
+  China: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/China.yaml, path: ./ruleset/China.yaml}
+  DingTalk: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/DingTalk.yaml, path: ./ruleset/DingTalk.yaml}
+  Facebook: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Facebook.yaml, path: ./ruleset/Facebook.yaml}
+  GitHub: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/GitHub.yaml, path: ./ruleset/GitHub.yaml}
+  Google: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Google.yaml, path: ./ruleset/Google.yaml}
+  Microsoft: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Microsoft.yaml, path: ./ruleset/Microsoft.yaml}
+  Netflix: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Netflix.yaml, path: ./ruleset/Netflix.yaml}
+  NetEase: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/NetEase.yaml, path: ./ruleset/NetEase.yaml}
+  Spotify: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Spotify.yaml, path: ./ruleset/Spotify.yaml}
+  Speedtest: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Speedtest.yaml, path: ./ruleset/Speedtest.yaml}
+  Steam: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Steam.yaml, path: ./ruleset/Steam.yaml}
+  Telegram: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Telegram.yaml, path: ./ruleset/Telegram.yaml}
+  Twitter: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Twitter.yaml, path: ./ruleset/Twitter.yaml}
+  YouTube: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/YouTube.yaml, path: ./ruleset/YouTube.yaml}
+  WhatsApp: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/WhatsApp.yaml, path: ./ruleset/WhatsApp.yaml}
+  PayPal: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/PayPal.yaml, path: ./ruleset/PayPal.yaml}
+  Zoom: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Zoom.yaml, path: ./ruleset/Zoom.yaml}
+  Adobe: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Adobe.yaml, path: ./ruleset/Adobe.yaml}
+  ChinaIP: {<<: *a7, url: https://cdn.jsdelivr.net/gh/soffchen/GeoIP2-CN@release/clash-rule-provider.yml, path: ./ruleset/ChinaIP.yaml}
+  Proxy: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Proxy.yaml, path: ./ruleset/Proxy.yaml}
+  
+rules:
+
+# 印度
+
+# depotras.com
+  - DOMAIN-SUFFIX,depotras.com,ID
+# Siergidepot.com
+  - DOMAIN-SUFFIX,siergidepot.com,ID
+# gavan.biz
+  - DOMAIN-SUFFIX,gavan.biz,ID
+# secureaload.com
+  - DOMAIN-SUFFIX,secureaload.com,ID
+#kim-isotank.com
+  - DOMAIN-SUFFIX,kim-isotank.com,ID
+# Maersk
+  - DOMAIN-SUFFIX,maersk.com,JP
+# Yang Ming
+  - DOMAIN-SUFFIX,yangming.com,HK
+# WAN HAI
+  - DOMAIN-SUFFIX,wanhai.com,DIRECT
+# shipmentlink
+  - DOMAIN-SUFFIX,shipmentlink.com,SG
+# SITC
+  - DOMAIN-SUFFIX,sitcline.com,DIRECT
+# Evergreen 
+  - DOMAIN-SUFFIX,evergreen-line.com,DIRECT
+# CMA CGM
+  - DOMAIN-SUFFIX,cma-cgm.com,JP
+  - DOMAIN-KEYWORD,cmacgm,JP
+# 云海系统
+  - DOMAIN-SUFFIX,haven.scm.eportyun.com,DIRECT
+  - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT
+  - DOMAIN-KEYWORD,exiamfw.home.oocl.com,DIRECT
+# PROCESS-NAME - 进程名匹配
+  - PROCESS-NAME,Telegram.exe,Telegram
+  - PROCESS-NAME,WeChatAppEx.exe,WeChat
+  - PROCESS-NAME,Weixin.exe,WeChat
+# 分流
+  - RULE-SET,Apple,Apple
+  - RULE-SET,Tencent,Tencent
+  - RULE-SET,TencentVideo,DIRECT
+  - RULE-SET,WeChat,WeChat
+  - RULE-SET,Amazon,Amazon
+  - RULE-SET,DingTalk,DingTalk
+  - RULE-SET,Facebook,Facebook
+  - RULE-SET,GitHub,GitHub
+  - RULE-SET,Google,Google
+  - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,Netflix,Netflix
+  - RULE-SET,NetEase,NetEase
+  - RULE-SET,Spotify,Spotify
+  - RULE-SET,Speedtest,DIRECT 
+  - RULE-SET,Steam,DIRECT
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,Twitter,Twitter
+  - RULE-SET,YouTube,YouTube
+  - RULE-SET,WhatsApp,WhatsApp
+  - RULE-SET,PayPal,PayPal
+  - RULE-SET,Zoom,Zoom
+  - RULE-SET,Adobe,REJECT
+  - RULE-SET,China,DIRECT
+  - RULE-SET,ChinaIP,DIRECT
+  - RULE-SET,Proxy,🌏 Global
+  
+  # GEOSITE - 地理站点匹配
+  # GEOIP - 地理 IP 匹配
+
+ # Local Area Network
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR,8.218.42.178/32,DIRECT
+ 
+  - IP-CIDR,119.28.28.28/32,DIRECT
+  - IP-CIDR,182.254.116.0/24,DIRECT
+
+  # 国内网站直连
+  - GEOSITE,cn,DIRECT
+  - GEOIP,CN,DIRECT
+  - DOMAIN-SUFFIX,cn,DIRECT
+  # MATCH - 兜底规则
+  - MATCH,MATCH
