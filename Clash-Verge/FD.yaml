@@ -195,6 +195,8 @@ rule-providers:
   Proxy: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Proxy.yaml, path: ./ruleset/Proxy.yaml}
   
 rules:
+# 俄罗斯银行
+  - DOMAIN-SUFFIX,sberbank.ru,US
 
 # 花旗银行
   - DOMAIN-SUFFIX,citi.com,US
