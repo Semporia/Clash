@@ -230,6 +230,7 @@ rules:
   - PROCESS-NAME,WXWork.exe,WeChat
   - PROCESS-NAME,WXWorkWeb.exe,WeChat
   - PROCESS-NAME,WXDrive_x64.exe,WeChat
+  - PROCESS-NAME,XChains.Client.exe,DIRECT
 
   # 分流
   - RULE-SET,Adobe,REJECT
