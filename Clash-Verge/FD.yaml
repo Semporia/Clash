@@ -158,7 +158,7 @@ proxy-groups:
   - {name: TH, <<: *a4, filter: "泰国"}
   - {name: AE, <<: *a4, filter: "阿联酋|迪拜"}
   - {name: TR, <<: *a4, filter: "土耳其|TR|(?i)Turkey"}
-  - {name: TR, <<: *a4, filter: "俄罗斯"}
+  - {name: RU, <<: *a4, filter: "俄罗斯"}
 
   - {name: Tencent, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Tencent.png }
   - {name: TencentVideo, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/TencentVideo.png }
