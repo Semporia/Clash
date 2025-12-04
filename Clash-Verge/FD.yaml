@@ -196,9 +196,6 @@ rule-providers:
   Proxy: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Proxy.yaml, path: ./ruleset/Proxy.yaml}
   
 rules:
-# 俄罗斯银行
-  - DOMAIN-SUFFIX,sberbank.ru,RU
-
 # 花旗银行
   - DOMAIN-SUFFIX,citi.com,US
   - DOMAIN-SUFFIX,citidirect.com,US
@@ -217,16 +214,16 @@ rules:
   - DOMAIN-SUFFIX,ibusiness.cbd.ae,AE
   - DOMAIN-KEYWORD,iBusiness,AE
 # 土耳其銀行
-  - DOMAIN,vakifbank.com.tr,DIRECT
-  - DOMAIN-SUFFIX,vakifbank.com.tr,DIRECT
-  - DOMAIN-KEYWORD,vakifbank,DIRECT
+  - DOMAIN,vakifbank.com.tr,TR
+  - DOMAIN-SUFFIX,vakifbank.com.tr,TR
+  - DOMAIN-KEYWORD,vakifbank,TR
 # 迪拜ADCB
   - DOMAIN,corporate.adcb.com,AE
   - DOMAIN-SUFFIX,corporate.adcb.com,AE
   - DOMAIN-KEYWORD,adcb,AE
 # 俄罗斯
-  - DOMAIN-SUFFIX,sberbank.com,DIRECT
-  - DOMAIN-KEYWORD,sberbank,DIRECT
+  - DOMAIN-SUFFIX,sberbank.com,RU
+  - DOMAIN-KEYWORD,sberbank,RU
 # 云海系统
   - DOMAIN-SUFFIX,haven.scm.eportyun.com,DIRECT
   - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT
@@ -246,12 +243,6 @@ rules:
   - RULE-SET,China,DIRECT
   - RULE-SET,ChinaIP,DIRECT
   - RULE-SET,Proxy,Global
-  
-  # PROCESS-NAME - 进程名匹配
-  - PROCESS-NAME,WeChatAppEx.exe,WeChat
-  - PROCESS-NAME,Weixin.exe,WeChat
-  # GEOSITE - 地理站点匹配
-  # GEOIP - 地理 IP 匹配
 
  # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
