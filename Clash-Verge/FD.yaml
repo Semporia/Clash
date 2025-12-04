@@ -197,7 +197,7 @@ rule-providers:
   
 rules:
 # 俄罗斯银行
-  - DOMAIN-SUFFIX,sberbank.ru,US
+  - DOMAIN-SUFFIX,sberbank.ru,RU
 
 # 花旗银行
   - DOMAIN-SUFFIX,citi.com,US
