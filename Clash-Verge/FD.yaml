@@ -197,9 +197,9 @@ rule-providers:
   
 rules:
 # 汇丰银行
-  - DOMAIN-SUFFIX,hsbc.com.hk,HK
-  - DOMAIN-SUFFIX,hsbc.com,HK
-  - DOMAIN-KEYWORD,hsbc,HK
+  - DOMAIN-SUFFIX,hsbc.com.hk,DIRECT
+  - DOMAIN-SUFFIX,hsbc.com,DIRECT
+  - DOMAIN-KEYWORD,hsbc,DIRECT
 # 花旗银行
   - DOMAIN-SUFFIX,citi.com,US
   - DOMAIN-SUFFIX,citidirect.com,US
