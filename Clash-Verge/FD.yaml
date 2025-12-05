@@ -153,7 +153,7 @@ proxies: null
 proxy-groups:
 
   - {name: ♻️ Auto, <<: *a4}
-  - {name: HK, <<: *a4, filter: "香港|HK|(?i)Hong"}
+  - {name: HK, <<: *a4, filter: "香港家宽|高级专线 香港"}
   - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
   - {name: TH, <<: *a4, filter: "泰国"}
   - {name: AE, <<: *a4, filter: "阿联酋|迪拜"}
