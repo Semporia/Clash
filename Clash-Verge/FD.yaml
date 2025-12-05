@@ -196,6 +196,9 @@ rule-providers:
   Proxy: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Proxy.yaml, path: ./ruleset/Proxy.yaml}
   
 rules:
+# 汇丰银行
+  - DOMAIN-SUFFIX,hsbc.com.hk,HK
+  - DOMAIN-SUFFIX,hsbc.com,HK
 # 花旗银行
   - DOMAIN-SUFFIX,citi.com,US
   - DOMAIN-SUFFIX,citidirect.com,US
