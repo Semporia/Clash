@@ -221,7 +221,8 @@ rule-providers:
   Proxy: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Proxy.yaml, path: ./ruleset/Proxy.yaml}
   
 rules:
-  - DOMAIN-SUFFIX,tag?,DIRECT
+  - DOMAIN-SUFFIX,tag*.pro,DIRECT
+  - DOMAIN-SUFFIX,tag*.vip,DIRECT
   # PROCESS-NAME - 进程名匹配
   - PROCESS-NAME,Telegram.exe,Telegram
   - PROCESS-NAME,QiDian.exe,Tencent
