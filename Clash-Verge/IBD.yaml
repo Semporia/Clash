@@ -213,6 +213,8 @@ rule-providers:
   Proxy: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Proxy.yaml, path: ./ruleset/Proxy.yaml}
   
 rules:
+# Centro Nacional de Registros (CNR) 
+  - DOMAIN-SUFFIX,cnr.gob.sv,US
 # Maersk
   - DOMAIN-SUFFIX,maersk.com,JP
 # Yang Ming
