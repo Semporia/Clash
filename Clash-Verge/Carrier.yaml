@@ -220,6 +220,8 @@ rule-providers:
   
 rules:
 
+# Centro Nacional de Registros (CNR) 
+  - DOMAIN-SUFFIX,cnr.gob.sv,US
 # Maersk
   - DOMAIN-SUFFIX,maersk.com,JP
 # Yang Ming
