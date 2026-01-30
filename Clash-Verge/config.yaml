@@ -159,11 +159,12 @@ proxies: null
 proxy-groups:
 
   - {name: ♻️ Auto, <<: *a4} 
-  - {name: HK, type: select, proxies: [Hong Kong,Backup]}
-  - {name: JP, type: select, proxies: [Japan,Backup]}   
-  - {name: TW, type: select, proxies: [Taiwan,Backup]}
-  - {name: US, type: select, proxies: [United States,Backup]}
-  - {name: SG, type: select, proxies: [Singapore,Backup]}
+  
+  - {name: HK, <<: *a4, filter: "香港|HK|(?i)Hong"}
+  - {name: JP, <<: *a4, filter: "日本|东京|JP|(?i)Japan"}   
+  - {name: TW, <<: *a4, filter: "台湾|TW|(?i)Taiwan"}
+  - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
+  - {name: SG, <<: *a4, filter: "新加坡|SG|(?i)Singapore"}
    
   
   - {name: Tencent, type: select, proxies: [DIRECT,SG], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Tencent.png }
@@ -193,13 +194,6 @@ proxy-groups:
   - {name: Global, <<: *a3}
   - {name: MATCH, <<: *a3}
   - {name: ♻️ Auto, <<: *a4} 
-
-  - {name: Hong Kong, <<: *a4, filter: "香港|HK|(?i)Hong"}
-  - {name: Japan, <<: *a4, filter: "日本|东京|JP|(?i)Japan"}   
-  - {name: Taiwan, <<: *a4, filter: "台湾|TW|(?i)Taiwan"}
-  - {name: United States, <<: *a4, filter: "美国|US|(?i)States|American"}
-  - {name: Singapore, <<: *a4, filter: "新加坡|SG|(?i)Singapore"}
-  - {name: Backup, <<: *a4, filter: "新加坡|香港|台湾|日本"}
 
 rule-providers:
   Adobe: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Adobe.yaml, path: ./ruleset/Adobe.yaml}
