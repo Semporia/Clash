@@ -162,7 +162,8 @@ proxy-groups:
   - {name: HK, <<: *a4, filter: "香港|HK|(?i)Hong"}
   - {name: JP, <<: *a4, filter: "日本|东京|JP|(?i)Japan"}   
   - {name: TW, <<: *a4, filter: "台湾|TW|(?i)Taiwan"}
-  - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
+  - {name: US, type: select, proxies: [840,SG], }
+  - {name: 840, <<: *a4, filter: "美国|US|(?i)States|American"}
   - {name: SG, <<: *a4, filter: "新加坡|SG|(?i)Singapore"}
   
   - {name: Tencent, type: select, proxies: [DIRECT,SG], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Tencent.png }
@@ -178,7 +179,6 @@ proxy-groups:
   - {name: Netflix, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png }
   - {name: NetEase, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/NetEase.png }
   - {name: Spotify, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png }
-  - {name: Speedtest, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png }
   - {name: Steam, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/TencentVideo.png }
   - {name: Telegram, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png }
   - {name: Twitter, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png }
@@ -206,7 +206,6 @@ rule-providers:
   Netflix: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Netflix.yaml, path: ./ruleset/Netflix.yaml}
   NetEase: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/NetEase.yaml, path: ./ruleset/NetEase.yaml}
   Spotify: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Spotify.yaml, path: ./ruleset/Spotify.yaml}
-  Speedtest: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Speedtest.yaml, path: ./ruleset/Speedtest.yaml}
   Steam: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Steam.yaml, path: ./ruleset/Steam.yaml}
   Telegram: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Telegram.yaml, path: ./ruleset/Telegram.yaml}
   Twitter: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Twitter.yaml, path: ./ruleset/Twitter.yaml}
@@ -245,7 +244,6 @@ rules:
   - RULE-SET,Netflix,Netflix
   - RULE-SET,NetEase,NetEase
   - RULE-SET,Spotify,Spotify
-  - RULE-SET,Speedtest,DIRECT 
   - RULE-SET,Steam,DIRECT
   - RULE-SET,Telegram,Telegram
   - RULE-SET,Twitter,Twitter
