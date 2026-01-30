@@ -159,7 +159,7 @@ proxies: null
 proxy-groups:
 
   - {name: ♻️ Auto, <<: *a4} 
-  
+
   - {name: HK, <<: *a4, filter: "香港|HK|(?i)Hong"}
   - {name: JP, <<: *a4, filter: "日本|东京|JP|(?i)Japan"}   
   - {name: TW, <<: *a4, filter: "台湾|TW|(?i)Taiwan"}
@@ -193,7 +193,6 @@ proxy-groups:
   - {name: ChinaIP, type: select, proxies: [DIRECT]}
   - {name: Global, <<: *a3}
   - {name: MATCH, <<: *a3}
-  - {name: ♻️ Auto, <<: *a4} 
 
 rule-providers:
   Adobe: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Adobe.yaml, path: ./ruleset/Adobe.yaml}
