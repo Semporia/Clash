@@ -219,7 +219,42 @@ rule-providers:
   Proxy: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Proxy.yaml, path: ./ruleset/Proxy.yaml}
   
 rules:
-
+# 汇丰银行
+  - DOMAIN-SUFFIX,hsbc.com.hk,DIRECT
+  - DOMAIN-SUFFIX,hsbc.com,DIRECT
+  - DOMAIN-KEYWORD,hsbc,DIRECT
+# 花旗银行
+  - DOMAIN-SUFFIX,citi.com,US
+  - DOMAIN-SUFFIX,citidirect.com,US
+# 泰國銀行
+  - DOMAIN,bibplus.uobgroup.com,TH
+  - DOMAIN-SUFFIX,thbib.infinity.uobgroup.com,TH
+  - DOMAIN-SUFFIX,th.bibplus.uobgroup.com,TH
+  - DOMAIN-SUFFIX,uobgroup.com,TH
+  - DOMAIN-KEYWORD,bibplus,TH
+  - DOMAIN-KEYWORD,uobgroup,TH
+  - DOMAIN,cms.uob.co.th,TH
+  - DOMAIN-SUFFIX,cms.uob,TH
+  - DOMAIN-SUFFIX,cms.uob.co.th,TH
+# 迪拜CBD
+  - DOMAIN,ibusiness.cbd.ae,AE
+  - DOMAIN-SUFFIX,ibusiness.cbd.ae,AE
+  - DOMAIN-KEYWORD,iBusiness,AE
+# 土耳其銀行
+  - DOMAIN,vakifbank.com.tr,Türkiye
+  - DOMAIN-SUFFIX,vakifbank.com.tr,Türkiye
+  - DOMAIN-KEYWORD,vakifbank,Türkiye
+# 迪拜ADCB
+  - DOMAIN,corporate.adcb.com,AE
+  - DOMAIN-SUFFIX,corporate.adcb.com,AE
+  - DOMAIN-KEYWORD,adcb,AE
+# 俄罗斯
+  - DOMAIN-SUFFIX,sberbank.com,RU
+  - DOMAIN-KEYWORD,sberbank,RU
+# 云海系统
+  - DOMAIN-SUFFIX,haven.scm.eportyun.com,DIRECT
+  - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT
+  - DOMAIN-KEYWORD,exiamfw.home.oocl.com,DIRECT
 # Centro Nacional de Registros (CNR) 
   - DOMAIN-SUFFIX,cnr.gob.sv,US
 # Maersk
