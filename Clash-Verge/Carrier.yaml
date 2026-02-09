@@ -163,6 +163,10 @@ proxy-groups:
   - {name: JP, <<: *a4, filter: "日本|东京|JP|(?i)Japan"}
   - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
   - {name: SG, <<: *a4, filter: "新加坡|SG|(?i)Singapore"}
+  - {name: TH, <<: *a4, filter: "泰国"}
+  - {name: AE, <<: *a4, filter: "阿联酋|迪拜"}
+  - {name: Türkiye, <<: *a4, filter: "土耳其|(?i)Turkey"}
+  - {name: RU, <<: *a4, filter: "俄罗斯"}
   # ---
   - {name: Tencent, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Tencent.png }
   - {name: TencentVideo, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/TencentVideo.png }
