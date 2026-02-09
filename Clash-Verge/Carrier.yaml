@@ -174,7 +174,7 @@ proxy-groups:
   - {name: Facebook, type: select, proxies: [REJECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Facebook.png }
   - {name: GitHub, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/GitHub.png }
   - {name: Microsoft, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png }
-  - {name: Google, type: select, proxies: [REJECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png }
+  - {name: Google, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png }
   - {name: Netflix, type: select, proxies: [REJECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png }
   - {name: Spotify, type: select, proxies: [REJECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png }
   - {name: Speedtest, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Speedtest.png }
