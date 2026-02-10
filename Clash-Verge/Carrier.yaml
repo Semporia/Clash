@@ -243,6 +243,7 @@ rules:
 # 迪拜CBD
   - DOMAIN,ibusiness.cbd.ae,AE
   - DOMAIN-SUFFIX,ibusiness.cbd.ae,AE
+  - DOMAIN-SUFFIX,cbd.ae,AE
   - DOMAIN-KEYWORD,iBusiness,AE
 # 土耳其銀行
   - DOMAIN,vakifbank.com.tr,Türkiye
@@ -251,6 +252,7 @@ rules:
 # 迪拜ADCB
   - DOMAIN,corporate.adcb.com,AE
   - DOMAIN-SUFFIX,corporate.adcb.com,AE
+  - DOMAIN-SUFFIX,adcb.com,AE
   - DOMAIN-KEYWORD,adcb,AE
 # 俄罗斯
   - DOMAIN-SUFFIX,sberbank.com,RU
