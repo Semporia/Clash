@@ -223,6 +223,7 @@ rule-providers:
 rules:
 
   - DOMAIN-SUFFIX,prodigal4936.com,DIRECT
+  - DOMAIN-SUFFIX,immtele.com,DIRECT
   - DOMAIN-SUFFIX,tag*.pro,DIRECT
   - DOMAIN-SUFFIX,tag*.vip,DIRECT
   # PROCESS-NAME - 进程名匹配
