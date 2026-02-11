@@ -221,7 +221,7 @@ rule-providers:
   Proxy: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Proxy.yaml, path: ./ruleset/Proxy.yaml}
   
 rules:
-
+  - IP-CIDR,113.108.0.112/32,DIRECT
   - DOMAIN-SUFFIX,prodigal4936.com,DIRECT
   - DOMAIN-SUFFIX,immtele.com,DIRECT
   - DOMAIN-SUFFIX,tag*.pro,DIRECT
