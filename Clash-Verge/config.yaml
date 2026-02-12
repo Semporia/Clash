@@ -184,6 +184,7 @@ proxy-groups:
   - {name: Telegram, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Telegram.png }
   - {name: Twitter, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png }
   - {name: YouTube, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/YouTube.png }
+  - {name: Line, type: select, proxies: [JP], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Line.png }
   - {name: WhatsApp, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/WhatsApp.png }
   - {name: PayPal, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Paypal.png }
   - {name: Zoom, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Zoom.png }
@@ -214,6 +215,7 @@ rule-providers:
   TencentVideo: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/TencentVideo.yaml, path: ./ruleset/TencentVideo.yaml}
   YouTube: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/YouTube.yaml, path: ./ruleset/YouTube.yaml}
   WhatsApp: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/WhatsApp.yaml, path: ./ruleset/WhatsApp.yaml}
+  Line: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Line.yaml, path: ./ruleset/Line.yaml}
   WeChat: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/WeChat.yaml, path: ./ruleset/WeChat.yaml}
   PayPal: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/PayPal.yaml, path: ./ruleset/PayPal.yaml}
   Zoom: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Zoom.yaml, path: ./ruleset/Zoom.yaml}
@@ -255,6 +257,7 @@ rules:
   - RULE-SET,TencentVideo,DIRECT
   - RULE-SET,YouTube,YouTube
   - RULE-SET,WhatsApp,WhatsApp
+  - RULE-SET,Line,Line
   - RULE-SET,WeChat,WeChat
   - RULE-SET,PayPal,PayPal
   - RULE-SET,Zoom,Zoom
