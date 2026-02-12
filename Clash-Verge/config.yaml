@@ -232,6 +232,7 @@ rules:
   - PROCESS-NAME,Telegram.exe,Telegram
   - PROCESS-NAME,QiDian.exe,Tencent
   - PROCESS-NAME,WeChatAppEx.exe,WeChat
+  - PROCESS-NAME,LINE.exe,Line
   - PROCESS-NAME,Weixin.exe,WeChat
   - PROCESS-NAME,WXWork.exe,WeChat
   - PROCESS-NAME,WXWorkWeb.exe,WeChat
