@@ -233,6 +233,8 @@ rules:
   - PROCESS-NAME,QiDian.exe,Tencent
   - PROCESS-NAME,WeChatAppEx.exe,WeChat
   - PROCESS-NAME,LINE.exe,Line
+  - PROCESS-NAME,LineCall.exe,Line
+  - PROCESS-NAME,LineMediaPlayer.exe,Line
   - PROCESS-NAME,Weixin.exe,WeChat
   - PROCESS-NAME,WXWork.exe,WeChat
   - PROCESS-NAME,WXWorkWeb.exe,WeChat
