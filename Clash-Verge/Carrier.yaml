@@ -261,6 +261,8 @@ rules:
   - DOMAIN-SUFFIX,haven.scm.eportyun.com,DIRECT
   - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT
   - DOMAIN-KEYWORD,exiamfw.home.oocl.com,DIRECT
+# mombasaports.org
+  - DOMAIN-SUFFIX,mombasaports.org,US
 # Centro Nacional de Registros (CNR) 
   - DOMAIN-SUFFIX,cnr.gob.sv,US
 # Maersk
