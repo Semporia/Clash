@@ -177,7 +177,7 @@ proxy-groups:
   - {name: YouTube, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/YouTube.png }
   - {name: WhatsApp, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/WhatsApp.png }
   - {name: PayPal, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Paypal.png }
-  - {name: Zoom, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Zoom.png }
+  - {name: Zoom, type: select, proxies: [DIRECT,US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Zoom.png }
   - {name: Adobe, type: select, proxies: [REJECT] }
   - {name: China, type: select, proxies: [DIRECT]}
   - {name: ChinaIP, type: select, proxies: [DIRECT]}
