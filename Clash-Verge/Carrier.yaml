@@ -245,10 +245,14 @@ rules:
   - DOMAIN-SUFFIX,ibusiness.cbd.ae,AE
   - DOMAIN-SUFFIX,cbd.ae,AE
   - DOMAIN-KEYWORD,iBusiness,AE
-# 土耳其銀行
+# 土耳其
+  # 银行
   - DOMAIN,vakifbank.com.tr,Türkiye
   - DOMAIN-SUFFIX,vakifbank.com.tr,Türkiye
   - DOMAIN-KEYWORD,vakifbank,Türkiye
+  # 业务
+  - DOMAIN-SUFFIX,dpweyarimca.dpworld.com.tr,Türkiye
+  - DOMAIN-SUFFIX,gemitescil.arkas.com,Türkiye
 # 迪拜ADCB
   - DOMAIN,corporate.adcb.com,AE
   - DOMAIN-SUFFIX,corporate.adcb.com,AE
