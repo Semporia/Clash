@@ -165,7 +165,7 @@ proxy-groups:
   - {name: SG, <<: *a4, filter: "新加坡|SG|(?i)Singapore"}
   - {name: TH, <<: *a2, filter: "泰国"}
   - {name: AE, <<: *a2, filter: "阿联酋|迪拜"}
-  - {name: Türkiye, <<: *a2, filter: "土耳其|(?i)Turkey"}
+  - {name: TR, <<: *a2, filter: "土耳其|(?i)Turkey"}
   - {name: RU, <<: *a2, filter: "俄罗斯"}
   # ---
   - {name: Tencent, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Tencent.png }
@@ -247,12 +247,12 @@ rules:
   - DOMAIN-KEYWORD,iBusiness,AE
 # 土耳其
   # 银行
-  - DOMAIN,vakifbank.com.tr,Türkiye
-  - DOMAIN-SUFFIX,vakifbank.com.tr,Türkiye
-  - DOMAIN-KEYWORD,vakifbank,Türkiye
+  - DOMAIN,vakifbank.com.tr,TR
+  - DOMAIN-SUFFIX,vakifbank.com.tr,TR
+  - DOMAIN-KEYWORD,vakifbank,TR
   # 业务
-  - DOMAIN-SUFFIX,dpweyarimca.dpworld.com.tr,Türkiye
-  - DOMAIN-SUFFIX,gemitescil.arkas.com,Türkiye
+  - DOMAIN-SUFFIX,dpweyarimca.dpworld.com.tr,TR
+  - DOMAIN-SUFFIX,gemitescil.arkas.com,TR
 # 迪拜ADCB
   - DOMAIN,corporate.adcb.com,AE
   - DOMAIN-SUFFIX,corporate.adcb.com,AE
