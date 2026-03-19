@@ -215,8 +215,8 @@ rule-providers:
   
 rules:
 
-# 印度
-
+# SG
+  - DOMAIN-SUFFIX,safetyculture.com,SG
 # depotras.com
   - DOMAIN-SUFFIX,depotras.com,ID
 # Siergidepot.com
