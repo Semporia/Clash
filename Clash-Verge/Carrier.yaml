@@ -296,7 +296,7 @@ rules:
   - DOMAIN-SUFFIX,pilship.com,DIRECT
   - DOMAIN-SUFFIX,pocketpil.com,DIRECT
 # RCL
-  - DOMAIN-SUFFIX,rclgroup.com,DIRECT
+  - DOMAIN-SUFFIX,rclgroup.com,HK
 # 分流
   - RULE-SET,Apple,Apple
   - RULE-SET,Tencent,Tencent
