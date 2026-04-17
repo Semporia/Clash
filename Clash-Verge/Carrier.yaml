@@ -299,7 +299,7 @@ rules:
 # RCL
   - DOMAIN-SUFFIX,rclgroup.com,HK
 # LG
-  - DOMAIN-SUFFIX,lgchem.com.cn,KR
+  - DOMAIN-SUFFIX,lgchem.com.cn,HK
 # 分流
   - RULE-SET,Apple,Apple
   - RULE-SET,Tencent,Tencent
