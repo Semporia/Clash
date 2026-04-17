@@ -160,6 +160,7 @@ proxy-groups:
 
   - {name: ♻️ Auto, <<: *a4, filter: "香港|HK|(?i)Hong"} 
   - {name: HK, <<: *a4, filter: "香港|HK|(?i)Hong"}
+  - {name: KR, <<: *a4, filter: "韩国|KR|(?i)Korea"}
   - {name: JP, <<: *a4, filter: "日本|东京|JP|(?i)Japan"}
   - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
   - {name: SG, <<: *a4, filter: "新加坡|SG|(?i)Singapore"}
@@ -297,6 +298,8 @@ rules:
   - DOMAIN-SUFFIX,pocketpil.com,DIRECT
 # RCL
   - DOMAIN-SUFFIX,rclgroup.com,HK
+# LG
+  - DOMAIN-SUFFIX,lgchem.com.cn,KR
 # 分流
   - RULE-SET,Apple,Apple
   - RULE-SET,Tencent,Tencent
