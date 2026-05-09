@@ -134,8 +134,8 @@ dns:
 # 策略组引用
 Pr: &a3 {type: select, proxies: [♻️ Auto]}
 Pro: &a1 {type: http, interval: 28800, health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800}}
-Auto: &a4 {type: url-test, lazy: true, url: http://www.gstatic.com/generate_204, interval: 900, use: [Subscribe]}
-Man: &a2 {type: select, use: [Subscribe]}
+Auto: &a4 {type: url-test, lazy: true, url: http://www.gstatic.com/generate_204, interval: 900, use: [FD]}
+Man: &a2 {type: select, use: [FD]}
 classical: &a6 {type: http, behavior: classical, interval: 28800}
 domain: &a5 {type: http, behavior: domain, interval: 28800}
 ipcidr: &a7 {type: http, behavior: ipcidr, interval: 28800}
