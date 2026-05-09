@@ -152,13 +152,17 @@ ipcidr: &a7 {type: http, behavior: ipcidr, interval: 28800}
 proxies: null
 proxy-groups:
 
-  - {name: ♻️ Auto, <<: *a4}
-  - {name: HK, <<: *a4, filter: "香港家宽|高级专线 香港"}
+  - {name: ♻️ Auto, <<: *a4} 
+  - {name: HK, <<: *a4, filter: "香港|HK|(?i)Hong"}
+  - {name: KR, <<: *a4, filter: "韩国|KR|(?i)Korea"}
+  - {name: JP, <<: *a4, filter: "日本|东京|JP|(?i)Japan"}
   - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
+  - {name: SG, <<: *a4, filter: "新加坡|SG|(?i)Singapore"}
   - {name: TH, <<: *a4, filter: "泰国"}
   - {name: AE, <<: *a4, filter: "阿联酋|迪拜"}
-  - {name: Türkiye, <<: *a4, filter: "土耳其|(?i)Turkey"}
+  - {name: TR, <<: *a4, filter: "土耳其|(?i)Turkey"}
   - {name: RU, <<: *a4, filter: "俄罗斯"}
+  - {name: ID, <<: *a4, filter: "印度尼西亚|印尼|ID|(?i)Indonesia"}
 
   - {name: Tencent, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Tencent.png }
   - {name: TencentVideo, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/TencentVideo.png }
@@ -194,6 +198,8 @@ rule-providers:
   Proxy: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Proxy.yaml, path: ./ruleset/Proxy.yaml}
   
 rules:
+# klikbca.com
+  - DOMAIN-SUFFIX,klikbca.com,ID
 # 汇丰银行
   - DOMAIN-SUFFIX,hsbc.com.hk,DIRECT
   - DOMAIN-SUFFIX,hsbc.com,DIRECT
@@ -226,7 +232,7 @@ rules:
 # 俄罗斯
   - DOMAIN-SUFFIX,sberbank.com,RU
   - DOMAIN-KEYWORD,sberbank,RU
-# 云海系统
+# YunHai
   - DOMAIN-SUFFIX,haven.scm.eportyun.com,DIRECT
   - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT
   - DOMAIN-KEYWORD,exiamfw.home.oocl.com,DIRECT
