@@ -198,7 +198,7 @@ rule-providers:
   Proxy: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Proxy.yaml, path: ./ruleset/Proxy.yaml}
   
 rules:
-  # SPDB - 进程名匹配
+# SPDB - 进程名匹配
   - PROCESS-NAME,SPDBENTClient.exe,DIRECT
   - PROCESS-NAME,SPDBSecInput.exe,DIRECT
   - PROCESS-NAME,SPDBSecInputServ.exe,DIRECT
