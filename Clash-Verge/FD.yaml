@@ -198,6 +198,12 @@ rule-providers:
   Proxy: {<<: *a6, url: https://cdn.jsdelivr.net/gh/Semporia/Clash@master/Rule/Proxy.yaml, path: ./ruleset/Proxy.yaml}
   
 rules:
+  # SPDB - 进程名匹配
+  - PROCESS-NAME,SPDBENTClient.exe,DIRECT
+  - PROCESS-NAME,SPDBSecInput.exe,DIRECT
+  - PROCESS-NAME,SPDBSecInputServ.exe,DIRECT
+  - PROCESS-NAME,SPDBSignServ.exe,DIRECT
+  - PROCESS-NAME,SPDBSignService.exe,DIRECT
 # klikbca.com
   - DOMAIN-SUFFIX,klikbca.com,ID
 # 汇丰银行
