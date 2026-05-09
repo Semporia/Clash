@@ -259,10 +259,6 @@ rules:
 # 俄罗斯
   - DOMAIN-SUFFIX,sberbank.com,RU
   - DOMAIN-KEYWORD,sberbank,RU
-# 云海系统
-  - DOMAIN-SUFFIX,haven.scm.eportyun.com,DIRECT
-  - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT
-  - DOMAIN-KEYWORD,exiamfw.home.oocl.com,DIRECT
 # mombasaports.org
   - DOMAIN-SUFFIX,mombasaports.org,US
 # Centro Nacional de Registros (CNR) 
@@ -324,8 +320,10 @@ rules:
   - RULE-SET,China,DIRECT
   - RULE-SET,ChinaIP,DIRECT
   - RULE-SET,Proxy,Global
-# 云海系统
-  - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT 
+# YunHai
+  - DOMAIN-SUFFIX,haven.scm.eportyun.com,DIRECT
+  - DOMAIN-KEYWORD,haven.scm.eportyun.com,DIRECT
+  - DOMAIN-KEYWORD,exiamfw.home.oocl.com,DIRECT
  # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
   - IP-CIDR,10.0.0.0/8,DIRECT
