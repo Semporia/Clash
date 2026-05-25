@@ -151,10 +151,10 @@ proxies: null
 proxy-groups:
 
   - {name: ♻️ Auto, <<: *a4}
-  - {name: HK, <<: *a4, filter: "香港|HK|(?i)Hong"}
-  - {name: JP, <<: *a4, filter: "日本|东京|JP|(?i)Japan"}
-  - {name: US, <<: *a4, filter: "美国|US|(?i)States|American"}
-  - {name: SG, <<: *a4, filter: "新加坡|SG|(?i)Singapore"}
+  - {name: HK, <<: *a4, filter: "香港"}
+  - {name: JP, <<: *a4, filter: "日本"}
+  - {name: US, <<: *a4, filter: "美国"}
+  - {name: SG, <<: *a4, filter: "新加坡"}
   
   - {name: GitHub, type: select, proxies: [US], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/GitHub.png }
   - {name: Tencent, type: select, proxies: [DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Tencent.png }
