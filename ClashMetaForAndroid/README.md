@@ -2,6 +2,6 @@
 
 ### ClashMetaForAndroid 下载地址
 
-[Clash Verge](https://github.com/MetaCubeX/ClashMetaForAndroid/releases)
+[ClashMetaForAndroid](https://github.com/MetaCubeX/ClashMetaForAndroid/releases)
 
 
