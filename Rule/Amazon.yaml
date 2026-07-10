@@ -1,6 +1,20 @@
-# NAME: Amazon
-
+# ================================================
+# Amazon
+# Includes: Amazon, PrimeVideo, Twitch
+# LastUpdated: 2026-07-10
+# ================================================
 payload:
+  - DOMAIN,atv-ps.amazon.com
+  - DOMAIN,avodmp4s3ww-a.akamaihd.net
+  - DOMAIN,d1v5ir2lpwr8os.cloudfront.net
+  - DOMAIN,d22qjgkvxw22r6.cloudfront.net
+  - DOMAIN,d25xi40x97liuc.cloudfront.net
+  - DOMAIN,d27xxe7juh1us6.cloudfront.net
+  - DOMAIN,dmqdd6hw24ucf.cloudfront.net
+  - DOMAIN,fls-na.amazon.com
+  - DOMAIN,www.amazon.com
+  - DOMAIN-KEYWORD,avoddashs
+  - DOMAIN-KEYWORD,ttvnw
   - DOMAIN-SUFFIX,a2z.com
   - DOMAIN-SUFFIX,aboutamazon.cn
   - DOMAIN-SUFFIX,aboutamazon.co.uk
@@ -129,12 +143,14 @@ payload:
   - DOMAIN-SUFFIX,containersonaws.com
   - DOMAIN-SUFFIX,createspace.com
   - DOMAIN-SUFFIX,elasticbeanstalk.com
+  - DOMAIN-SUFFIX,ext-twitch.tv
   - DOMAIN-SUFFIX,gameon-masters.com
   - DOMAIN-SUFFIX,gdansk-amazon.com
   - DOMAIN-SUFFIX,images-amazon.com
   - DOMAIN-SUFFIX,imdb
   - DOMAIN-SUFFIX,imdb.com
   - DOMAIN-SUFFIX,imdb.to
+  - DOMAIN-SUFFIX,jtvnw.net
   - DOMAIN-SUFFIX,kindle
   - DOMAIN-SUFFIX,kindle.cn
   - DOMAIN-SUFFIX,kindle.co.jp
@@ -155,6 +171,7 @@ payload:
   - DOMAIN-SUFFIX,kindleoasis.us
   - DOMAIN-SUFFIX,kindleoasisnews.com
   - DOMAIN-SUFFIX,kindleproject.com
+  - DOMAIN-SUFFIX,live-video.net
   - DOMAIN-SUFFIX,llnwd.net
   - DOMAIN-SUFFIX,media-amazon.com
   - DOMAIN-SUFFIX,media-imdb.com
@@ -172,6 +189,11 @@ payload:
   - DOMAIN-SUFFIX,siege-amazon.com
   - DOMAIN-SUFFIX,ssl-images-amazon.com
   - DOMAIN-SUFFIX,thinkboxsoftware.com
+  - DOMAIN-SUFFIX,ttvnw.net
+  - DOMAIN-SUFFIX,twitch-ext.rootonline.de
+  - DOMAIN-SUFFIX,twitch.tv
+  - DOMAIN-SUFFIX,twitchcdn.net
+  - DOMAIN-SUFFIX,twitchsvc.net
   - DOMAIN-SUFFIX,ueberamazon.de
   - DOMAIN-SUFFIX,wfm.com
   - DOMAIN-SUFFIX,wholecitiesfoundation.org
@@ -187,14 +209,23 @@ payload:
   - DOMAIN-SUFFIX,yamaxun.com
   - DOMAIN-SUFFIX,z.cn
   - DOMAIN-SUFFIX,zappos
-  - DOMAIN-KEYWORD,avoddashs
+  - IP-CIDR,103.53.48.0/23
   - IP-CIDR,13.32.0.0/15
   - IP-CIDR,13.35.0.0/17
   - IP-CIDR,18.184.0.0/15
   - IP-CIDR,18.194.0.0/15
   - IP-CIDR,18.208.0.0/13
   - IP-CIDR,18.232.0.0/14
+  - IP-CIDR,185.42.204.0/22
+  - IP-CIDR,192.108.239.0/24
+  - IP-CIDR,192.16.64.0/21
+  - IP-CIDR,199.9.248.0/21
+  - IP-CIDR,23.160.0.0/24
+  - IP-CIDR,45.113.128.0/22
   - IP-CIDR,52.200.0.0/13
+  - IP-CIDR,52.223.192.0/20
+  - IP-CIDR,52.223.208.0/21
+  - IP-CIDR,52.223.224.0/19
   - IP-CIDR,52.58.0.0/15
   - IP-CIDR,52.74.0.0/16
   - IP-CIDR,52.77.0.0/16
@@ -203,36 +234,7 @@ payload:
   - IP-CIDR,54.226.0.0/15
   - IP-CIDR,54.230.156.0/22
   - IP-CIDR,54.93.0.0/16
+  - IP-CIDR,99.181.64.0/18
+  - IP-CIDR6,2402:2a80::/32
   - PROCESS-NAME,com.amazon.avod.thirdpartyclient
-
-# NAME: AmazonPrimeVideo
-  - DOMAIN,d1v5ir2lpwr8os.cloudfront.net
-  - DOMAIN,d22qjgkvxw22r6.cloudfront.net
-  - DOMAIN,d25xi40x97liuc.cloudfront.net
-  - DOMAIN,d27xxe7juh1us6.cloudfront.net
-  - DOMAIN,dmqdd6hw24ucf.cloudfront.net
-  - DOMAIN-SUFFIX,aiv-cdn.net
-  - DOMAIN-SUFFIX,aiv-delivery.net
-  - DOMAIN-SUFFIX,amazonprimevideo.cn
-  - DOMAIN-SUFFIX,amazonprimevideo.com.cn
-  - DOMAIN-SUFFIX,amazonprimevideos.com
-  - DOMAIN-SUFFIX,amazonvideo.cc
-  - DOMAIN-SUFFIX,amazonvideo.com
-  - DOMAIN-SUFFIX,atv-ps.amazon.com
-  - DOMAIN-SUFFIX,avodmp4s3ww-a.akamaihd.net
-  - DOMAIN-SUFFIX,fls-na.amazon.com
-  - DOMAIN-SUFFIX,llnwd.net
-  - DOMAIN-SUFFIX,media-amazon.com
-  - DOMAIN-SUFFIX,prime-video.com
-  - DOMAIN-SUFFIX,primevideo.cc
-  - DOMAIN-SUFFIX,primevideo.com
-  - DOMAIN-SUFFIX,primevideo.info
-  - DOMAIN-SUFFIX,primevideo.org
-  - DOMAIN-SUFFIX,primevideo.tv
-  - DOMAIN-KEYWORD,avoddashs
-  - PROCESS-NAME,com.amazon.avod.thirdpartyclient
-
-# NAME: AmazonTrust
-  - DOMAIN-SUFFIX,amazontrust.com
-  - DOMAIN-SUFFIX,awstrust.com
-  - DOMAIN-SUFFIX,ss2.us
+  - PROCESS-NAME,tv.twitch.android.app
