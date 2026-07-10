@@ -1,14 +1,26 @@
-# NAME: Google
-# UPDATED: 2026-05-12 02:38:11
-# DOMAIN: 1
-# DOMAIN-KEYWORD: 5
-# DOMAIN-SUFFIX: 684
-# IP-CIDR: 4
-# IP-CIDR6: 1
-# PROCESS-NAME: 6
-# TOTAL: 701
+# ================================================
+# Google
+# Includes: Google, GoogleDrive, GoogleSearch, GoogleVoice, Gemini, Android, Chromecast
+# LastUpdated: 2026-07-10
+# ================================================
 payload:
+  - DOMAIN,ai.google.dev
+  - DOMAIN,aida.googleapis.com
+  - DOMAIN,alkalimakersuite-pa.clients6.google.com
+  - DOMAIN,lens.l.google.com
+  - DOMAIN,makersuite.google.com
   - DOMAIN,voice.telephony.goog
+  - DOMAIN,www.googleapis.com
+  - DOMAIN-KEYWORD,appspot
+  - DOMAIN-KEYWORD,blogspot
+  - DOMAIN-KEYWORD,colab
+  - DOMAIN-KEYWORD,developerprofiles
+  - DOMAIN-KEYWORD,generativelanguage
+  - DOMAIN-KEYWORD,gmail
+  - DOMAIN-KEYWORD,google
+  - DOMAIN-KEYWORD,pa.google
+  - DOMAIN-KEYWORD,recaptcha
+  - DOMAIN-KEYWORD,www.google.
   - DOMAIN-SUFFIX,0emm.com
   - DOMAIN-SUFFIX,1e100.net
   - DOMAIN-SUFFIX,1ucrs.com
@@ -39,6 +51,7 @@ payload:
   - DOMAIN-SUFFIX,angulardart.org
   - DOMAIN-SUFFIX,api.ai
   - DOMAIN-SUFFIX,apigee.com
+  - DOMAIN-SUFFIX,apis.google.com
   - DOMAIN-SUFFIX,app-analytics-services.com
   - DOMAIN-SUFFIX,app-measurement-cn.com
   - DOMAIN-SUFFIX,app-measurement.com
@@ -54,6 +67,7 @@ payload:
   - DOMAIN-SUFFIX,autodraw.com
   - DOMAIN-SUFFIX,avail.googleflights.net
   - DOMAIN-SUFFIX,bandpage.com
+  - DOMAIN-SUFFIX,bard.google.com
   - DOMAIN-SUFFIX,baselinestudy.com
   - DOMAIN-SUFFIX,baselinestudy.org
   - DOMAIN-SUFFIX,bazel.build
@@ -195,6 +209,7 @@ payload:
   - DOMAIN-SUFFIX,debug.com
   - DOMAIN-SUFFIX,debugproject.com
   - DOMAIN-SUFFIX,deepmind.com
+  - DOMAIN-SUFFIX,deepmind.google
   - DOMAIN-SUFFIX,deja.com
   - DOMAIN-SUFFIX,deps.dev
   - DOMAIN-SUFFIX,deps.info
@@ -203,9 +218,11 @@ payload:
   - DOMAIN-SUFFIX,digisfera.com
   - DOMAIN-SUFFIX,digitalassetlinks.org
   - DOMAIN-SUFFIX,digitalattackmap.com
+  - DOMAIN-SUFFIX,docs.google.com
   - DOMAIN-SUFFIX,doubleclick-cn.net
   - DOMAIN-SUFFIX,doubleclick.com
   - DOMAIN-SUFFIX,doubleclick.net
+  - DOMAIN-SUFFIX,drive.google.com
   - DOMAIN-SUFFIX,episodic.com
   - DOMAIN-SUFFIX,fastlane.ci
   - DOMAIN-SUFFIX,fastlane.tools
@@ -227,6 +244,8 @@ payload:
   - DOMAIN-SUFFIX,gateway.dev
   - DOMAIN-SUFFIX,gcp.gvt2.com
   - DOMAIN-SUFFIX,gcr.io
+  - DOMAIN-SUFFIX,gemini.google.com
+  - DOMAIN-SUFFIX,generativeai.google
   - DOMAIN-SUFFIX,gerritcodereview.com
   - DOMAIN-SUFFIX,get.app
   - DOMAIN-SUFFIX,get.dev
@@ -476,6 +495,7 @@ payload:
   - DOMAIN-SUFFIX,googlecompare.co.uk
   - DOMAIN-SUFFIX,googledanmark.com
   - DOMAIN-SUFFIX,googledomains.com
+  - DOMAIN-SUFFIX,googledrive.com
   - DOMAIN-SUFFIX,googlee.com
   - DOMAIN-SUFFIX,googleearth.com
   - DOMAIN-SUFFIX,googlefiber.com
@@ -503,6 +523,7 @@ payload:
   - DOMAIN-SUFFIX,googletagservices.com
   - DOMAIN-SUFFIX,googletraveladservices-cn.com
   - DOMAIN-SUFFIX,googletraveladservices.com
+  - DOMAIN-SUFFIX,googleusercontent.com
   - DOMAIN-SUFFIX,googlevads-cn.com
   - DOMAIN-SUFFIX,googleventures.com
   - DOMAIN-SUFFIX,googlr.com
@@ -589,6 +610,7 @@ payload:
   - DOMAIN-SUFFIX,polymerproject.org
   - DOMAIN-SUFFIX,postini.com
   - DOMAIN-SUFFIX,privacysandbox.com
+  - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
   - DOMAIN-SUFFIX,prod-controlbe.floonet.goog
   - DOMAIN-SUFFIX,prod-databe.floonet.goog
   - DOMAIN-SUFFIX,prod.databe.floonet.goog
@@ -691,135 +713,14 @@ payload:
   - DOMAIN-SUFFIX,xplr.co
   - DOMAIN-SUFFIX,zukunftswerkstatt.de
   - DOMAIN-SUFFIX,zynamics.com
-  - DOMAIN-SUFFIX,googledrive.com
-  - DOMAIN-SUFFIX,googleusercontent.com
-  - DOMAIN-KEYWORD,appspot
-  - DOMAIN-KEYWORD,blogspot
-  - DOMAIN-KEYWORD,gmail
-  - DOMAIN-KEYWORD,google
-  - DOMAIN-KEYWORD,recaptcha
   - IP-CIDR,172.110.32.0/21
   - IP-CIDR,173.194.0.0/16
   - IP-CIDR,216.73.80.0/20
   - IP-CIDR,74.125.0.0/16
   - IP-CIDR6,2620:120:e000::/40
+  - PROCESS-NAME,BackupandSync
   - PROCESS-NAME,GoogleDriveFS.exe
   - PROCESS-NAME,com.android.vending
   - PROCESS-NAME,com.google.android.gms
   - PROCESS-NAME,com.google.android.gsf
   - PROCESS-NAME,com.google.android.play.games
-  - PROCESS-NAME,BackupandSync
-
-# NAME: GoogleDrive
-# UPDATED: 2025-06-06 09:15:10
-# DOMAIN: 1
-# DOMAIN-SUFFIX: 4
-# PROCESS-NAME: 1
-# TOTAL: 6
-  - DOMAIN,www.googleapis.com
-  - DOMAIN-SUFFIX,docs.google.com
-  - DOMAIN-SUFFIX,drive.google.com
-  - DOMAIN-SUFFIX,googledrive.com
-  - DOMAIN-SUFFIX,googleusercontent.com
-  - PROCESS-NAME,BackupandSync
-
-# NAME: GoogleSearch
-# UPDATED: 2025-06-06 09:17:51
-# DOMAIN-KEYWORD: 1
-# TOTAL: 1
-  - DOMAIN-KEYWORD,www.google.
-
-# NAME: GoogleVoice
-# UPDATED: 2025-06-06 09:17:51
-# DOMAIN: 1
-# TOTAL: 1
-  - DOMAIN,lens.l.google.com
-
-# NAME: Chromecast
-# UPDATED: 2025-06-06 09:17:53
-# DOMAIN-KEYWORD: 1
-# TOTAL: 1
-  - DOMAIN-KEYWORD,pa.google
-
-# NAME: GoogleFCM
-# UPDATED: 2025-06-06 09:18:26
-# DOMAIN: 15
-# IP-CIDR: 26
-# TOTAL: 41
-  - DOMAIN,alt1-mtalk.google.com
-  - DOMAIN,alt2-mtalk.google.com
-  - DOMAIN,alt3-mtalk.google.com
-  - DOMAIN,alt4-mtalk.google.com
-  - DOMAIN,alt5-mtalk.google.com
-  - DOMAIN,alt6-mtalk.google.com
-  - DOMAIN,alt7-mtalk.google.com
-  - DOMAIN,alt8-mtalk.google.com
-  - DOMAIN,android.apis.google.com
-  - DOMAIN,device-provisioning.googleapis.com
-  - DOMAIN,firebaseinstallations.googleapis.com
-  - DOMAIN,mtalk-dev.google.com
-  - DOMAIN,mtalk-staging.google.com
-  - DOMAIN,mtalk.google.com
-  - DOMAIN,mtalk4.google.com
-  - IP-CIDR,108.177.125.188/32
-  - IP-CIDR,142.250.10.188/32
-  - IP-CIDR,142.250.31.188/32
-  - IP-CIDR,142.250.4.188/32
-  - IP-CIDR,142.250.96.188/32
-  - IP-CIDR,172.217.194.188/32
-  - IP-CIDR,172.217.218.188/32
-  - IP-CIDR,172.217.219.188/32
-  - IP-CIDR,172.253.122.188/32
-  - IP-CIDR,172.253.63.188/32
-  - IP-CIDR,173.194.175.188/32
-  - IP-CIDR,173.194.218.188/32
-  - IP-CIDR,209.85.233.188/32
-  - IP-CIDR,64.233.177.188/32
-  - IP-CIDR,64.233.186.188/32
-  - IP-CIDR,64.233.187.188/32
-  - IP-CIDR,64.233.188.188/32
-  - IP-CIDR,64.233.189.188/32
-  - IP-CIDR,74.125.127.188/32
-  - IP-CIDR,74.125.137.188/32
-  - IP-CIDR,74.125.203.188/32
-  - IP-CIDR,74.125.204.188/32
-  - IP-CIDR,74.125.206.188/32
-  - IP-CIDR,74.125.23.188/32
-  - IP-CIDR,74.125.24.188/32
-  - IP-CIDR,74.125.28.188/32
-
-# NAME: BardAI
-# UPDATED: 2025-06-06 09:20:02
-# DOMAIN: 4
-# DOMAIN-SUFFIX: 6
-# TOTAL: 10
-  - DOMAIN,ai.google.dev
-  - DOMAIN,alkalimakersuite-pa.clients6.google.com
-  - DOMAIN,generativelanguage.googleapis.com
-  - DOMAIN,makersuite.google.com
-  - DOMAIN-SUFFIX,bard.google.com
-  - DOMAIN-SUFFIX,deepmind.com
-  - DOMAIN-SUFFIX,deepmind.google
-  - DOMAIN-SUFFIX,gemini.google.com
-  - DOMAIN-SUFFIX,generativeai.google
-  - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
-
-# NAME: Gemini
-# UPDATED: 2025-06-06 09:20:02
-# DOMAIN: 3
-# DOMAIN-KEYWORD: 3
-# DOMAIN-SUFFIX: 7
-# TOTAL: 13
-  - DOMAIN,ai.google.dev
-  - DOMAIN,alkalimakersuite-pa.clients6.google.com
-  - DOMAIN,makersuite.google.com
-  - DOMAIN-SUFFIX,bard.google.com
-  - DOMAIN-SUFFIX,deepmind.com
-  - DOMAIN-SUFFIX,deepmind.google
-  - DOMAIN-SUFFIX,gemini.google.com
-  - DOMAIN-SUFFIX,generativeai.google
-  - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
-  - DOMAIN-SUFFIX,apis.google.com
-  - DOMAIN-KEYWORD,colab
-  - DOMAIN-KEYWORD,developerprofiles
-  - DOMAIN-KEYWORD,generativelanguage
