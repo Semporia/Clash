@@ -1,10 +1,8 @@
-# NAME: TencentVideo
-# UPDATED: 2023-05-28 18:21:56
-# DOMAIN: 14
-# DOMAIN-SUFFIX: 5
-# IP-CIDR: 3
-# IP-CIDR6: 29
-# TOTAL: 51
+# ================================================
+# TencentVideo
+# Includes: TencentVideo
+# LastUpdated: 2026-07-10
+# ================================================
 payload:
   - DOMAIN,00713915daab0be43def5c338c02c80b.dlied1.cdntips.net
   - DOMAIN,17caa75e77d31e1f5a7841e0b3374569.dlied1.cdntips.net
