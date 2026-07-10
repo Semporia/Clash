@@ -1,8 +1,8 @@
-# NAME: WeChat
-# DOMAIN: 8
-# DOMAIN-SUFFIX: 22
-# IP-ASN: 1
-# TOTAL: 31
+# ================================================
+# WeChat
+# Includes: WeChat
+# LastUpdated: 2026-07-10
+# ================================================
 payload:
   - DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net
   - DOMAIN,btrace.qq.com
