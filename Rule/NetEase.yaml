@@ -1,9 +1,8 @@
-# NAME: NetEase
-# UPDATED: 2023-04-20 02:12:04
-# DOMAIN: 1
-# DOMAIN-SUFFIX: 117
-# IP-CIDR: 28
-# TOTAL: 146
+# ================================================
+# NetEase
+# Includes: NetEase
+# LastUpdated: 2026-07-10
+# ================================================
 payload:
   - DOMAIN,netease.ugcvideoss.ourdvs.com
   - DOMAIN-SUFFIX,126.am
@@ -20,7 +19,6 @@ payload:
   - DOMAIN-SUFFIX,163adl.com
   - DOMAIN-SUFFIX,163cms.cn
   - DOMAIN-SUFFIX,163cms.com
-  - DOMAIN-SUFFIX,163cn.tv
   - DOMAIN-SUFFIX,163fen.com
   - DOMAIN-SUFFIX,163img.cn
   - DOMAIN-SUFFIX,163img.com
@@ -31,7 +29,6 @@ payload:
   - DOMAIN-SUFFIX,163mail.net
   - DOMAIN-SUFFIX,163nasa.com
   - DOMAIN-SUFFIX,163nos.com
-  - DOMAIN-SUFFIX,163qiyukf.com
   - DOMAIN-SUFFIX,163yun.com
   - DOMAIN-SUFFIX,166.com
   - DOMAIN-SUFFIX,166.net
@@ -48,6 +45,8 @@ payload:
   - DOMAIN-SUFFIX,easebar.com
   - DOMAIN-SUFFIX,easebar.net
   - DOMAIN-SUFFIX,gamehaopu.com
+  - DOMAIN-SUFFIX,gameviewer.cn
+  - DOMAIN-SUFFIX,gameviewer.com
   - DOMAIN-SUFFIX,haowu.link
   - DOMAIN-SUFFIX,huihui.cn
   - DOMAIN-SUFFIX,hukeck.com
@@ -66,9 +65,9 @@ payload:
   - DOMAIN-SUFFIX,icourses163.cn
   - DOMAIN-SUFFIX,icourses163.com
   - DOMAIN-SUFFIX,icourses163.org
+  - DOMAIN-SUFFIX,infiniteborders3kingdoms.com
   - DOMAIN-SUFFIX,kada.com
   - DOMAIN-SUFFIX,kada163.com
-  - DOMAIN-SUFFIX,kaola.com
   - DOMAIN-SUFFIX,laiqukankan.com
   - DOMAIN-SUFFIX,lf126.net
   - DOMAIN-SUFFIX,lf127.net
