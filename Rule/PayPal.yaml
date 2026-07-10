@@ -1,5 +1,10 @@
-# NAME: PayPal
+# ================================================
+# PayPal
+# Includes: PayPal
+# LastUpdated: 2026-07-10
+# ================================================
 payload:
+  - DOMAIN-KEYWORD,paypal
   - DOMAIN-SUFFIX,account-paypal.info
   - DOMAIN-SUFFIX,account-paypal.net
   - DOMAIN-SUFFIX,account-paypal.org
@@ -246,4 +251,3 @@ payload:
   - DOMAIN-SUFFIX,xoom.net.cn
   - DOMAIN-SUFFIX,xoom.us
   - DOMAIN-SUFFIX,xoomcom.com
-  - DOMAIN-KEYWORD,paypal
