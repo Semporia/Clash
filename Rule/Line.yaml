@@ -1,7 +1,8 @@
-# NAME: Line
-# DOMAIN-SUFFIX: 8
-# IP-CIDR: 16
-# TOTAL: 24
+# ================================================
+# Line
+# Includes: Line
+# LastUpdated: 2026-07-10
+# ================================================
 payload:
   - DOMAIN-SUFFIX,lin.ee
   - DOMAIN-SUFFIX,line-apps.com
