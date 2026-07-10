@@ -1,8 +1,10 @@
-# NAME: GitHub
-# DOMAIN-KEYWORD: 1
-# DOMAIN-SUFFIX: 30
-# TOTAL: 31
+# ================================================
+# GitHub
+# Includes: GitHub
+# LastUpdated: 2026-07-10
+# ================================================
 payload:
+  - DOMAIN-KEYWORD,github
   - DOMAIN-SUFFIX,atom.io
   - DOMAIN-SUFFIX,dependabot.com
   - DOMAIN-SUFFIX,ghcr.io
@@ -33,4 +35,3 @@ payload:
   - DOMAIN-SUFFIX,rawgithub.com
   - DOMAIN-SUFFIX,repo.new
   - DOMAIN-SUFFIX,thegithubshop.com
-  - DOMAIN-KEYWORD,github
