@@ -1,13 +1,12 @@
 # ================================================
 # Meta
 # Includes: Facebook, Instagram, Whatsapp, Threads
-# LastUpdated: 2026-07-10
+# LastUpdated: 2026-10-26
 # ================================================
 payload:
   - DOMAIN,graph.facebook.com
   - DOMAIN-KEYWORD,facebook
   - DOMAIN-KEYWORD,fbcdn
-  - DOMAIN-KEYWORD,instagram
   - DOMAIN-KEYWORD,whatsapp
   - DOMAIN-SUFFIX,aboutfacebook.com
   - DOMAIN-SUFFIX,accessfacebookfromschool.com
@@ -527,7 +526,6 @@ payload:
   - DOMAIN-SUFFIX,thefacebook.net
   - DOMAIN-SUFFIX,thefind.com
   - DOMAIN-SUFFIX,theinstagramhack.com
-  - DOMAIN-SUFFIX,threads.net
   - DOMAIN-SUFFIX,toplayerserver.com
   - DOMAIN-SUFFIX,viewpointsfromfacebook.com
   - DOMAIN-SUFFIX,wa.me
