@@ -1,18 +1,9 @@
 # ================================================
 # Amazon
 # Includes: Amazon, PrimeVideo, Twitch
-# LastUpdated: 2026-07-10
+# LastUpdated: 2026-10-26
 # ================================================
 payload:
-  - DOMAIN,atv-ps.amazon.com
-  - DOMAIN,avodmp4s3ww-a.akamaihd.net
-  - DOMAIN,d1v5ir2lpwr8os.cloudfront.net
-  - DOMAIN,d22qjgkvxw22r6.cloudfront.net
-  - DOMAIN,d25xi40x97liuc.cloudfront.net
-  - DOMAIN,d27xxe7juh1us6.cloudfront.net
-  - DOMAIN,dmqdd6hw24ucf.cloudfront.net
-  - DOMAIN,fls-na.amazon.com
-  - DOMAIN,www.amazon.com
   - DOMAIN-KEYWORD,avoddashs
   - DOMAIN-KEYWORD,ttvnw
   - DOMAIN-SUFFIX,a2z.com
