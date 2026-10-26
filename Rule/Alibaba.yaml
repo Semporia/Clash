@@ -1,7 +1,7 @@
 # ================================================
 # Alibaba
 # Includes: Alibaba, AliPay, Youku, GaoDe, Eleme, CaiNiao
-# LastUpdated: 2026-07-10
+# LastUpdated: 2026-10-26
 # ================================================
 payload:
   - DOMAIN-SUFFIX,0co3geye.cn
